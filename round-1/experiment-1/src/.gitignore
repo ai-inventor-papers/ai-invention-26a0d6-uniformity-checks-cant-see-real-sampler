@@ -1,0 +1,11 @@
+# Virtual environment / tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Transient logs from pipeline runs (regenerable)
+logs/
+
+# Scratch / transient intermediates
+*.npy

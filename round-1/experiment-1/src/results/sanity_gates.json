@@ -1,0 +1,73 @@
+{
+ "duality": {
+  "ok": true,
+  "complement_algebra_maxabs": {
+   "maxdev_maxabs_diff": 2.1316282072803006e-14,
+   "energy_maxabs_diff": 5.229594535194337e-12,
+   "trend_slope_sum_maxabs": 6.5052130349130266e-18,
+   "chi2_scaled_maxabs_diff": 9.094947017729282e-13
+  },
+  "duality_distribution_ks_p": 0.8835917582147937,
+  "duality_quantile_rel_err": {
+   "0.5": 0.10344827586207078,
+   "0.95": 1.674850734291662e-15,
+   "0.99": 1.429750626834346e-15
+  },
+  "duality_quantile_rel_err_note": "maxdev is lattice-quantized; quantile diffs of one lattice step are discrete artifacts, the KS test on rounded values is authoritative",
+  "note": "complement identity must be exact; D(5) vs D(n-5) same law (KS)"
+ },
+ "algorithmR_vs_priority": {
+  "ok": true,
+  "row_sums_valid": true,
+  "quantile_rel_err": {
+   "maxdev": {
+    "0.5": 0.0,
+    "0.95": 0.0,
+    "0.99": 0.0
+   },
+   "chi2": {
+    "0.5": 0.0009832841691247813,
+    "0.95": 0.0017151812045754096,
+    "0.99": 9.41836864434516e-06
+   }
+  }
+ },
+ "null_self_consistency": {
+  "ok": true,
+  "empirical_alpha_rates": {
+   "maxdev": 0.038,
+   "chi2": 0.0455,
+   "trend_slope": 0.0585,
+   "energy": 0.0565
+  },
+  "maxdev_q95_rel_vs_benchmark": 0.0,
+  "textbook_false_alarm_5pct": 0.0135
+ },
+ "mechanism": {
+  "ok": true,
+  "spike": {
+   "delta_1.0x_floor_power": {
+    "maxdev": 0.85125,
+    "chi2": 0.2625,
+    "trend_slope": 0.0575,
+    "energy": 0.51125
+   }
+  },
+  "linear_trend": {
+   "delta_0.2x_floor_power": {
+    "maxdev": 0.355,
+    "chi2": 0.99625,
+    "trend_slope": 1.0,
+    "energy": 0.97375
+   },
+   "delta_0.3x_floor_power": {
+    "maxdev": 0.74,
+    "chi2": 1.0,
+    "trend_slope": 1.0,
+    "energy": 1.0
+   }
+  },
+  "note": "spike@1.0x delta_floor: maxdev>=0.7 & chi2<0.5 (inversion); linear_trend: blind-band condition (chi2>=0.9 & maxdev<0.5) at delta 0.2x or 0.3x delta_floor"
+ },
+ "wall_s": 92.7
+}

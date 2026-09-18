@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "method_name": "reservoir_uniformity_protocol",
+    "version": "0.1.0",
+    "description": "Empirical uniformity verification for reservoir-sampling stream samplers: null calibration by simulation (max deviation, Pearson chi2, position-trend slope, max-over-subwindows energy), analytic indep...",
+    "seed": 0,
+    "generated_at": "2026-09-18T16:32:35",
+    "grid_summary": {
+      "null_cells_total": 35,
+      "null_cells_done": 35,
+      "null_cells_skipped": 0,
+      "power_cells_total": 6,
+      "power_cells_done": 6,
+      "power_cells_skipped": 0,
+      "bug_cells_total": 3,
+      "bug_cells_done": 3,
+      "bug_cells_skipped": 0
+    },
+    "trims_applied": [
+      "main grid: n in {300, 1e3, 3e3, 1e4} x p in {0.05, 0.5, 0.9} x m in {500, 2e3, 5e3}; default trims applied: m=5e3 dropped at n>=3e3; at n=1e4 m in {500, 1e3, 2e3} with p=0.9 only at m=1e3 (power suppo...",
+      "corner cells k=5 at n in {300, 1e3}, m in {500, 2e3}: simulated at k=5 only; the k=n-5 corner is read from the anti-reservoir complement duality D(n-5) == D(5) (exact).",
+      "power cells (F1 ladder): n in {300, 3e3, 1e4} x p in {0.05, 0.5} (p=0.9 power cells dropped; the textbook chi2 threshold misfire at p=0.9 is established by the null cells' false-alarm rows). n_fine si..."
+    ],
+    "downstream_consumers": [
+      "results/power_surfaces.json -> next iteration: m*(.) trials-to-detection law fit (power vs amplitude at fixed trial budget m)",
+      "results/bug_battery.json + family_linkage_corr -> next iteration: blind bug-battery scoring",
+      "results/null_calibration.json (thresholds) -> both consumers"
+    ],
+    "sampler_suite": [
+      "correct_priority (k smallest of n iid uniforms)",
+      "correct_algorithm_R (sequential, exact)",
+      "bug_recency_slot"
+    ],
+    "statistics": [
+      "maxdev = max_i |c_i - mu|, mu = m*k/n (mandated report)",
+      "chi2 = sum_i (c_i - mu)^2 / mu",
+      "trend_slope: OLS slope of c_i on position, |z|-standardized"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "reservoir_uniformity_core_verification",
+      "examples": [
+        {
+          "input": "Implement and evaluate a reservoir-sampling stream sampler: sample k items uniformly from a stream of unknown length, verify uniformity empirically over many trials and report the max deviation from t...",
+          "output": "{\"verdict\":\"UNIFORM: the sampler's per-position inclusion counts match the expected frequency m*k/n within the predicted max-deviation band\",\"samplers_verified\":[\"correct_priority\",\"correct_algorithm_...",
+          "metadata_phase": "core_verification",
+          "predict_method_maxdev_q95": "90.0",
+          "predict_baseline_maxdev_q95": "87.0",
+          "predict_uniformity_verdict": "UNIFORM"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_null_calibration",
+      "examples": [
+        {
+          "input": "Null calibration cell: stream length n=300, reservoir size k=5 (p=0.0166667), trials per run m=500, replicates N=4000 (corner). Simulate the CORRECT uniform reservoir sampler; compute maxdev, chi2, tr...",
+          "output": "{\"n\":300,\"k\":5,\"m\":500,\"p\":0.016666666666666666,\"mu\":8.333333333333334,\"n_reps\":4000,\"role\":\"corner\",\"stat_quantiles\":{\"maxdev\":{\"0.5\":8.666666666666666,\"0.95\":11.666666666666666,\"0.99\":13.66666666666...",
+          "metadata_cell": "null_n300_k5_m500",
+          "metadata_phase": "null",
+          "metadata_n": "300",
+          "metadata_k": "5",
+          "metadata_m": "500",
+          "metadata_n_reps": "4000",
+          "predict_method_maxdev_q95": "11.666666666666666",
+          "predict_baseline_maxdev_q95": "11.666666666666666",
+          "predict_c1_direction": "sim_le_bench",
+          "predict_textbook_chi2_false_alarm_5pct": "0.0305"
+        },
+        {
+          "input": "Null calibration cell: stream length n=300, reservoir size k=5 (p=0.0166667), trials per run m=2000, replicates N=4000 (corner). Simulate the CORRECT uniform reservoir sampler; compute maxdev, chi2, t...",
+          "output": "{\"n\":300,\"k\":5,\"m\":2000,\"p\":0.016666666666666666,\"mu\":33.333333333333336,\"n_reps\":4000,\"role\":\"corner\",\"stat_quantiles\":{\"maxdev\":{\"0.5\":17.666666666666664,\"0.95\":22.666666666666664,\"0.99\":24.66666666...",
+          "metadata_cell": "null_n300_k5_m2000",
+          "metadata_phase": "null",
+          "metadata_n": "300",
+          "metadata_k": "5",
+          "metadata_m": "2000",
+          "metadata_n_reps": "4000",
+          "predict_method_maxdev_q95": "22.666666666666664",
+          "predict_baseline_maxdev_q95": "22.666666666666664",
+          "predict_c1_direction": "sim_le_bench",
+          "predict_textbook_chi2_false_alarm_5pct": "0.0330"
+        },
+        {
+          "input": "Null calibration cell: stream length n=300, reservoir size k=15 (p=0.05), trials per run m=500, replicates N=4000 (main). Simulate the CORRECT uniform reservoir sampler; compute maxdev, chi2, trend-sl...",
+          "output": "{\"n\":300,\"k\":15,\"m\":500,\"p\":0.05,\"mu\":25.0,\"n_reps\":4000,\"role\":\"main\",\"stat_quantiles\":{\"maxdev\":{\"0.5\":15.0,\"0.95\":19.0,\"0.99\":21.0,\"0.999\":24.0},\"chi2\":{\"0.5\":284.44,\"0.95\":324.32,\"0.99\":341.840799...",
+          "metadata_cell": "null_n300_k15_m500",
+          "metadata_phase": "null",
+          "metadata_n": "300",
+          "metadata_k": "15",
+          "metadata_m": "500",
+          "metadata_n_reps": "4000",
+          "predict_method_maxdev_q95": "19.0",
+          "predict_baseline_maxdev_q95": "19.0",
+          "predict_c1_direction": "sim_le_bench",
+          "predict_textbook_chi2_false_alarm_5pct": "0.0125"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_power",
+      "examples": [
+        {
+          "input": "Detection-power surface: cell n=300, p=0.05, k=15, trials per run m=2000; bias family 'linear_trend'. Power of maxdev (method) / chi2 (textbook baseline) / trend-slope / subwindow-energy at 5% and 1% ...",
+          "output": "{\"n\":300,\"p\":0.05,\"m\":2000,\"k\":15,\"family\":\"linear_trend\",\"delta_floor\":0.33775086897463935,\"A_floor\":33.775086897463936,\"A_acc_delta\":0.059870791313768615,\"A_acc_over_delta_floor\":0.1772631747640718,...",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "metadata_phase": "power",
+          "metadata_n": "300",
+          "metadata_p": "0.05",
+          "metadata_m": "2000",
+          "metadata_family": "linear_trend",
+          "predict_blind_band_present": "yes",
+          "predict_a_acc_over_delta_floor": "0.1773",
+          "predict_realized_maxdev_vs_chi2": "chi2_ge_maxdev",
+          "predict_method_maxdev_power_mid": "1.0000",
+          "predict_baseline_chi2_power_mid": "1.0000"
+        },
+        {
+          "input": "Detection-power surface: cell n=300, p=0.05, k=15, trials per run m=2000; bias family 'exp_recency'. Power of maxdev (method) / chi2 (textbook baseline) / trend-slope / subwindow-energy at 5% and 1% a...",
+          "output": "{\"n\":300,\"p\":0.05,\"m\":2000,\"k\":15,\"family\":\"exp_recency\",\"delta_floor\":0.33775086897463935,\"A_floor\":33.775086897463936,\"A_acc_delta\":0.09128514849008801,\"A_acc_over_delta_floor\":0.27027361548237,\"A_a...",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "metadata_phase": "power",
+          "metadata_n": "300",
+          "metadata_p": "0.05",
+          "metadata_m": "2000",
+          "metadata_family": "exp_recency",
+          "predict_blind_band_present": "yes",
+          "predict_a_acc_over_delta_floor": "0.2703",
+          "predict_realized_maxdev_vs_chi2": "chi2_ge_maxdev",
+          "predict_method_maxdev_power_mid": "0.9987",
+          "predict_baseline_chi2_power_mid": "1.0000"
+        },
+        {
+          "input": "Detection-power surface: cell n=300, p=0.05, k=15, trials per run m=2000; bias family 'half_ramp'. Power of maxdev (method) / chi2 (textbook baseline) / trend-slope / subwindow-energy at 5% and 1% alp...",
+          "output": "{\"n\":300,\"p\":0.05,\"m\":2000,\"k\":15,\"family\":\"half_ramp\",\"delta_floor\":0.33775086897463935,\"A_floor\":33.775086897463936,\"A_acc_delta\":null,\"A_acc_over_delta_floor\":null,\"A_acc_method\":\"coarse_interp\",\"f...",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "metadata_phase": "power",
+          "metadata_n": "300",
+          "metadata_p": "0.05",
+          "metadata_m": "2000",
+          "metadata_family": "half_ramp",
+          "predict_blind_band_present": "yes",
+          "predict_a_acc_over_delta_floor": "not_crossed_in_coarse_grid",
+          "predict_realized_maxdev_vs_chi2": "chi2_ge_maxdev",
+          "predict_method_maxdev_power_mid": "1.0000",
+          "predict_baseline_chi2_power_mid": "1.0000"
+        }
+      ]
+    }
+  ]
+}

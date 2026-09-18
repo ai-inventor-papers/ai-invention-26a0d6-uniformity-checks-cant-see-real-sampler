@@ -1,0 +1,3644 @@
+{
+ "null_n300_k15_m500": {
+  "cell": "null_n300_k15_m500",
+  "n": 300,
+  "k": 15,
+  "m": 500,
+  "p": 0.05,
+  "mu": 25.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 1.2655140612673462e-05,
+   "sd": 0.0032388414164962204
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 15.0,
+    "0.95": 19.0,
+    "0.99": 21.0,
+    "0.999": 24.0
+   },
+   "chi2": {
+    "0.5": 284.44,
+    "0.95": 324.32,
+    "0.99": 341.84079999999994,
+    "0.999": 359.8429600000006
+   },
+   "trend_slope": {
+    "0.5": 0.668219791551445,
+    "0.95": 1.9830118357096076,
+    "0.99": 2.5163603817514772,
+    "0.999": 3.340835417518656
+   },
+   "energy": {
+    "0.5": 1131.0,
+    "0.95": 1421.0,
+    "0.99": 1565.0299999999993,
+    "0.999": 1766.0680000000139
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 19.0,
+    "alpha_0.01": 21.0,
+    "alpha_0.001": 24.0
+   },
+   "chi2": {
+    "alpha_0.05": 324.32,
+    "alpha_0.01": 341.84079999999994,
+    "alpha_0.001": 359.8429600000006
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9830118357096076,
+    "alpha_0.01": 2.5163603817514772,
+    "alpha_0.001": 3.340835417518656
+   },
+   "energy": {
+    "alpha_0.05": 1421.0,
+    "alpha_0.01": 1565.0299999999993,
+    "alpha_0.001": 1766.0680000000139
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 19.0,
+    "q0.99": 21.0,
+    "q0.999": 25.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": -0.04
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.8189894035458565e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 547.0066463879971,
+   "product_binomial_var": 552.667620409486,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9897570007497554,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.9147268334247443,
+   "chi2_sample_mean": 284.97144000000003,
+   "chi2_theory_mean_under_independence": 285.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0125,
+   "false_alarm_alpha_0.01": 0.0015
+  },
+  "dual_corner": null,
+  "wall_s": 34.02,
+  "skipped": false
+ },
+ "null_n300_k15_m2000": {
+  "cell": "null_n300_k15_m2000",
+  "n": 300,
+  "k": 15,
+  "m": 2000,
+  "p": 0.05,
+  "mu": 100.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 0.00021097334414826836,
+   "sd": 0.006493979797106068
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 30.0,
+    "0.95": 37.0,
+    "0.99": 41.0,
+    "0.999": 48.001000000000204
+   },
+   "chi2": {
+    "0.5": 284.22,
+    "0.95": 325.0,
+    "0.99": 341.1263999999999,
+    "0.999": 363.4209800000002
+   },
+   "trend_slope": {
+    "0.5": 0.6690842000968746,
+    "0.95": 1.9670858602646282,
+    "0.99": 2.551278726759271,
+    "0.999": 3.28565187678846
+   },
+   "energy": {
+    "0.5": 4518.0,
+    "0.95": 5659.15,
+    "0.99": 6177.029999999999,
+    "0.999": 7027.019000000004
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 37.0,
+    "alpha_0.01": 41.0,
+    "alpha_0.001": 48.001000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 325.0,
+    "alpha_0.01": 341.1263999999999,
+    "alpha_0.001": 363.4209800000002
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9670858602646282,
+    "alpha_0.01": 2.551278726759271,
+    "alpha_0.001": 3.28565187678846
+   },
+   "energy": {
+    "alpha_0.05": 5659.15,
+    "alpha_0.01": 6177.029999999999,
+    "alpha_0.001": 7027.019000000004
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 37.0,
+    "q0.99": 41.0,
+    "q0.999": 47.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.021297872340429867
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 7.275957614183426e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 547.3255469505127,
+   "product_binomial_var": 546.6912099986,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0011603203788741,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.9152601119573791,
+   "chi2_sample_mean": 284.79553500000003,
+   "chi2_theory_mean_under_independence": 285.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.01075,
+   "false_alarm_alpha_0.01": 0.00225
+  },
+  "dual_corner": null,
+  "wall_s": 108.1,
+  "skipped": false
+ },
+ "null_n300_k15_m5000": {
+  "cell": "null_n300_k15_m5000",
+  "n": 300,
+  "k": 15,
+  "m": 5000,
+  "p": 0.05,
+  "mu": 250.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -4.162757363970712e-05,
+   "sd": 0.010421163164482869
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 47.0,
+    "0.95": 58.0,
+    "0.99": 64.0,
+    "0.999": 68.0010000000002
+   },
+   "chi2": {
+    "0.5": 284.816,
+    "0.95": 323.8724,
+    "0.99": 341.89727999999997,
+    "0.999": 360.6250480000002
+   },
+   "trend_slope": {
+    "0.5": 0.6736511614301937,
+    "0.95": 1.9600103244740903,
+    "0.99": 2.6261003350635956,
+    "0.999": 3.2482661192268756
+   },
+   "energy": {
+    "0.5": 11283.0,
+    "0.95": 14213.05,
+    "0.99": 15670.289999999994,
+    "0.999": 17407.04600000001
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 58.0,
+    "alpha_0.01": 64.0,
+    "alpha_0.001": 68.0010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 323.8724,
+    "alpha_0.01": 341.89727999999997,
+    "alpha_0.001": 360.6250480000002
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9600103244740903,
+    "alpha_0.01": 2.6261003350635956,
+    "alpha_0.001": 3.2482661192268756
+   },
+   "energy": {
+    "alpha_0.05": 14213.05,
+    "alpha_0.01": 15670.289999999994,
+    "alpha_0.001": 17407.04600000001
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 57.0,
+    "q0.99": 64.0,
+    "q0.999": 72.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.017543859649122806,
+    "q0.99": 0.0,
+    "q0.999": -0.05554166666666384
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.4551915228366852e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 538.0537029788607,
+   "product_binomial_var": 541.1355282195963,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9943048920648858,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.8997553561519409,
+   "chi2_sample_mean": 285.46037800000005,
+   "chi2_theory_mean_under_independence": 285.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.012,
+   "false_alarm_alpha_0.01": 0.0015
+  },
+  "dual_corner": null,
+  "wall_s": 248.62,
+  "skipped": false
+ },
+ "null_n300_k150_m500": {
+  "cell": "null_n300_k150_m500",
+  "n": 300,
+  "k": 150,
+  "m": 500,
+  "p": 0.5,
+  "mu": 250.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -6.0579117545750535e-05,
+   "sd": 0.007455603552662779
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 34.0,
+    "0.95": 42.0,
+    "0.99": 46.0,
+    "0.999": 51.0
+   },
+   "chi2": {
+    "0.5": 149.944,
+    "0.95": 170.6248,
+    "0.99": 179.64087999999995,
+    "0.999": 187.35460000000054
+   },
+   "trend_slope": {
+    "0.5": 0.6749658965740544,
+    "0.95": 1.9557588569204194,
+    "0.99": 2.651150899625045,
+    "0.999": 3.2758736999911875
+   },
+   "energy": {
+    "0.5": 5948.0,
+    "0.95": 7404.199999999999,
+    "0.99": 8161.01,
+    "0.999": 9325.071000000014
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 42.0,
+    "alpha_0.01": 46.0,
+    "alpha_0.001": 51.0
+   },
+   "chi2": {
+    "alpha_0.05": 170.6248,
+    "alpha_0.01": 179.64087999999995,
+    "alpha_0.001": 187.35460000000054
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9557588569204194,
+    "alpha_0.01": 2.651150899625045,
+    "alpha_0.001": 3.2758736999911875
+   },
+   "energy": {
+    "alpha_0.05": 7404.199999999999,
+    "alpha_0.01": 8161.01,
+    "alpha_0.001": 9325.071000000014
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 40.0,
+    "q0.99": 44.0,
+    "q0.999": 50.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.05,
+    "q0.99": 0.045454545454545456,
+    "q0.999": 0.02
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 148.79462512898624,
+   "product_binomial_var": 149.57810095478393,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9947620953816325,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.24882044335950876,
+   "chi2_sample_mean": 150.22246399999997,
+   "chi2_theory_mean_under_independence": 150.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 34.2,
+  "skipped": false
+ },
+ "null_n300_k150_m2000": {
+  "cell": "null_n300_k150_m2000",
+  "n": 300,
+  "k": 150,
+  "m": 2000,
+  "p": 0.5,
+  "mu": 1000.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -0.0001298624429160325,
+   "sd": 0.014702533871795372
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 68.0,
+    "0.95": 84.0,
+    "0.99": 92.0,
+    "0.999": 103.00300000000061
+   },
+   "chi2": {
+    "0.5": 149.872,
+    "0.95": 169.9009,
+    "0.99": 178.00928,
+    "0.999": 185.12255200000052
+   },
+   "trend_slope": {
+    "0.5": 0.6753351700616984,
+    "0.95": 1.9448433987761402,
+    "0.99": 2.5925508311699046,
+    "0.999": 3.3814681689618147
+   },
+   "energy": {
+    "0.5": 23731.0,
+    "0.95": 29560.149999999998,
+    "0.99": 32645.289999999994,
+    "0.999": 35916.12700000002
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 84.0,
+    "alpha_0.01": 92.0,
+    "alpha_0.001": 103.00300000000061
+   },
+   "chi2": {
+    "alpha_0.05": 169.9009,
+    "alpha_0.01": 178.00928,
+    "alpha_0.001": 185.12255200000052
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9448433987761402,
+    "alpha_0.01": 2.5925508311699046,
+    "alpha_0.001": 3.3814681689618147
+   },
+   "energy": {
+    "alpha_0.05": 29560.149999999998,
+    "alpha_0.01": 32645.289999999994,
+    "alpha_0.001": 35916.12700000002
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 80.0,
+    "q0.99": 89.0,
+    "q0.999": 101.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.05,
+    "q0.99": 0.033707865168539325,
+    "q0.999": 0.019831683168322883
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 146.84932601997272,
+   "product_binomial_var": 150.41685430126947,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9762823900428648,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.2455674348160079,
+   "chi2_sample_mean": 149.9091885,
+   "chi2_theory_mean_under_independence": 150.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 122.69,
+  "skipped": false
+ },
+ "null_n300_k150_m5000": {
+  "cell": "null_n300_k150_m5000",
+  "n": 300,
+  "k": 150,
+  "m": 5000,
+  "p": 0.5,
+  "mu": 2500.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 0.0005163961821798019,
+   "sd": 0.023452280893327685
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 108.0,
+    "0.95": 133.0,
+    "0.99": 147.00999999999976,
+    "0.999": 162.0010000000002
+   },
+   "chi2": {
+    "0.5": 150.002,
+    "0.95": 171.3616,
+    "0.99": 179.52923999999996,
+    "0.999": 190.5128376
+   },
+   "trend_slope": {
+    "0.5": 0.688955028952043,
+    "0.95": 1.934017515865318,
+    "0.99": 2.5359363352131155,
+    "0.999": 3.2728431201578005
+   },
+   "energy": {
+    "0.5": 59527.5,
+    "0.95": 74422.09999999999,
+    "0.99": 82935.45999999999,
+    "0.999": 95043.4570000001
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 133.0,
+    "alpha_0.01": 147.00999999999976,
+    "alpha_0.001": 162.0010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 171.3616,
+    "alpha_0.01": 179.52923999999996,
+    "alpha_0.001": 190.5128376
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.934017515865318,
+    "alpha_0.01": 2.5359363352131155,
+    "alpha_0.001": 3.2728431201578005
+   },
+   "energy": {
+    "alpha_0.05": 74422.09999999999,
+    "alpha_0.01": 82935.45999999999,
+    "alpha_0.001": 95043.4570000001
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 127.0,
+    "q0.99": 141.0,
+    "q0.999": 159.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.047244094488188976,
+    "q0.99": 0.042624113475175626,
+    "q0.999": 0.01887421383647927
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 150.19496211524785,
+   "product_binomial_var": 149.01021644402286,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0079507680714634,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.2511621440054312,
+   "chi2_sample_mean": 150.42187099999998,
+   "chi2_theory_mean_under_independence": 150.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 293.9,
+  "skipped": false
+ },
+ "null_n300_k270_m500": {
+  "cell": "null_n300_k270_m500",
+  "n": 300,
+  "k": 270,
+  "m": 500,
+  "p": 0.9,
+  "mu": 450.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 0.00016531628129201433,
+   "sd": 0.0044144236569479845
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 20.0,
+    "0.95": 26.0,
+    "0.99": 28.0,
+    "0.999": 32.0
+   },
+   "chi2": {
+    "0.5": 29.98,
+    "0.95": 34.209555555555546,
+    "0.99": 36.12008888888889,
+    "0.999": 37.61364000000007
+   },
+   "trend_slope": {
+    "0.5": 0.6663583897842438,
+    "0.95": 1.9566388070944947,
+    "0.99": 2.570982782264809,
+    "0.999": 3.396601380953984
+   },
+   "energy": {
+    "0.5": 2146.0,
+    "0.95": 2655.0499999999997,
+    "0.99": 2931.0999999999976,
+    "0.999": 3199.055000000011
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 26.0,
+    "alpha_0.01": 28.0,
+    "alpha_0.001": 32.0
+   },
+   "chi2": {
+    "alpha_0.05": 34.209555555555546,
+    "alpha_0.01": 36.12008888888889,
+    "alpha_0.001": 37.61364000000007
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9566388070944947,
+    "alpha_0.01": 2.570982782264809,
+    "alpha_0.001": 3.396601380953984
+   },
+   "energy": {
+    "alpha_0.05": 2655.0499999999997,
+    "alpha_0.01": 2931.0999999999976,
+    "alpha_0.001": 3199.055000000011
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 22.0,
+    "q0.99": 25.0,
+    "q0.999": 27.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.18181818181818182,
+    "q0.99": 0.12,
+    "q0.999": 0.18518518518518517
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 3.637978807091713e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 6.171961913904402,
+   "product_binomial_var": 5.979633980314206,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0321638304657723,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.01032100654499064,
+   "chi2_sample_mean": 30.01449444444444,
+   "chi2_theory_mean_under_independence": 29.999999999999993,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 30.74,
+  "skipped": false
+ },
+ "null_n300_k270_m2000": {
+  "cell": "null_n300_k270_m2000",
+  "n": 300,
+  "k": 270,
+  "m": 2000,
+  "p": 0.9,
+  "mu": 1800.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 0.00027547006077845306,
+   "sd": 0.009080079279039251
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 41.0,
+    "0.95": 51.0,
+    "0.99": 58.0,
+    "0.999": 63.001000000000204
+   },
+   "chi2": {
+    "0.5": 29.95111111111111,
+    "0.95": 34.17755555555555,
+    "0.99": 36.11346666666667,
+    "0.999": 38.237824444444456
+   },
+   "trend_slope": {
+    "0.5": 0.6843481412551313,
+    "0.95": 1.9295714426705348,
+    "0.99": 2.6255077042615658,
+    "0.999": 3.4561517524434606
+   },
+   "energy": {
+    "0.5": 8569.0,
+    "0.95": 10735.15,
+    "0.99": 11742.229999999994,
+    "0.999": 12982.070000000014
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 51.0,
+    "alpha_0.01": 58.0,
+    "alpha_0.001": 63.001000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 34.17755555555555,
+    "alpha_0.01": 36.11346666666667,
+    "alpha_0.001": 38.237824444444456
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9295714426705348,
+    "alpha_0.01": 2.6255077042615658,
+    "alpha_0.001": 3.4561517524434606
+   },
+   "energy": {
+    "alpha_0.05": 10735.15,
+    "alpha_0.01": 11742.229999999994,
+    "alpha_0.001": 12982.070000000014
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 46.0,
+    "q0.99": 51.0,
+    "q0.999": 58.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.10869565217391304,
+    "q0.99": 0.13725490196078433,
+    "q0.999": 0.08622413793103799
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.4551915228366852e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 5.9963832940419515,
+   "product_binomial_var": 6.002003979384072,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9990635318867788,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.010027396812779183,
+   "chi2_sample_mean": 30.02362027777778,
+   "chi2_theory_mean_under_independence": 29.999999999999993,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 105.73,
+  "skipped": false
+ },
+ "null_n300_k270_m5000": {
+  "cell": "null_n300_k270_m5000",
+  "n": 300,
+  "k": 270,
+  "m": 5000,
+  "p": 0.9,
+  "mu": 4500.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 0.00016132334803720038,
+   "sd": 0.01407512576206258
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 65.0,
+    "0.95": 80.0,
+    "0.99": 89.0,
+    "0.999": 97.0
+   },
+   "chi2": {
+    "0.5": 29.869999999999997,
+    "0.95": 34.09622222222222,
+    "0.99": 35.85259555555553,
+    "0.999": 38.53176488888893
+   },
+   "trend_slope": {
+    "0.5": 0.6867045217513885,
+    "0.95": 1.9808742169798847,
+    "0.99": 2.6479646017135874,
+    "0.999": 3.325470429676489
+   },
+   "energy": {
+    "0.5": 21307.5,
+    "0.95": 26635.05,
+    "0.99": 29595.1,
+    "0.999": 32100.377000000077
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 80.0,
+    "alpha_0.01": 89.0,
+    "alpha_0.001": 97.0
+   },
+   "chi2": {
+    "alpha_0.05": 34.09622222222222,
+    "alpha_0.01": 35.85259555555553,
+    "alpha_0.001": 38.53176488888893
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9808742169798847,
+    "alpha_0.01": 2.6479646017135874,
+    "alpha_0.001": 3.325470429676489
+   },
+   "energy": {
+    "alpha_0.05": 26635.05,
+    "alpha_0.01": 29595.1,
+    "alpha_0.001": 32100.377000000077
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 74.0,
+    "q0.99": 83.0,
+    "q0.999": 93.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.08108108108108109,
+    "q0.99": 0.07228915662650602,
+    "q0.999": 0.043010752688172046
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 2.9103830456733704e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 6.01115042685827,
+   "product_binomial_var": 6.113287245468,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9832926518076756,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.01005209101481316,
+   "chi2_sample_mean": 29.93634088888889,
+   "chi2_theory_mean_under_independence": 29.999999999999993,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 292.29,
+  "skipped": false
+ },
+ "null_n1000_k50_m500": {
+  "cell": "null_n1000_k50_m500",
+  "n": 1000,
+  "k": 50,
+  "m": 500,
+  "p": 0.05,
+  "mu": 25.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 2.6061626061626337e-07,
+   "sd": 0.0005340122609465168
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 17.0,
+    "0.95": 21.0,
+    "0.99": 23.0,
+    "0.999": 26.001000000000204
+   },
+   "chi2": {
+    "0.5": 950.08,
+    "0.95": 1020.644,
+    "0.99": 1051.1223999999997,
+    "0.999": 1088.0005600000002
+   },
+   "trend_slope": {
+    "0.5": 0.6913331325501979,
+    "0.95": 1.9355387978722236,
+    "0.99": 2.5531564706028536,
+    "0.999": 3.3089654456550153
+   },
+   "energy": {
+    "0.5": 3140.0,
+    "0.95": 3587.0,
+    "0.99": 3836.039999999999,
+    "0.999": 4067.001
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 21.0,
+    "alpha_0.01": 23.0,
+    "alpha_0.001": 26.001000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 1020.644,
+    "alpha_0.01": 1051.1223999999997,
+    "alpha_0.001": 1088.0005600000002
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9355387978722236,
+    "alpha_0.01": 2.5531564706028536,
+    "alpha_0.001": 3.3089654456550153
+   },
+   "energy": {
+    "alpha_0.05": 3587.0,
+    "alpha_0.01": 3836.039999999999,
+    "alpha_0.001": 4067.001
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 21.0,
+    "q0.99": 23.0,
+    "q0.999": 26.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 3.846153846937411e-05
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 3.637978807091713e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1823.412069288922,
+   "product_binomial_var": 1849.7936968238473,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9857380703695643,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.9126186532977588,
+   "chi2_sample_mean": 950.00778,
+   "chi2_theory_mean_under_independence": 950.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.00175,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 96.65,
+  "skipped": false
+ },
+ "null_n1000_k50_m2000": {
+  "cell": "null_n1000_k50_m2000",
+  "n": 1000,
+  "k": 50,
+  "m": 2000,
+  "p": 0.05,
+  "mu": 100.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.05923235923236e-05,
+   "sd": 0.001064939645032537
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 33.0,
+    "0.95": 40.0,
+    "0.99": 44.0,
+    "0.999": 47.001000000000204
+   },
+   "chi2": {
+    "0.5": 949.89,
+    "0.95": 1020.822,
+    "0.99": 1049.8401999999999,
+    "0.999": 1080.3639400000006
+   },
+   "trend_slope": {
+    "0.5": 0.676146036457043,
+    "0.95": 1.9582058026464755,
+    "0.99": 2.521624981325924,
+    "0.999": 3.053201231690185
+   },
+   "energy": {
+    "0.5": 12599.5,
+    "0.95": 14298.199999999999,
+    "0.99": 15240.089999999998,
+    "0.999": 16226.122000000025
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 40.0,
+    "alpha_0.01": 44.0,
+    "alpha_0.001": 47.001000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 1020.822,
+    "alpha_0.01": 1049.8401999999999,
+    "alpha_0.001": 1080.3639400000006
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9582058026464755,
+    "alpha_0.01": 2.521624981325924,
+    "alpha_0.001": 3.053201231690185
+   },
+   "energy": {
+    "alpha_0.05": 14298.199999999999,
+    "alpha_0.01": 15240.089999999998,
+    "alpha_0.001": 16226.122000000025
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 40.0,
+    "q0.99": 44.0,
+    "q0.999": 49.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": -0.04079591836734278
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.4551915228366852e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1756.9932051940734,
+   "product_binomial_var": 1831.1167386909906,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9595200393668479,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.8793759785756123,
+   "chi2_sample_mean": 950.6000849999999,
+   "chi2_theory_mean_under_independence": 950.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.002,
+   "false_alarm_alpha_0.01": 0.00025
+  },
+  "dual_corner": null,
+  "wall_s": 310.75,
+  "skipped": false
+ },
+ "null_n1000_k50_m5000": {
+  "cell": "null_n1000_k50_m5000",
+  "n": 1000,
+  "k": 50,
+  "m": 5000,
+  "p": 0.05,
+  "mu": 250.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 1.6094638094638104e-05,
+   "sd": 0.0017248513516829479
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 52.0,
+    "0.95": 63.0,
+    "0.99": 69.0,
+    "0.999": 78.0010000000002
+   },
+   "chi2": {
+    "0.5": 948.748,
+    "0.95": 1022.15,
+    "0.99": 1052.6883200000002,
+    "0.999": 1085.51244
+   },
+   "trend_slope": {
+    "0.5": 0.6716307218780557,
+    "0.95": 1.945106732673783,
+    "0.99": 2.523859187653709,
+    "0.999": 3.3879636828020296
+   },
+   "energy": {
+    "0.5": 31445.5,
+    "0.95": 35823.399999999994,
+    "0.99": 37725.40999999999,
+    "0.999": 39905.24400000005
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 63.0,
+    "alpha_0.01": 69.0,
+    "alpha_0.001": 78.0010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 1022.15,
+    "alpha_0.01": 1052.6883200000002,
+    "alpha_0.001": 1085.51244
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.945106732673783,
+    "alpha_0.01": 2.523859187653709,
+    "alpha_0.001": 3.3879636828020296
+   },
+   "energy": {
+    "alpha_0.05": 35823.399999999994,
+    "alpha_0.01": 37725.40999999999,
+    "alpha_0.001": 39905.24400000005
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 62.0,
+    "q0.99": 68.0,
+    "q0.999": 76.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.016129032258064516,
+    "q0.99": 0.014705882352941176,
+    "q0.999": 0.026328947368423734
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 5.820766091346741e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1807.3123037678422,
+   "product_binomial_var": 1801.838626074339,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0030378290343507,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.9045607125965176,
+   "chi2_sample_mean": 950.09869,
+   "chi2_theory_mean_under_independence": 950.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.00375,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 551.8,
+  "skipped": false
+ },
+ "null_n1000_k500_m500": {
+  "cell": "null_n1000_k500_m500",
+  "n": 1000,
+  "k": 500,
+  "m": 500,
+  "p": 0.5,
+  "mu": 250.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.218969018969019e-05,
+   "sd": 0.0012326847794039133
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 38.0,
+    "0.95": 45.0,
+    "0.99": 49.0,
+    "0.999": 54.001000000000204
+   },
+   "chi2": {
+    "0.5": 499.028,
+    "0.95": 537.328,
+    "0.99": 556.05672,
+    "0.999": 577.1229520000006
+   },
+   "trend_slope": {
+    "0.5": 0.6682444997277855,
+    "0.95": 1.9529983297071867,
+    "0.99": 2.4812021811928044,
+    "0.999": 3.3305656764959224
+   },
+   "energy": {
+    "0.5": 16464.5,
+    "0.95": 18890.399999999998,
+    "0.99": 20006.32999999999,
+    "0.999": 21337.174000000035
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 45.0,
+    "alpha_0.01": 49.0,
+    "alpha_0.001": 54.001000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 537.328,
+    "alpha_0.01": 556.05672,
+    "alpha_0.001": 577.1229520000006
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9529983297071867,
+    "alpha_0.01": 2.4812021811928044,
+    "alpha_0.001": 3.3305656764959224
+   },
+   "energy": {
+    "alpha_0.05": 18890.399999999998,
+    "alpha_0.01": 20006.32999999999,
+    "alpha_0.001": 21337.174000000035
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 43.0,
+    "q0.99": 48.0,
+    "q0.999": 53.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.046511627906976744,
+    "q0.99": 0.020833333333333332,
+    "q0.999": 0.018886792452834034
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 515.3555236965242,
+   "product_binomial_var": 495.2304716491628,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0406377498952015,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.2579356975458079,
+   "chi2_sample_mean": 499.49062,
+   "chi2_theory_mean_under_independence": 500.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 103.46,
+  "skipped": false
+ },
+ "null_n1000_k500_m2000": {
+  "cell": "null_n1000_k500_m2000",
+  "n": 1000,
+  "k": 500,
+  "m": 2000,
+  "p": 0.5,
+  "mu": 1000.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -2.6729471729471723e-05,
+   "sd": 0.0024345699625989608
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 76.0,
+    "0.95": 90.0,
+    "0.99": 99.00999999999976,
+    "0.999": 105.0010000000002
+   },
+   "chi2": {
+    "0.5": 499.203,
+    "0.95": 537.5234,
+    "0.99": 554.20658,
+    "0.999": 576.4890800000003
+   },
+   "trend_slope": {
+    "0.5": 0.6744850681260057,
+    "0.95": 1.9434204188332722,
+    "0.99": 2.555715893424949,
+    "0.999": 3.239162848974017
+   },
+   "energy": {
+    "0.5": 65993.5,
+    "0.95": 75722.34999999999,
+    "0.99": 80464.19,
+    "0.999": 85037.21200000025
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 90.0,
+    "alpha_0.01": 99.00999999999976,
+    "alpha_0.001": 105.0010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 537.5234,
+    "alpha_0.01": 554.20658,
+    "alpha_0.001": 576.4890800000003
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9434204188332722,
+    "alpha_0.01": 2.555715893424949,
+    "alpha_0.001": 3.239162848974017
+   },
+   "energy": {
+    "alpha_0.05": 75722.34999999999,
+    "alpha_0.01": 80464.19,
+    "alpha_0.001": 85037.21200000025
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 87.0,
+    "q0.99": 95.0,
+    "q0.999": 106.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.034482758620689655,
+    "q0.99": 0.042210526315786985,
+    "q0.999": -0.009424528301884871
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 518.6905456205328,
+   "product_binomial_var": 500.1064228040366,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.037160336218634,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.25960487768795437,
+   "chi2_sample_mean": 499.55821649999996,
+   "chi2_theory_mean_under_independence": 500.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 340.54,
+  "skipped": false
+ },
+ "null_n1000_k500_m5000": {
+  "cell": "null_n1000_k500_m5000",
+  "n": 1000,
+  "k": 500,
+  "m": 5000,
+  "p": 0.5,
+  "mu": 2500.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.873261273261272e-05,
+   "sd": 0.0038315945484968064
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 120.0,
+    "0.95": 142.0,
+    "0.99": 153.0,
+    "0.999": 169.0020000000004
+   },
+   "chi2": {
+    "0.5": 499.7428,
+    "0.95": 536.091,
+    "0.99": 550.642696,
+    "0.999": 568.1310248000001
+   },
+   "trend_slope": {
+    "0.5": 0.6806828267160486,
+    "0.95": 1.9625119797448913,
+    "0.99": 2.57634919367924,
+    "0.999": 3.3006380922189282
+   },
+   "energy": {
+    "0.5": 165321.5,
+    "0.95": 188343.35,
+    "0.99": 199676.20999999996,
+    "0.999": 211175.66500000033
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 142.0,
+    "alpha_0.01": 153.0,
+    "alpha_0.001": 169.0020000000004
+   },
+   "chi2": {
+    "alpha_0.05": 536.091,
+    "alpha_0.01": 550.642696,
+    "alpha_0.001": 568.1310248000001
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9625119797448913,
+    "alpha_0.01": 2.57634919367924,
+    "alpha_0.001": 3.3006380922189282
+   },
+   "energy": {
+    "alpha_0.05": 188343.35,
+    "alpha_0.01": 199676.20999999996,
+    "alpha_0.001": 211175.66500000033
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 137.0,
+    "q0.99": 151.0,
+    "q0.999": 168.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0364963503649635,
+    "q0.99": 0.013245033112582781,
+    "q0.999": 0.00596428571428814
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 486.4521019831764,
+   "product_binomial_var": 493.0343260082471,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9866495623573265,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.2434695205121003,
+   "chi2_sample_mean": 499.7623456,
+   "chi2_theory_mean_under_independence": 500.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 469.89,
+  "skipped": false
+ },
+ "null_n1000_k900_m500": {
+  "cell": "null_n1000_k900_m500",
+  "n": 1000,
+  "k": 900,
+  "m": 500,
+  "p": 0.9,
+  "mu": 450.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 1.0852801852801853e-05,
+   "sd": 0.0007371538711529552
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 23.0,
+    "0.95": 28.0,
+    "0.99": 30.009999999999764,
+    "0.999": 35.0
+   },
+   "chi2": {
+    "0.5": 99.84,
+    "0.95": 107.74666666666667,
+    "0.99": 110.85808888888889,
+    "0.999": 115.23618222222234
+   },
+   "trend_slope": {
+    "0.5": 0.6832897884696858,
+    "0.95": 1.9314228527742634,
+    "0.99": 2.6377144795295893,
+    "0.999": 3.025495130029218
+   },
+   "energy": {
+    "0.5": 5955.0,
+    "0.95": 6838.0,
+    "0.99": 7285.0199999999995,
+    "0.999": 7611.020000000004
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 28.0,
+    "alpha_0.01": 30.009999999999764,
+    "alpha_0.001": 35.0
+   },
+   "chi2": {
+    "alpha_0.05": 107.74666666666667,
+    "alpha_0.01": 110.85808888888889,
+    "alpha_0.001": 115.23618222222234
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9314228527742634,
+    "alpha_0.01": 2.6377144795295893,
+    "alpha_0.001": 3.025495130029218
+   },
+   "energy": {
+    "alpha_0.05": 6838.0,
+    "alpha_0.01": 7285.0199999999995,
+    "alpha_0.001": 7611.020000000004
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 24.0,
+    "q0.99": 26.0,
+    "q0.999": 29.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.16666666666666666,
+    "q0.99": 0.15423076923076012,
+    "q0.999": 0.20689655172413793
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 7.275957614183426e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 20.264414923306134,
+   "product_binomial_var": 20.273364112329112,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9995585740495069,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.010142349811464531,
+   "chi2_sample_mean": 100.05109777777777,
+   "chi2_theory_mean_under_independence": 99.99999999999997,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 118.5,
+  "skipped": false
+ },
+ "null_n1000_k900_m2000": {
+  "cell": "null_n1000_k900_m2000",
+  "n": 1000,
+  "k": 900,
+  "m": 2000,
+  "p": 0.9,
+  "mu": 1800.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 5.318681318681311e-06,
+   "sd": 0.0014642620354381748
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 46.0,
+    "0.95": 54.0,
+    "0.99": 59.0,
+    "0.999": 66.0010000000002
+   },
+   "chi2": {
+    "0.5": 99.85666666666667,
+    "0.95": 107.35172222222222,
+    "0.99": 110.56888888888889,
+    "0.999": 115.11041555555563
+   },
+   "trend_slope": {
+    "0.5": 0.69740229034492,
+    "0.95": 1.9324415201094838,
+    "0.99": 2.5787880496208277,
+    "0.999": 3.3529884698434684
+   },
+   "energy": {
+    "0.5": 23774.5,
+    "0.95": 27156.149999999998,
+    "0.99": 28810.109999999997,
+    "0.999": 30828.598000000122
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 54.0,
+    "alpha_0.01": 59.0,
+    "alpha_0.001": 66.0010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 107.35172222222222,
+    "alpha_0.01": 110.56888888888889,
+    "alpha_0.001": 115.11041555555563
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9324415201094838,
+    "alpha_0.01": 2.5787880496208277,
+    "alpha_0.001": 3.3529884698434684
+   },
+   "energy": {
+    "alpha_0.05": 27156.149999999998,
+    "alpha_0.01": 28810.109999999997,
+    "alpha_0.001": 30828.598000000122
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 50.0,
+    "q0.99": 55.0,
+    "q0.999": 61.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.08,
+    "q0.99": 0.07272727272727272,
+    "q0.999": 0.08198360655738039
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 2.9103830456733704e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 20.471335699849654,
+   "product_binomial_var": 19.997573233510572,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0236909979429496,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.010245913763688516,
+   "chi2_sample_mean": 99.94144555555555,
+   "chi2_theory_mean_under_independence": 99.99999999999997,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 133.95,
+  "skipped": false
+ },
+ "null_n1000_k900_m5000": {
+  "cell": "null_n1000_k900_m5000",
+  "n": 1000,
+  "k": 900,
+  "m": 5000,
+  "p": 0.9,
+  "mu": 4500.0,
+  "n_reps": 4000,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 2.798660198660198e-05,
+   "sd": 0.002262834966318777
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 72.0,
+    "0.95": 86.0,
+    "0.99": 95.0,
+    "0.999": 104.00200000000041
+   },
+   "chi2": {
+    "0.5": 100.1031111111111,
+    "0.95": 107.53664444444445,
+    "0.99": 110.58851555555556,
+    "0.999": 113.95160755555574
+   },
+   "trend_slope": {
+    "0.5": 0.6637874720864207,
+    "0.95": 1.9668091576314983,
+    "0.99": 2.607949309250479,
+    "0.999": 3.1662629937111104
+   },
+   "energy": {
+    "0.5": 59632.0,
+    "0.95": 67781.2,
+    "0.99": 71617.11,
+    "0.999": 75376.02
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 86.0,
+    "alpha_0.01": 95.0,
+    "alpha_0.001": 104.00200000000041
+   },
+   "chi2": {
+    "alpha_0.05": 107.53664444444445,
+    "alpha_0.01": 110.58851555555556,
+    "alpha_0.001": 113.95160755555574
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9668091576314983,
+    "alpha_0.01": 2.607949309250479,
+    "alpha_0.001": 3.1662629937111104
+   },
+   "energy": {
+    "alpha_0.05": 67781.2,
+    "alpha_0.01": 71617.11,
+    "alpha_0.001": 75376.02
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 80.0,
+    "q0.99": 88.0,
+    "q0.999": 98.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.075,
+    "q0.99": 0.07954545454545454,
+    "q0.999": 0.06124489795918783
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 5.820766091346741e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 20.00160621709581,
+   "product_binomial_var": 19.90491363139842,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0048577244537682,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.010010813922470375,
+   "chi2_sample_mean": 100.12182711111112,
+   "chi2_theory_mean_under_independence": 99.99999999999997,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 262.43,
+  "skipped": false
+ },
+ "null_n3000_k150_m500": {
+  "cell": "null_n3000_k150_m500",
+  "n": 3000,
+  "k": 150,
+  "m": 500,
+  "p": 0.05,
+  "mu": 25.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 1.44577438286382e-06,
+   "sd": 0.00010316592158757582
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 19.0,
+    "0.95": 22.0,
+    "0.99": 24.0,
+    "0.999": 26.0
+   },
+   "chi2": {
+    "0.5": 2849.68,
+    "0.95": 2972.884,
+    "0.99": 3024.5632,
+    "0.999": 3071.459840000004
+   },
+   "trend_slope": {
+    "0.5": 0.6735816761823161,
+    "0.95": 1.9364639891723725,
+    "0.99": 2.670087379966099,
+    "0.999": 3.1161562579030484
+   },
+   "energy": {
+    "0.5": 8458.0,
+    "0.95": 9190.0,
+    "0.99": 9593.159999999996,
+    "0.999": 9897.042000000009
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 22.0,
+    "alpha_0.01": 24.0,
+    "alpha_0.001": 26.0
+   },
+   "chi2": {
+    "alpha_0.05": 2972.884,
+    "alpha_0.01": 3024.5632,
+    "alpha_0.001": 3071.459840000004
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9364639891723725,
+    "alpha_0.01": 2.670087379966099,
+    "alpha_0.001": 3.1161562579030484
+   },
+   "energy": {
+    "alpha_0.05": 9190.0,
+    "alpha_0.01": 9593.159999999996,
+    "alpha_0.001": 9897.042000000009
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 22.0,
+    "q0.99": 25.0,
+    "q0.999": 27.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": -0.04,
+    "q0.999": -0.037037037037037035
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 7.275957614183426e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 5481.946413023833,
+   "product_binomial_var": 5516.970283946207,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9936516114606798,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.9139623896338501,
+   "chi2_sample_mean": 2850.174624,
+   "chi2_theory_mean_under_independence": 2850.0,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 36.58,
+  "skipped": false
+ },
+ "null_n3000_k150_m2000": {
+  "cell": "null_n3000_k150_m2000",
+  "n": 3000,
+  "k": 150,
+  "m": 2000,
+  "p": 0.05,
+  "mu": 100.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.676915252990584e-06,
+   "sd": 0.00020696285437188443
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 36.0,
+    "0.95": 43.0,
+    "0.99": 47.0,
+    "0.999": 51.0
+   },
+   "chi2": {
+    "0.5": 2850.88,
+    "0.95": 2971.473,
+    "0.99": 3018.6205999999997,
+    "0.999": 3081.6381000000056
+   },
+   "trend_slope": {
+    "0.5": 0.6517905538497779,
+    "0.95": 1.947862780898312,
+    "0.99": 2.6070217757965763,
+    "0.999": 3.2611584280245247
+   },
+   "energy": {
+    "0.5": 33854.5,
+    "0.95": 36696.15,
+    "0.99": 37959.14,
+    "0.999": 39335.026000000005
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 43.0,
+    "alpha_0.01": 47.0,
+    "alpha_0.001": 51.0
+   },
+   "chi2": {
+    "alpha_0.05": 2971.473,
+    "alpha_0.01": 3018.6205999999997,
+    "alpha_0.001": 3081.6381000000056
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.947862780898312,
+    "alpha_0.01": 2.6070217757965763,
+    "alpha_0.001": 3.2611584280245247
+   },
+   "energy": {
+    "alpha_0.05": 36696.15,
+    "alpha_0.01": 37959.14,
+    "alpha_0.001": 39335.026000000005
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 43.0,
+    "q0.99": 47.0,
+    "q0.999": 52.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": -0.019230769230769232
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 5237.045122997422,
+   "product_binomial_var": 5417.872163848361,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9666239742499765,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.8731318977988367,
+   "chi2_sample_mean": 2850.8394240000002,
+   "chi2_theory_mean_under_independence": 2850.0,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0004,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 127.97,
+  "skipped": false
+ },
+ "null_n3000_k1500_m500": {
+  "cell": "null_n3000_k1500_m500",
+  "n": 3000,
+  "k": 1500,
+  "m": 500,
+  "p": 0.5,
+  "mu": 250.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 7.972905952545105e-06,
+   "sd": 0.00023258396455971326
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 41.0,
+    "0.95": 48.0,
+    "0.99": 53.0,
+    "0.999": 56.501000000000204
+   },
+   "chi2": {
+    "0.5": 1497.964,
+    "0.95": 1564.1732,
+    "0.99": 1593.55272,
+    "0.999": 1615.2557680000007
+   },
+   "trend_slope": {
+    "0.5": 0.674419360065691,
+    "0.95": 1.9599800559798821,
+    "0.99": 2.5004690500412114,
+    "0.999": 3.3650752672371214
+   },
+   "energy": {
+    "0.5": 44514.5,
+    "0.95": 47964.5,
+    "0.99": 49304.61999999999,
+    "0.999": 50643.23000000005
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 48.0,
+    "alpha_0.01": 53.0,
+    "alpha_0.001": 56.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 1564.1732,
+    "alpha_0.01": 1593.55272,
+    "alpha_0.001": 1615.2557680000007
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9599800559798821,
+    "alpha_0.01": 2.5004690500412114,
+    "alpha_0.001": 3.3650752672371214
+   },
+   "energy": {
+    "alpha_0.05": 47964.5,
+    "alpha_0.01": 49304.61999999999,
+    "alpha_0.001": 50643.23000000005
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 46.0,
+    "q0.99": 50.0,
+    "q0.999": 55.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.043478260869565216,
+    "q0.99": 0.06,
+    "q0.999": 0.027290909090912797
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1498.2202208575616,
+   "product_binomial_var": 1489.7596733144824,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.005679135832866,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.24978663235371149,
+   "chi2_sample_mean": 1499.1055488,
+   "chi2_theory_mean_under_independence": 1500.0,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 57.23,
+  "skipped": false
+ },
+ "null_n3000_k1500_m2000": {
+  "cell": "null_n3000_k1500_m2000",
+  "n": 3000,
+  "k": 1500,
+  "m": 2000,
+  "p": 0.5,
+  "mu": 1000.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -1.0466170051796653e-07,
+   "sd": 0.00047240231964292137
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 83.0,
+    "0.95": 96.0,
+    "0.99": 105.0,
+    "0.999": 114.0
+   },
+   "chi2": {
+    "0.5": 1501.188,
+    "0.95": 1567.046,
+    "0.99": 1594.26038,
+    "0.999": 1619.6014940000005
+   },
+   "trend_slope": {
+    "0.5": 0.6814766428847752,
+    "0.95": 1.9397786186876096,
+    "0.99": 2.610601921035845,
+    "0.999": 3.21329315049468
+   },
+   "energy": {
+    "0.5": 178059.5,
+    "0.95": 192892.25,
+    "0.99": 198990.84999999992,
+    "0.999": 206117.77300000066
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 96.0,
+    "alpha_0.01": 105.0,
+    "alpha_0.001": 114.0
+   },
+   "chi2": {
+    "alpha_0.05": 1567.046,
+    "alpha_0.01": 1594.26038,
+    "alpha_0.001": 1619.6014940000005
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9397786186876096,
+    "alpha_0.01": 2.610601921035845,
+    "alpha_0.001": 3.21329315049468
+   },
+   "energy": {
+    "alpha_0.05": 192892.25,
+    "alpha_0.01": 198990.84999999992,
+    "alpha_0.001": 206117.77300000066
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 93.0,
+    "q0.99": 101.0,
+    "q0.999": 111.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.03225806451612903,
+    "q0.99": 0.039603960396039604,
+    "q0.999": 0.02702702702702703
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1512.716802361963,
+   "product_binomial_var": 1506.4678584944713,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0041480764639323,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.25220353490529557,
+   "chi2_sample_mean": 1501.0098776,
+   "chi2_theory_mean_under_independence": 1500.0,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 142.73,
+  "skipped": false
+ },
+ "null_n3000_k2700_m500": {
+  "cell": "null_n3000_k2700_m500",
+  "n": 3000,
+  "k": 2700,
+  "m": 500,
+  "p": 0.9,
+  "mu": 450.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -3.891586210176247e-07,
+   "sd": 0.00014463064924492955
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 25.0,
+    "0.95": 30.0,
+    "0.99": 33.0,
+    "0.999": 35.501000000000204
+   },
+   "chi2": {
+    "0.5": 299.8377777777778,
+    "0.95": 313.1333333333333,
+    "0.99": 318.732311111111,
+    "0.999": 323.03854666666683
+   },
+   "trend_slope": {
+    "0.5": 0.6883189115243817,
+    "0.95": 1.9308691237563747,
+    "0.99": 2.6547433101704274,
+    "0.999": 3.1103123332346287
+   },
+   "energy": {
+    "0.5": 16035.5,
+    "0.95": 17370.25,
+    "0.99": 18063.03,
+    "0.999": 19104.040000000008
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 30.0,
+    "alpha_0.01": 33.0,
+    "alpha_0.001": 35.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 313.1333333333333,
+    "alpha_0.01": 318.732311111111,
+    "alpha_0.001": 323.03854666666683
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9308691237563747,
+    "alpha_0.01": 2.6547433101704274,
+    "alpha_0.001": 3.1103123332346287
+   },
+   "energy": {
+    "alpha_0.05": 17370.25,
+    "alpha_0.01": 18063.03,
+    "alpha_0.001": 19104.040000000008
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 25.0,
+    "q0.99": 27.0,
+    "q0.999": 30.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.2,
+    "q0.99": 0.2222222222222222,
+    "q0.999": 0.18336666666667345
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 2.9103830456733704e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 63.95620591497833,
+   "product_binomial_var": 60.533810216755846,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0565369284696895,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.010662921959816326,
+   "chi2_sample_mean": 299.79592,
+   "chi2_theory_mean_under_independence": 299.99999999999994,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 59.23,
+  "skipped": false
+ },
+ "null_n3000_k2700_m2000": {
+  "cell": "null_n3000_k2700_m2000",
+  "n": 3000,
+  "k": 2700,
+  "m": 2000,
+  "p": 0.9,
+  "mu": 1800.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -3.1051411450156834e-06,
+   "sd": 0.0002814291103620416
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 49.0,
+    "0.95": 58.0,
+    "0.99": 63.0,
+    "0.999": 68.0
+   },
+   "chi2": {
+    "0.5": 300.1016666666667,
+    "0.95": 312.77922222222224,
+    "0.99": 319.4489666666667,
+    "0.999": 325.1718366666667
+   },
+   "trend_slope": {
+    "0.5": 0.6807612085362166,
+    "0.95": 1.9635713665583854,
+    "0.99": 2.5344543931550847,
+    "0.999": 3.001320843151839
+   },
+   "energy": {
+    "0.5": 64106.0,
+    "0.95": 69343.2,
+    "0.99": 71868.55999999998,
+    "0.999": 74511.58700000042
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 58.0,
+    "alpha_0.01": 63.0,
+    "alpha_0.001": 68.0
+   },
+   "chi2": {
+    "alpha_0.05": 312.77922222222224,
+    "alpha_0.01": 319.4489666666667,
+    "alpha_0.001": 325.1718366666667
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9635713665583854,
+    "alpha_0.01": 2.5344543931550847,
+    "alpha_0.001": 3.001320843151839
+   },
+   "energy": {
+    "alpha_0.05": 69343.2,
+    "alpha_0.01": 71868.55999999998,
+    "alpha_0.001": 74511.58700000042
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 53.0,
+    "q0.99": 58.0,
+    "q0.999": 63.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.09433962264150944,
+    "q0.99": 0.08620689655172414,
+    "q0.999": 0.07936507936507936
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.1641532182693481e-10
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 61.42266752053335,
+   "product_binomial_var": 60.478166738936935,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.015617219114354,
+   "chi2_df_var": 5998.0,
+   "variance_ratio_true_vs_chi2df": 0.010240524761676117,
+   "chi2_sample_mean": 300.0676768888889,
+   "chi2_theory_mean_under_independence": 299.99999999999994,
+   "textbook_chi2_95": 3127.515431571307,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 262.23,
+  "skipped": false
+ },
+ "null_n10000_k500_m500": {
+  "cell": "null_n10000_k500_m500",
+  "n": 10000,
+  "k": 500,
+  "m": 500,
+  "p": 0.05,
+  "mu": 25.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -1.8483374584833744e-08,
+   "sd": 1.7135567907458216e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 20.0,
+    "0.95": 24.0,
+    "0.99": 26.0,
+    "0.999": 29.501000000000204
+   },
+   "chi2": {
+    "0.5": 9504.52,
+    "0.95": 9724.464,
+    "0.99": 9812.909599999999,
+    "0.999": 9878.20216
+   },
+   "trend_slope": {
+    "0.5": 0.6702852687746669,
+    "0.95": 1.9890519036489331,
+    "0.99": 2.572131998961404,
+    "0.999": 3.5245187967425857
+   },
+   "energy": {
+    "0.5": 26197.0,
+    "0.95": 27381.0,
+    "0.99": 27993.629999999986,
+    "0.999": 28556.571000000014
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 24.0,
+    "alpha_0.01": 26.0,
+    "alpha_0.001": 29.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 9724.464,
+    "alpha_0.01": 9812.909599999999,
+    "alpha_0.001": 9878.20216
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9890519036489331,
+    "alpha_0.01": 2.572131998961404,
+    "alpha_0.001": 3.5245187967425857
+   },
+   "energy": {
+    "alpha_0.05": 27381.0,
+    "alpha_0.01": 27993.629999999986,
+    "alpha_0.001": 28556.571000000014
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 24.0,
+    "q0.99": 26.0,
+    "q0.999": 29.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.017275862068972542
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 5.820766091346741e-11
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 18019.547695352314,
+   "product_binomial_var": 18421.562020754885,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9781769686550121,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.9010674915167673,
+   "chi2_sample_mean": 9503.296768,
+   "chi2_theory_mean_under_independence": 9500.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 259.85,
+  "skipped": false
+ },
+ "null_n10000_k500_m1000": {
+  "cell": "null_n10000_k500_m1000",
+  "n": 10000,
+  "k": 500,
+  "m": 1000,
+  "p": 0.05,
+  "mu": 50.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -2.436360984363591e-08,
+   "sd": 2.4035782445050953e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 28.0,
+    "0.95": 33.0,
+    "0.99": 36.0,
+    "0.999": 40.501000000000204
+   },
+   "chi2": {
+    "0.5": 9503.8,
+    "0.95": 9717.578,
+    "0.99": 9810.3676,
+    "0.999": 9915.224760000001
+   },
+   "trend_slope": {
+    "0.5": 0.6939441312104763,
+    "0.95": 1.931350810774775,
+    "0.99": 2.5519565360943957,
+    "0.999": 3.39663256582764
+   },
+   "energy": {
+    "0.5": 52410.0,
+    "0.95": 54791.1,
+    "0.99": 55868.149999999994,
+    "0.999": 57360.437000000195
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 33.0,
+    "alpha_0.01": 36.0,
+    "alpha_0.001": 40.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 9717.578,
+    "alpha_0.01": 9810.3676,
+    "alpha_0.001": 9915.224760000001
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.931350810774775,
+    "alpha_0.01": 2.5519565360943957,
+    "alpha_0.001": 3.39663256582764
+   },
+   "energy": {
+    "alpha_0.05": 54791.1,
+    "alpha_0.01": 55868.149999999994,
+    "alpha_0.001": 57360.437000000195
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 33.0,
+    "q0.99": 36.0,
+    "q0.999": 39.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.03848717948718471
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 1.1641532182693481e-10
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 17678.52904832435,
+   "product_binomial_var": 18039.716826831296,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.979978190235795,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.8840148539016077,
+   "chi2_sample_mean": 9503.747824,
+   "chi2_theory_mean_under_independence": 9500.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 295.33,
+  "skipped": false
+ },
+ "null_n10000_k500_m2000": {
+  "cell": "null_n10000_k500_m2000",
+  "n": 10000,
+  "k": 500,
+  "m": 2000,
+  "p": 0.05,
+  "mu": 100.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.10095593500956e-07,
+   "sd": 3.471120110540893e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 39.0,
+    "0.95": 46.0,
+    "0.99": 49.0,
+    "0.999": 52.501000000000204
+   },
+   "chi2": {
+    "0.5": 9508.21,
+    "0.95": 9726.628,
+    "0.99": 9821.0646,
+    "0.999": 9941.574060000004
+   },
+   "trend_slope": {
+    "0.5": 0.6883841376270607,
+    "0.95": 1.9638267913652117,
+    "0.99": 2.606317421870679,
+    "0.999": 3.129179290072182
+   },
+   "energy": {
+    "0.5": 104678.5,
+    "0.95": 109557.2,
+    "0.99": 112546.23999999999,
+    "0.999": 115516.83200000017
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 46.0,
+    "alpha_0.01": 49.0,
+    "alpha_0.001": 52.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 9726.628,
+    "alpha_0.01": 9821.0646,
+    "alpha_0.001": 9941.574060000004
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9638267913652117,
+    "alpha_0.01": 2.606317421870679,
+    "alpha_0.001": 3.129179290072182
+   },
+   "energy": {
+    "alpha_0.05": 109557.2,
+    "alpha_0.01": 112546.23999999999,
+    "alpha_0.001": 115516.83200000017
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 46.0,
+    "q0.99": 49.0,
+    "q0.999": 54.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": -0.027759259259255487
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 2.3283064365386963e-10
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 19191.254282762708,
+   "product_binomial_var": 18009.29124451852,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0656307359460322,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.959658680006136,
+   "chi2_sample_mean": 9504.02552,
+   "chi2_theory_mean_under_independence": 9500.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 574.2,
+  "skipped": false
+ },
+ "null_n10000_k5000_m500": {
+  "cell": "null_n10000_k5000_m500",
+  "n": 10000,
+  "k": 5000,
+  "m": 500,
+  "p": 0.5,
+  "mu": 250.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 3.4780540667805427e-07,
+   "sd": 3.8953943808406365e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 44.0,
+    "0.95": 51.0,
+    "0.99": 55.0,
+    "0.999": 58.501000000000204
+   },
+   "chi2": {
+    "0.5": 5000.048000000001,
+    "0.95": 5115.7928,
+    "0.99": 5160.93728,
+    "0.999": 5199.781392000001
+   },
+   "trend_slope": {
+    "0.5": 0.6638281603160003,
+    "0.95": 1.9512143108486046,
+    "0.99": 2.649567232393391,
+    "0.999": 3.106557530711917
+   },
+   "energy": {
+    "0.5": 137690.5,
+    "0.95": 143863.65,
+    "0.99": 146707.37,
+    "0.999": 150796.77200000017
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 51.0,
+    "alpha_0.01": 55.0,
+    "alpha_0.001": 58.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 5115.7928,
+    "alpha_0.01": 5160.93728,
+    "alpha_0.001": 5199.781392000001
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9512143108486046,
+    "alpha_0.01": 2.649567232393391,
+    "alpha_0.001": 3.106557530711917
+   },
+   "energy": {
+    "alpha_0.05": 143863.65,
+    "alpha_0.01": 146707.37,
+    "alpha_0.001": 150796.77200000017
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 49.0,
+    "q0.99": 53.0,
+    "q0.999": 58.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.04081632653061224,
+    "q0.99": 0.03773584905660377,
+    "q0.999": 0.008637931034486271
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 4881.687156236251,
+   "product_binomial_var": 4916.2346943301645,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9929727646782696,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.24410876868868142,
+   "chi2_sample_mean": 5000.0777984,
+   "chi2_theory_mean_under_independence": 5000.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 122.47,
+  "skipped": false
+ },
+ "null_n10000_k5000_m1000": {
+  "cell": "null_n10000_k5000_m1000",
+  "n": 10000,
+  "k": 5000,
+  "m": 1000,
+  "p": 0.5,
+  "mu": 500.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 1.3595619255956193e-06,
+   "sd": 5.5543708335277206e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 63.0,
+    "0.95": 72.0,
+    "0.99": 78.0,
+    "0.999": 83.0
+   },
+   "chi2": {
+    "0.5": 5001.408,
+    "0.95": 5113.4146,
+    "0.99": 5168.64732,
+    "0.999": 5217.350436
+   },
+   "trend_slope": {
+    "0.5": 0.6909565013578297,
+    "0.95": 1.9808287252860217,
+    "0.99": 2.5602908745291733,
+    "0.999": 3.06545855208103
+   },
+   "energy": {
+    "0.5": 275404.0,
+    "0.95": 288166.05,
+    "0.99": 294535.7,
+    "0.999": 301177.1570000001
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 72.0,
+    "alpha_0.01": 78.0,
+    "alpha_0.001": 83.0
+   },
+   "chi2": {
+    "alpha_0.05": 5113.4146,
+    "alpha_0.01": 5168.64732,
+    "alpha_0.001": 5217.350436
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9808287252860217,
+    "alpha_0.01": 2.5602908745291733,
+    "alpha_0.001": 3.06545855208103
+   },
+   "energy": {
+    "alpha_0.05": 288166.05,
+    "alpha_0.01": 294535.7,
+    "alpha_0.001": 301177.1570000001
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 70.0,
+    "q0.99": 75.0,
+    "q0.999": 82.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.02857142857142857,
+    "q0.99": 0.04,
+    "q0.999": 0.012195121951219513
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 5133.113658036589,
+   "product_binomial_var": 4930.692803441656,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0410532277439069,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.2566813510369331,
+   "chi2_sample_mean": 4999.789832,
+   "chi2_theory_mean_under_independence": 5000.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 454.14,
+  "skipped": false
+ },
+ "null_n10000_k5000_m2000": {
+  "cell": "null_n10000_k5000_m2000",
+  "n": 10000,
+  "k": 5000,
+  "m": 2000,
+  "p": 0.5,
+  "mu": 1000.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": -2.1544773863447735e-06,
+   "sd": 7.652305286954189e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 89.0,
+    "0.95": 101.0,
+    "0.99": 108.0,
+    "0.999": 116.5010000000002
+   },
+   "chi2": {
+    "0.5": 4999.222,
+    "0.95": 5116.916300000001,
+    "0.99": 5169.3493,
+    "0.999": 5260.553618
+   },
+   "trend_slope": {
+    "0.5": 0.675268047719292,
+    "0.95": 1.9520336202050674,
+    "0.99": 2.507016410113819,
+    "0.999": 3.229508240783793
+   },
+   "energy": {
+    "0.5": 550510.5,
+    "0.95": 576058.0499999999,
+    "0.99": 588064.2,
+    "0.999": 598718.3130000002
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 101.0,
+    "alpha_0.01": 108.0,
+    "alpha_0.001": 116.5010000000002
+   },
+   "chi2": {
+    "alpha_0.05": 5116.916300000001,
+    "alpha_0.01": 5169.3493,
+    "alpha_0.001": 5260.553618
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9520336202050674,
+    "alpha_0.01": 2.507016410113819,
+    "alpha_0.001": 3.229508240783793
+   },
+   "energy": {
+    "alpha_0.05": 576058.0499999999,
+    "alpha_0.01": 588064.2,
+    "alpha_0.001": 598718.3130000002
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 99.0,
+    "q0.99": 106.0,
+    "q0.999": 116.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.020202020202020204,
+    "q0.99": 0.018867924528301886,
+    "q0.999": 0.004318965517243136
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 5077.156379866463,
+   "product_binomial_var": 5017.784620080696,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0118322654878742,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.25388320731405456,
+   "chi2_sample_mean": 5000.429269599999,
+   "chi2_theory_mean_under_independence": 5000.0,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 672.93,
+  "skipped": false
+ },
+ "null_n10000_k9000_m1000": {
+  "cell": "null_n10000_k9000_m1000",
+  "n": 10000,
+  "k": 9000,
+  "m": 1000,
+  "p": 0.9,
+  "mu": 900.0,
+  "n_reps": 2500,
+  "role": "main",
+  "trend_z_reference": {
+   "mu": 6.10772386907724e-07,
+   "sd": 3.217495236323191e-05
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 38.0,
+    "0.95": 44.0,
+    "0.99": 47.00999999999976,
+    "0.999": 52.501000000000204
+   },
+   "chi2": {
+    "0.5": 1000.52,
+    "0.95": 1024.559,
+    "0.99": 1037.3670888888887,
+    "0.999": 1051.0847777777783
+   },
+   "trend_slope": {
+    "0.5": 0.6841456543841933,
+    "0.95": 1.9165402446529627,
+    "0.99": 2.5604346981772337,
+    "0.999": 3.1237532048911687
+   },
+   "energy": {
+    "0.5": 99205.0,
+    "0.95": 103765.25,
+    "0.99": 105860.37,
+    "0.999": 108733.64200000014
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 44.0,
+    "alpha_0.01": 47.00999999999976,
+    "alpha_0.001": 52.501000000000204
+   },
+   "chi2": {
+    "alpha_0.05": 1024.559,
+    "alpha_0.01": 1037.3670888888887,
+    "alpha_0.001": 1051.0847777777783
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9165402446529627,
+    "alpha_0.01": 2.5604346981772337,
+    "alpha_0.001": 3.1237532048911687
+   },
+   "energy": {
+    "alpha_0.05": 103765.25,
+    "alpha_0.01": 105860.37,
+    "alpha_0.001": 108733.64200000014
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 39.0,
+    "q0.99": 42.0,
+    "q0.999": 46.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.1282051282051282,
+    "q0.99": 0.11928571428570865,
+    "q0.999": 0.14132608695652618
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 2.3283064365386963e-10
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 205.7922950870027,
+   "product_binomial_var": 201.2160868963058,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 1.0227427551210417,
+   "chi2_df_var": 19998.0,
+   "variance_ratio_true_vs_chi2df": 0.01029064381873201,
+   "chi2_sample_mean": 1000.5400622222222,
+   "chi2_theory_mean_under_independence": 999.9999999999998,
+   "textbook_chi2_95": 10232.737266236883,
+   "false_alarm_alpha_0.05": 0.0,
+   "false_alarm_alpha_0.01": 0.0
+  },
+  "dual_corner": null,
+  "wall_s": 481.42,
+  "skipped": false
+ },
+ "null_n300_k5_m500": {
+  "cell": "null_n300_k5_m500",
+  "n": 300,
+  "k": 5,
+  "m": 500,
+  "p": 0.016666666666666666,
+  "mu": 8.333333333333334,
+  "n_reps": 4000,
+  "role": "corner",
+  "trend_z_reference": {
+   "mu": 4.244158268425283e-06,
+   "sd": 0.0019207054757711141
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 8.666666666666666,
+    "0.95": 11.666666666666666,
+    "0.99": 13.666666666666666,
+    "0.999": 15.666666666666666
+   },
+   "chi2": {
+    "0.5": 293.84000000000003,
+    "0.95": 335.36,
+    "0.99": 352.1624,
+    "0.999": 370.16240000000045
+   },
+   "trend_slope": {
+    "0.5": 0.6792718506725961,
+    "0.95": 1.9881675770801095,
+    "0.99": 2.522478103534934,
+    "0.999": 3.1655179307253603
+   },
+   "energy": {
+    "0.5": 392.6666666666662,
+    "0.95": 498.36666666666616,
+    "0.99": 549.6699999999998,
+    "0.999": 614.0013333333335
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 11.666666666666666,
+    "alpha_0.01": 13.666666666666666,
+    "alpha_0.001": 15.666666666666666
+   },
+   "chi2": {
+    "alpha_0.05": 335.36,
+    "alpha_0.01": 352.1624,
+    "alpha_0.001": 370.16240000000045
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9881675770801095,
+    "alpha_0.01": 2.522478103534934,
+    "alpha_0.001": 3.1655179307253603
+   },
+   "energy": {
+    "alpha_0.05": 498.36666666666616,
+    "alpha_0.01": 549.6699999999998,
+    "alpha_0.001": 614.0013333333335
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 11.666666666666666,
+    "q0.99": 13.666666666666666,
+    "q0.999": 15.666666666666666
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.0
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 2.1316282072803006e-14,
+    "energy_maxabs_diff": 5.002220859751105e-12,
+    "trend_slope_sum_maxabs": 6.288372600415926e-18,
+    "chi2_scaled_maxabs_diff": 9.094947017729282e-13
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 578.8400046247561,
+   "product_binomial_var": 616.4864843493599,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9389338117212158,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.9679598739544417,
+   "chi2_sample_mean": 294.70957999999996,
+   "chi2_theory_mean_under_independence": 295.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.0305,
+   "false_alarm_alpha_0.01": 0.00425
+  },
+  "dual_corner": {
+   "k_dual": 295,
+   "p_dual": 0.9833333333333333,
+   "mu_dual": 491.6666666666667,
+   "maxdev_quantiles": {
+    "0.5": 8.666666666666666,
+    "0.95": 11.666666666666666,
+    "0.99": 13.666666666666666,
+    "0.999": 15.666666666666666
+   },
+   "chi2_quantiles_scaled": {
+    "q0.5": 4.9803389830508475,
+    "q0.95": 5.68406779661017,
+    "q0.99": 5.968854237288135,
+    "q0.999": 6.273938983050855
+   },
+   "energy_quantiles": {
+    "0.5": 392.6666666666662,
+    "0.95": 498.36666666666616,
+    "0.99": 549.6699999999998,
+    "0.999": 614.0013333333335
+   },
+   "trend_abs_z_quantiles": {
+    "0.5": 0.6792718506725961,
+    "0.95": 1.9881675770801095,
+    "0.99": 2.522478103534934,
+    "0.999": 3.1655179307253603
+   },
+   "thresholds": {
+    "alpha_0.05": {
+     "maxdev": 11.666666666666666,
+     "chi2": 5.68406779661017,
+     "trend_slope": 1.9881675770801095,
+     "energy": 498.36666666666616
+    },
+    "alpha_0.01": {
+     "maxdev": 13.666666666666666,
+     "chi2": 5.968854237288135,
+     "trend_slope": 2.522478103534934,
+     "energy": 549.6699999999998
+    }
+   },
+   "benchmark_maxdev_Fn": {
+    "0.95": 8.333333333333371,
+    "0.99": 8.333333333333371,
+    "0.999": 8.333333333333371
+   },
+   "benchmark_maxdev_rel_error": {
+    "q0.95": 0.3999999999999936,
+    "q0.99": 0.6399999999999925,
+    "q0.999": 0.8799999999999913
+   },
+   "read_off_note": "k=n-5 corner read exactly from the k=5 simulation via the anti-reservoir complement duality D(n-5)=D(5)"
+  },
+  "wall_s": 6.8,
+  "skipped": false
+ },
+ "null_n300_k5_m2000": {
+  "cell": "null_n300_k5_m2000",
+  "n": 300,
+  "k": 5,
+  "m": 2000,
+  "p": 0.016666666666666666,
+  "mu": 33.333333333333336,
+  "n_reps": 4000,
+  "role": "corner",
+  "trend_z_reference": {
+   "mu": -8.14942388248766e-06,
+   "sd": 0.003955161609004401
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 17.666666666666664,
+    "0.95": 22.666666666666664,
+    "0.99": 24.666666666666664,
+    "0.999": 28.666666666666664
+   },
+   "chi2": {
+    "0.5": 295.07,
+    "0.95": 335.06299999999993,
+    "0.99": 352.34959999999967,
+    "0.999": 377.60138000000023
+   },
+   "trend_slope": {
+    "0.5": 0.6860871880254009,
+    "0.95": 1.971101802849232,
+    "0.99": 2.505973599156381,
+    "0.999": 3.181812798763752
+   },
+   "energy": {
+    "0.5": 1563.8333333333344,
+    "0.95": 1952.783333333333,
+    "0.99": 2180.0033333333304,
+    "0.999": 2401.0103333333336
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 22.666666666666664,
+    "alpha_0.01": 24.666666666666664,
+    "alpha_0.001": 28.666666666666664
+   },
+   "chi2": {
+    "alpha_0.05": 335.06299999999993,
+    "alpha_0.01": 352.34959999999967,
+    "alpha_0.001": 377.60138000000023
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.971101802849232,
+    "alpha_0.01": 2.505973599156381,
+    "alpha_0.001": 3.181812798763752
+   },
+   "energy": {
+    "alpha_0.05": 1952.783333333333,
+    "alpha_0.01": 2180.0033333333304,
+    "alpha_0.001": 2401.0103333333336
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 22.666666666666664,
+    "q0.99": 24.666666666666664,
+    "q0.999": 28.666666666666664
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.0
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 7.815970093361102e-14,
+    "energy_maxabs_diff": 2.546585164964199e-11,
+    "trend_slope_sum_maxabs": 2.190088388420719e-17,
+    "chi2_scaled_maxabs_diff": 5.4569682106375694e-12
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 557.8684856030006,
+   "product_binomial_var": 589.089309616245,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.9470015437326764,
+   "chi2_df_var": 598.0,
+   "variance_ratio_true_vs_chi2df": 0.9328904441521749,
+   "chi2_sample_mean": 295.29571999999996,
+   "chi2_theory_mean_under_independence": 295.0,
+   "textbook_chi2_95": 340.3278503488595,
+   "false_alarm_alpha_0.05": 0.033,
+   "false_alarm_alpha_0.01": 0.0055
+  },
+  "dual_corner": {
+   "k_dual": 295,
+   "p_dual": 0.9833333333333333,
+   "mu_dual": 1966.6666666666667,
+   "maxdev_quantiles": {
+    "0.5": 17.666666666666664,
+    "0.95": 22.666666666666664,
+    "0.99": 24.666666666666664,
+    "0.999": 28.666666666666664
+   },
+   "chi2_quantiles_scaled": {
+    "q0.5": 5.001186440677966,
+    "q0.95": 5.679033898305083,
+    "q0.99": 5.972027118644062,
+    "q0.999": 6.400023389830513
+   },
+   "energy_quantiles": {
+    "0.5": 1563.8333333333344,
+    "0.95": 1952.783333333333,
+    "0.99": 2180.0033333333304,
+    "0.999": 2401.0103333333336
+   },
+   "trend_abs_z_quantiles": {
+    "0.5": 0.6860871880254009,
+    "0.95": 1.971101802849232,
+    "0.99": 2.505973599156381,
+    "0.999": 3.181812798763752
+   },
+   "thresholds": {
+    "alpha_0.05": {
+     "maxdev": 22.666666666666664,
+     "chi2": 5.679033898305083,
+     "trend_slope": 1.971101802849232,
+     "energy": 1952.783333333333
+    },
+    "alpha_0.01": {
+     "maxdev": 24.666666666666664,
+     "chi2": 5.972027118644062,
+     "trend_slope": 2.505973599156381,
+     "energy": 2180.0033333333304
+    }
+   },
+   "benchmark_maxdev_Fn": {
+    "0.95": 18.333333333333485,
+    "0.99": 20.333333333333485,
+    "0.999": 22.333333333333485
+   },
+   "benchmark_maxdev_rel_error": {
+    "q0.95": 0.236363636363626,
+    "q0.99": 0.21311475409835148,
+    "q0.999": 0.28358208955222997
+   },
+   "read_off_note": "k=n-5 corner read exactly from the k=5 simulation via the anti-reservoir complement duality D(n-5)=D(5)"
+  },
+  "wall_s": 24.29,
+  "skipped": false
+ },
+ "null_n1000_k5_m500": {
+  "cell": "null_n1000_k5_m500",
+  "n": 1000,
+  "k": 5,
+  "m": 500,
+  "p": 0.005,
+  "mu": 2.5,
+  "n_reps": 4000,
+  "role": "corner",
+  "trend_z_reference": {
+   "mu": 3.202527202527202e-06,
+   "sd": 0.00017413944984491853
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 6.5,
+    "0.95": 8.5,
+    "0.99": 9.5,
+    "0.999": 10.5
+   },
+   "chi2": {
+    "0.5": 995.2,
+    "0.95": 1068.8,
+    "0.99": 1104.0079999999998,
+    "0.999": 1128.0016000000003
+   },
+   "trend_slope": {
+    "0.5": 0.6661908953624804,
+    "0.95": 1.9781736348934518,
+    "0.99": 2.6047934457198014,
+    "0.999": 3.4639613068578874
+   },
+   "energy": {
+    "0.5": 337.0,
+    "0.95": 393.0,
+    "0.99": 427.0,
+    "0.999": 475.0040000000008
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 8.5,
+    "alpha_0.01": 9.5,
+    "alpha_0.001": 10.5
+   },
+   "chi2": {
+    "alpha_0.05": 1068.8,
+    "alpha_0.01": 1104.0079999999998,
+    "alpha_0.001": 1128.0016000000003
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9781736348934518,
+    "alpha_0.01": 2.6047934457198014,
+    "alpha_0.001": 3.4639613068578874
+   },
+   "energy": {
+    "alpha_0.05": 393.0,
+    "alpha_0.01": 427.0,
+    "alpha_0.001": 475.0040000000008
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 8.5,
+    "q0.99": 9.5,
+    "q0.999": 10.5
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.0
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 2044.0155798949738,
+   "product_binomial_var": 2376.867174513666,
+   "c3_source": "empirical_independent_binomial (F3 fallback: closed form drifted)",
+   "variance_ratio_true_vs_product_binomial": 0.8599620550160538,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 1.0230308207682552,
+   "chi2_sample_mean": 995.528,
+   "chi2_theory_mean_under_independence": 995.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0375,
+   "false_alarm_alpha_0.01": 0.00925
+  },
+  "dual_corner": {
+   "k_dual": 995,
+   "p_dual": 0.995,
+   "mu_dual": 497.5,
+   "maxdev_quantiles": {
+    "0.5": 6.5,
+    "0.95": 8.5,
+    "0.99": 9.5,
+    "0.999": 10.5
+   },
+   "chi2_quantiles_scaled": {
+    "q0.5": 5.001005025125629,
+    "q0.95": 5.370854271356784,
+    "q0.99": 5.547778894472361,
+    "q0.999": 5.66834974874372
+   },
+   "energy_quantiles": {
+    "0.5": 337.0,
+    "0.95": 393.0,
+    "0.99": 427.0,
+    "0.999": 475.0040000000008
+   },
+   "trend_abs_z_quantiles": {
+    "0.5": 0.6661908953624804,
+    "0.95": 1.9781736348934518,
+    "0.99": 2.6047934457198014,
+    "0.999": 3.4639613068578874
+   },
+   "thresholds": {
+    "alpha_0.05": {
+     "maxdev": 8.5,
+     "chi2": 5.370854271356784,
+     "trend_slope": 1.9781736348934518,
+     "energy": 393.0
+    },
+    "alpha_0.01": {
+     "maxdev": 9.5,
+     "chi2": 5.547778894472361,
+     "trend_slope": 2.6047934457198014,
+     "energy": 427.0
+    }
+   },
+   "benchmark_maxdev_Fn": {
+    "0.95": 2.5,
+    "0.99": 2.5,
+    "0.999": 2.5
+   },
+   "benchmark_maxdev_rel_error": {
+    "q0.95": 2.4,
+    "q0.99": 2.8,
+    "q0.999": 3.2
+   },
+   "read_off_note": "k=n-5 corner read exactly from the k=5 simulation via the anti-reservoir complement duality D(n-5)=D(5)"
+  },
+  "wall_s": 17.73,
+  "skipped": false
+ },
+ "null_n1000_k5_m2000": {
+  "cell": "null_n1000_k5_m2000",
+  "n": 1000,
+  "k": 5,
+  "m": 2000,
+  "p": 0.005,
+  "mu": 10.0,
+  "n_reps": 4000,
+  "role": "corner",
+  "trend_z_reference": {
+   "mu": 2.7285567285567287e-06,
+   "sd": 0.0003411496484923195
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 11.0,
+    "0.95": 14.0,
+    "0.99": 16.0,
+    "0.999": 18.0
+   },
+   "chi2": {
+    "0.5": 996.2,
+    "0.95": 1071.4,
+    "0.99": 1104.6019999999999,
+    "0.999": 1141.2162000000033
+   },
+   "trend_slope": {
+    "0.5": 0.6931845995585322,
+    "0.95": 1.9635610689578347,
+    "0.99": 2.5147704083076476,
+    "0.999": 3.064938385050731
+   },
+   "energy": {
+    "0.5": 1325.0,
+    "0.95": 1521.0,
+    "0.99": 1629.0,
+    "0.999": 1720.0230000000047
+   }
+  },
+  "thresholds": {
+   "maxdev": {
+    "alpha_0.05": 14.0,
+    "alpha_0.01": 16.0,
+    "alpha_0.001": 18.0
+   },
+   "chi2": {
+    "alpha_0.05": 1071.4,
+    "alpha_0.01": 1104.6019999999999,
+    "alpha_0.001": 1141.2162000000033
+   },
+   "trend_slope": {
+    "alpha_0.05": 1.9635610689578347,
+    "alpha_0.01": 2.5147704083076476,
+    "alpha_0.001": 3.064938385050731
+   },
+   "energy": {
+    "alpha_0.05": 1521.0,
+    "alpha_0.01": 1629.0,
+    "alpha_0.001": 1720.0230000000047
+   }
+  },
+  "c1": {
+   "benchmark_Fn_quantiles": {
+    "q0.95": 14.0,
+    "q0.99": 16.0,
+    "q0.999": 18.0
+   },
+   "relative_error_sim_vs_bench": {
+    "q0.95": 0.0,
+    "q0.99": 0.0,
+    "q0.999": 0.0
+   },
+   "benchmark_note": "F(x)^n is an approximation: it tracks the max-side only (maxdev also has a min-side event, |mu - min c_i|, which pushes maxdev's quantiles up) and ignores the negative within-trial dependence (which shrinks the max and pushes them down). sim vs bench therefore agree within a few percent but the sign is not guaranteed.",
+   "duality": {
+    "maxdev_maxabs_diff": 0.0,
+    "energy_maxabs_diff": 0.0,
+    "trend_slope_sum_maxabs": 0.0,
+    "chi2_scaled_maxabs_diff": 0.0
+   },
+   "duality_ok": true
+  },
+  "c3": {
+   "chi2_sample_var": 1951.0068457014254,
+   "product_binomial_var": 2066.6049249999996,
+   "c3_source": "product_binomial_closed_form",
+   "variance_ratio_true_vs_product_binomial": 0.9440637744059502,
+   "chi2_df_var": 1998.0,
+   "variance_ratio_true_vs_chi2df": 0.9764799027534662,
+   "chi2_sample_mean": 996.6699,
+   "chi2_theory_mean_under_independence": 995.0,
+   "textbook_chi2_95": 1073.6426506574246,
+   "false_alarm_alpha_0.05": 0.0445,
+   "false_alarm_alpha_0.01": 0.00925
+  },
+  "dual_corner": {
+   "k_dual": 995,
+   "p_dual": 0.995,
+   "mu_dual": 1990.0,
+   "maxdev_quantiles": {
+    "0.5": 11.0,
+    "0.95": 14.0,
+    "0.99": 16.0,
+    "0.999": 18.0
+   },
+   "chi2_quantiles_scaled": {
+    "q0.5": 5.0060301507537694,
+    "q0.95": 5.383919597989951,
+    "q0.99": 5.550763819095477,
+    "q0.999": 5.734754773869363
+   },
+   "energy_quantiles": {
+    "0.5": 1325.0,
+    "0.95": 1521.0,
+    "0.99": 1629.0,
+    "0.999": 1720.0230000000047
+   },
+   "trend_abs_z_quantiles": {
+    "0.5": 0.6931845995585322,
+    "0.95": 1.9635610689578347,
+    "0.99": 2.5147704083076476,
+    "0.999": 3.064938385050731
+   },
+   "thresholds": {
+    "alpha_0.05": {
+     "maxdev": 14.0,
+     "chi2": 5.383919597989951,
+     "trend_slope": 1.9635610689578347,
+     "energy": 1521.0
+    },
+    "alpha_0.01": {
+     "maxdev": 16.0,
+     "chi2": 5.550763819095477,
+     "trend_slope": 2.5147704083076476,
+     "energy": 1629.0
+    }
+   },
+   "benchmark_maxdev_Fn": {
+    "0.95": 9.0,
+    "0.99": 10.0,
+    "0.999": 10.0
+   },
+   "benchmark_maxdev_rel_error": {
+    "q0.95": 0.5555555555555556,
+    "q0.99": 0.6,
+    "q0.999": 0.8
+   },
+   "read_off_note": "k=n-5 corner read exactly from the k=5 simulation via the anti-reservoir complement duality D(n-5)=D(5)"
+  },
+  "wall_s": 66.98,
+  "skipped": false
+ }
+}
