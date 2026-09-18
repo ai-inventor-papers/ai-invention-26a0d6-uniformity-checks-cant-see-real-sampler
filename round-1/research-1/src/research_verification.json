@@ -1,0 +1,55 @@
+{
+  "valid": true,
+  "file_errors": [],
+  "schema_errors": [],
+  "content_warnings": [],
+  "files_found": {
+    "research_out.json": {
+      "exists": true,
+      "path": "/ai-inventor/aii_data/runs/run_yRBWOr6EQPIx/3_invention_loop/iter_1/gen_art/gen_art_research_1/research_out.json",
+      "source_count": 42,
+      "size": 36418
+    }
+  },
+  "source_count": 42,
+  "checked_at": "2026-09-18T13:36:12.139665+00:00",
+  "passage_check_scope": "Case/whitespace-normalized text occurrence at the source URL (or archive fallback). Not claim entailment, locator verification, or author/year verification. status=error means unverified, not a misquotation.",
+  "passages": [
+    {
+      "source_index": 2,
+      "source_url": "https://www.cs.umd.edu/~samir/498/vitter.pdf",
+      "quote": "Algorithm R (which is is a reservoir algorithm due to Alan Waterman) works as follows: When the (t + 1)st record in the file is being processed, for t L n, the n candidates form a random sample of the first t records.",
+      "locator": "p. 38, Algorithm R definition",
+      "status": "valid",
+      "context": "...he sequential pass through the file, the current set of n candidates is output as the final sample. algorithm r (which is is a reservoir algorithm due to alan waterman) works as follows: when the (t + 1)st record in the file is being processed, for t l n, the n candidates form a random sample of the first t records. the (t + 1)st record has a n/(t + 1) chance of being in a random sample of size n of the first t + ...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 20,
+      "source_url": "https://arxiv.org/abs/2503.14079",
+      "quote": "We propose a framework that contains five statistical tests which are suited to test uniform random samplers. Moreover, we demonstrate their use by testing seven samplers.",
+      "locator": "Abstract",
+      "status": "valid",
+      "context": "...s constrained. this means that testing prngs is subject to fewer constraints than testing samplers. we propose a framework that contains five statistical tests which are suited to test uniform random samplers. moreover, we demonstrate their use by testing seven samplers. finally, we demonstrate the influence of the boolean formula given as input to the samplers under t...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 26,
+      "source_url": "https://web.archive.org/web/20160724165920/http://stackoverflow.com/questions/28993071/test-case-for-weighted-reservoir-sampling",
+      "quote": "Therefore, you can look at the percentage of times the first element appeared out of 106 trials.",
+      "locator": "Accepted answer, second paragraph (Wayback capture 2016-07-24)",
+      "status": "valid",
+      "context": "...hird element, 0.048 * 106 instances of the first element, and so on. **approximately** , of course. therefore, you can look at the percentage of times the first element appeared out of 106 trials. this must be approximately `(weight_of_first_element/weight_of_all_elements)`. compare those values...",
+      "match_type": "exact"
+    },
+    {
+      "source_index": 26,
+      "source_url": "https://web.archive.org/web/20160724165920/http://stackoverflow.com/questions/28993071/test-case-for-weighted-reservoir-sampling",
+      "quote": "assert(abs(real_probability - observed_probability) <= epsilon) # measuring absolute difference, but you can switch to relative difference",
+      "locator": "Accepted answer, pseudo-code block",
+      "status": "valid",
+      "context": "...l_probability = weights[i] / sum(weights) observed_probability = histogram[elements[i]] / numtrials assert(abs(real_probability - observed_probability) <= epsilon) # measuring absolute difference, but you can switch to relative difference see [this](https://web.archive.org/web/20160724165920/https://github.com/linkedin/datafu/issues/80#...",
+      "match_type": "exact"
+    }
+  ]
+}

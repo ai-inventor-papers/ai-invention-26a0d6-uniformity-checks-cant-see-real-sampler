@@ -1,0 +1,117 @@
+{
+  "q1_novelty": {
+    "maxdev_null_law_published": false,
+    "power_analysis_published": false,
+    "m_star_design_law_published": false,
+    "nearest_neighbors": [
+      {
+        "title": "The exact distribution of the maximum, minimum and the range of Multinomial/Dirichlet and Multivariate Hypergeometric frequencies (Corrado 2010)",
+        "why_different": "Single-draw multinomial max/min/range; coincides with the reservoir object only at the k=1 border.",
+        "url": "https://doi.org/10.1007/s11222-010-9174-3"
+      },
+      {
+        "title": "Algorithm AS 145: Exact Distribution of the Largest Multinomial Frequency (1979)",
+        "why_different": "Single-draw largest cell frequency; no repeated-trial fixed-sum vector, no verification framing.",
+        "url": "https://doi.org/10.2307/2347220"
+      },
+      {
+        "title": "On the asymptotic distribution of the multinomial maximum with an increasing number of classes (Houdre, Huynh, Peng 2014, Extremes)",
+        "why_different": "Single-draw k=1-style asymptotics with growing number of classes; no repeated-trials statistic, no power analysis.",
+        "url": "https://doi.org/10.1007/s10687-014-0208-7"
+      },
+      {
+        "title": "A Coincidence-Based Test for Uniformity (Paninski 2008)",
+        "why_different": "sqrt(n)-efficient uniformity test with sample-complexity bounds; the information-theoretic ancestor of any accumulation-statistic arm, but not the reservoir k-subset maxdev statistic.",
+        "url": "https://doi.org/10.1109/tit.2008.928987"
+      },
+      {
+        "title": "NIST SP 800-22 / TestU01 (2000-2007)",
+        "why_different": "PRNG test batteries with per-test power behavior - the closest 'protocol power atlas' analog; object is a single bitstream, not repeated-trial inclusion counts.",
+        "url": "https://doi.org/10.1145/1268776.1268777"
+      }
+    ],
+    "premise_C1": "HOLDS",
+    "confidence": "medium",
+    "verdict": "No published derivation of the null law / power / trials-to-detection law for max_i |c_i - m*k/n| with c the fixed-sum vector of m iid k-subset indicator sums was found across ~15 distinct scholarly+general queries (OpenAlex, Crossref, ddgs) including 2023-2026 SE/PBT venues. Caveats: the k=1 border reduces to the classical single-draw multinomial whose largest-frequency/range laws ARE published (AS 145, Corrado, Houdre et al.), so the claim must be scoped to interior k (2 <= k <= n-2); this is absence-of-evidence, not proof of non-existence."
+  },
+  "q2_protocol_origin": {
+    "canonical_statement_found": true,
+    "canonical_sources": [
+      {
+        "quote": "Therefore, you can look at the percentage of times the first element appeared out of 10^6 trials. This must be approximately (weight_of_first_element/weight_of_all_elements). ... numTrials = 1000000 ... histogram[element]++ ... assert(abs(real_probability - observed_probability) <= epsilon)",
+        "source": "Stack Overflow, 'Test Case for Weighted Reservoir Sampling' (top-voted answer)",
+        "url": "https://stackoverflow.com/questions/28993071/test-case-for-weighted-reservoir-sampling",
+        "type": "stackoverflow"
+      }
+    ],
+    "practice_table_summary": "Per-position/per-element repeated-trial inclusion-count verification (numTrials ~1e6, histogram, epsilon compare) in N=2 explicit sources (SO answer; Ziai Medium snippet) plus 2 theory-only lecture-note series with no verification content (Utah MCMD S7.2, Rice COMP441); per-value distribution-mode verification in N=3 blog sources (SteadBytes MLE/pytest; Analytics Vidhya chi-square/KS per feature; Behera eyeball histograms) - all on synthetic or static source data; ZERO sources for per-value verification on replayed streams.",
+    "premise_C2": "FAILS",
+    "verdict": "The premise that real-world practice is 'per-value verification on replayed streams' is not supported: every concrete protocol found counts per-element/per-position inclusions over many trials on synthetic or static streams (the SO answer is verbatim the hypothesis's protocol), per-value checks appear only as distribution comparisons against known source populations, and no source of any kind replays one fixed stream across seeds for per-value statistics. The paper should frame per-position-on-synthetic-streams as the canonical mode, per-value checks as a secondary blog-level mode, and replayed-stream per-value verification as unattested (candidate contribution of the study's own screening arm)."
+  },
+  "q3_chisq_dependence": {
+    "fixed_sum_chisq_reference_found": false,
+    "nearest_ancestors": [
+      {
+        "title": "Pearson's chi-squared test (multinomial null; fixed-sum df reduction)",
+        "what_it_covers": "Classical single-draw multinomial correction; applies to Var(c_i)=m p (1-p) margins, not the m-trial k-subset coupling.",
+        "url": "https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test"
+      },
+      {
+        "title": "Some Exact Conditional Tests of Independence for R x C Cross-Classification Tables (Agresti & Wackerly 1977)",
+        "what_it_covers": "Exact conditional tests for tables with fixed margins - closest published treatment of inference under fixed-sum dependence, but for contingency tables, not reservoir count vectors.",
+        "url": "https://doi.org/10.1007/bf02293748"
+      },
+      {
+        "title": "Algorithm AS 159 (Patefield 1981) / CSDA 1985 survey of fixed-margin exact tests",
+        "what_it_covers": "Monte-Carlo/exact machinery for chi-square under fixed row/column sums; table setting only.",
+        "url": "https://doi.org/10.2307/2346669"
+      },
+      {
+        "title": "Negative Association of Random Variables with Applications (Joag-Dev & Proschan 1983)",
+        "what_it_covers": "Sampling-without-replacement indicators are negatively associated - the mathematical backdrop for the fixed-sum negative dependence; no follow-up located quantifies the chi-square null for repeated-trial k-subset count vectors.",
+        "url": "https://doi.org/10.1214/aos/1176346079"
+      },
+      {
+        "title": "Smooth Tests of Goodness of Fit (Rayner, Thas, Best 2009/2011)",
+        "what_it_covers": "Decomposes Pearson chi-square into asymptotically independent components (ancestor of position-trend tests); no fixed-sum inclusion-count correction.",
+        "url": "https://doi.org/10.1002/wics.171"
+      }
+    ],
+    "premise_C3": "PARTIALLY_HOLDS",
+    "verdict": "The classical/conditional/negative-association ancestors all exist and are well documented (Pearson df correction; Agresti-Wackerly and Patefield for fixed-margin tables; Joag-Dev-Proschan negative association), but NO reference was found that gives the chi-square null/reference (distribution, variance, or quantiles) for the m-trial reservoir inclusion-count vector - the exact object of alternate C3. The study's null-calibration work therefore quantifies a well-motivated but apparently unaddressed instance; it must cite the ancestors and avoid claiming the negative-association concept itself as novel."
+  },
+  "q4_zeyen_status": {
+    "arxiv_id": "2503.14079",
+    "exists": true,
+    "authors": [
+      "Olivier Zeyen",
+      "Maxime Cordy",
+      "Martin Gubri",
+      "Gilles Perrouin",
+      "Mathieu Acher"
+    ],
+    "versions": "v1 only (submitted 18 Mar 2025); no revision; published as ACM TOSEM vol. 35, pp. 1-24, issued 2026-09-17, DOI 10.1145/3797477",
+    "covers_reservoir_or_maxdev": false,
+    "successors": [
+      {
+        "title": "DivKC: A Divide-and-Conquer Approach to Knowledge Compilation",
+        "year": 2026,
+        "url": "https://doi.org/10.1007/978-3-032-22774-4_7",
+        "note": "Only OpenAlex-indexed citation so far; cites the suite but is not a uniformity-testing successor (no trial laws, no reservoir)."
+      },
+      {
+        "title": "Growing Binary Trees (arXiv:2603.25972)",
+        "year": 2026,
+        "url": "https://arxiv.org/abs/2603.25972",
+        "note": "Combinatorial uniform random sampler (binary trees); generation, not verification - top new hit for the phrase 'uniform random samplers'."
+      },
+      {
+        "title": "Adaptive Binning Coincidence Test for Uniformity Testing (IEEE TSP 2024)",
+        "year": 2024,
+        "url": "https://doi.org/10.1109/tsp.2024.3397560",
+        "note": "Parallel line in distribution testing; not SAT-sampler-specific."
+      }
+    ],
+    "verdict": "arXiv:2503.14079 exists exactly as cited (v1, 18 Mar 2025, cs.LO; Zeyen, Cordy, Gubri, Perrouin, Acher) and was formally published in ACM TOSEM (35:1-24) on 2026-09-17, one day before this research ran. Its five tests are SAT-sampler-specific (variable-frequency chi-square per variable, collision, monobit-style parity); full-text grep found no reservoir sampling, no max-deviation statistic, and no trials-to-detection design law (only qualitative per-test sample-size remarks). Successor work is still nascent (1 citation); no 2025-2026 uniformity-verification successor touching reservoirs was found."
+  }
+}
