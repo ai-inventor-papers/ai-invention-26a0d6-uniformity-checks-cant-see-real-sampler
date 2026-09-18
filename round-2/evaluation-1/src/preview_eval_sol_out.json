@@ -1,0 +1,732 @@
+{
+  "metadata": {
+    "artifact_type": "evaluation",
+    "plan_id": "gen_plan_evaluation_1_idx2",
+    "title": "Reviewer-required reconciliation tables rebuilt from stored iteration-1 evidence",
+    "generated_at": "2026-09-18T19:03:48+00:00",
+    "evaluation_method": "Pure data-processing reconciliation; no new simulation; all values deterministic (seeded per cell key in the source artifacts) and read verbatim from stored artifacts at stored float precision (maxdev...",
+    "conventions": {
+      "delta_scale": "A_floor = sqrt(2*p*m*log(n)) in count units; delta_floor = A_floor/(p*m), the per-position relative inclusion-deviation amplitude in fraction-of-mu units (mu = m*k/n). TARGET delta in floor units = pr...",
+      "ib_benchmark": "IB benchmark (main-screen C1 convention): maxdev q(t) = Q(t) - mu with Q(t) = min{x : binom.cdf(x; m, k/n)^n >= t} for t in {0.95, 0.99, 0.999}, count units (F(x)^n independent-Binomial per-position q...",
+      "blind_band": "Blind band at alpha=0.05: maximal consecutive mult interval (across the union of the family's A_acc_probe_pass and fine_pass probes, sorted by TARGET mult) where maxdev power < 0.5 AND max(chi2, trend..."
+    },
+    "source_artifacts": [
+      {
+        "id": "art_UF60msYdlAIi",
+        "path": "/ai-inventor/aii_data/runs/run_yRBWOr6EQPIx/3_invention_loop/iter_1/gen_art/gen_art_experiment_1",
+        "consumed": [
+          "results/power_surfaces.json",
+          "results/null_calibration.json",
+          "results/thresholds.json"
+        ]
+      },
+      {
+        "id": "art_uCeKcHDqIJMh",
+        "path": "/ai-inventor/aii_data/runs/run_yRBWOr6EQPIx/3_invention_loop/iter_1/gen_art/gen_art_experiment_2",
+        "consumed": [
+          "results/cells/null_*.json",
+          "results/method_out.json (null_law rows)"
+        ]
+      }
+    ],
+    "ib_benchmark_import_mode": "DEP1_reservoir.benchmarks (import ok)",
+    "per_table_notes": {
+      "table1_corrected": [
+        "TABLE-A band diff at cell=power_n300_p0.05_m2000 family=linear_trend: stored mult [0.2,0.3] vs re-derived [0.1,0.3]",
+        "TABLE-A band diff at cell=power_n300_p0.5_m2000 family=linear_trend: stored mult [0.2,0.2] vs re-derived [0.1,0.2]",
+        "TABLE-A band diff at cell=power_n300_p0.5_m2000 family=exp_recency: stored mult [0.2,0.3] vs re-derived [0.1414,0.3]"
+      ],
+      "c2_inflation_pinned": [
+        "TABLE-B completeness: 195 null_* checkpoint files parsed -> 190 unique (profile,n,k,m) cells, of which 189 are on the declared grid (expected 189; 7 profiles x 3 n x 3 p x 3 m); 195 files include 6 al...",
+        "TABLE-B pin: max pp_relative_factor = 2371.932 at (zipf_2.0, n=5000, k=4500, m=5000); max ib_relative_factor = 2481.095 at (zipf_2.0, n=5000, k=4500, m=5000). Quoted approximation '~2372x' vs measured...",
+        "TABLE-B reviewer-ambiguity closure (MINOR #3): the quoted '~2372x' equals thresh_PV_naive/thresh_PP (pp_relative_factor) at the pinned cell (zipf_2.0, n=5000, k=4500, m=5000): measured 2371.9 (0.003% ..."
+      ],
+      "null_law_validation": [
+        "TABLE-C: thresholds.json matches null_calibration.json on all 35 cells (blocks stat_quantiles/thresholds/c1/c3)",
+        "TABLE-C benchmark equality (OK): null_n300_k15_m500 stored q95/q99/q999=[19.0, 21.0, 25.0] vs analytic recompute=[19.0, 21.0, 25.0]",
+        "TABLE-C benchmark equality (OK): null_n1000_k5_m500 stored q95/q99/q999=[8.5, 9.5, 10.5] vs analytic recompute=[8.5, 9.5, 10.5]"
+      ]
+    },
+    "table_summaries": {
+      "table1_corrected": {
+        "n_rows": 30,
+        "n_blind_pairs_rederived_union": 23,
+        "n_blind_pairs_stored": 21,
+        "n_band_rows_reconciled": 12,
+        "n_band_rows_rederived_wider": 11,
+        "definition_note": "stored bands computed over coarse+fine probes; re-derived over A_acc_probe_pass+fine_pass (plan STEP 1.2)"
+      },
+      "c2_inflation_pinned": {
+        "n_checkpoints": 189,
+        "max_pp_relative_factor": 2371.9318547281127,
+        "max_pp_relative_cell": "zipf_2.0 n=5000 k=4500 m=5000",
+        "max_ib_relative_factor": 2481.0946275877586,
+        "max_ib_relative_cell": "zipf_2.0 n=5000 k=4500 m=5000",
+        "quoted_inflation_approx": 2372.0,
+        "pinned_cell_c2_vs_ib_ratio": 1.0025900909297567
+      },
+      "null_law_validation": {
+        "rel_err_q95_abs_pct_p_le_0_5": {
+          "n": 26,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 1.783591630683698
+        },
+        "rel_err_q95_abs_pct_p_0_9": {
+          "n": 9,
+          "min": 7.5,
+          "max": 20.0,
+          "mean": 12.39784813984978
+        },
+        "duality_failures": [],
+        "var_ratio_true_vs_product_binomial_band": {
+          "n": 35,
+          "min": 0.8599620550160538,
+          "max": 1.0656307359460322,
+          "mean": 0.9955483829392338
+        },
+        "var_ratio_true_vs_chi2df_band": {
+          "n": 35,
+          "min": 0.010010813922470375,
+          "max": 1.0230308207682552,
+          "mean": 0.4775346078607259
+        },
+        "textbook_FA_alpha_0.05_band": {
+          "n": 35,
+          "min": 0.0,
+          "max": 0.0445,
+          "mean": 0.00539
+        },
+        "textbook_FA_alpha_0.01_band": {
+          "n": 35,
+          "min": 0.0,
+          "max": 0.00925,
+          "mean": 0.0009642857142857144
+        },
+        "textbook_FA_alpha_0.05_main_grid_band": {
+          "n": 31,
+          "min": 0.0,
+          "max": 0.0125,
+          "mean": 0.0013919354838709678
+        },
+        "textbook_FA_alpha_0.01_main_grid_band": {
+          "n": 31,
+          "min": 0.0,
+          "max": 0.00225,
+          "mean": 0.00017741935483870966
+        },
+        "textbook_FA_alpha_0.05_corner_band": {
+          "n": 4,
+          "min": 0.0305,
+          "max": 0.0445,
+          "mean": 0.036375
+        },
+        "textbook_FA_note": "Main grid (p in {0.05,0.5,0.9}): textbook chi2_{n-1} false-alarm 0.0-1.25% at alpha 0.05 (p>=0.5 exactly 0.0 on all 17 cells -> the textbook test is strongly over-conservative for the choice-based nul..."
+      }
+    },
+    "self_consistency_checks": [
+      {
+        "check": "tableA_30_rows",
+        "ok": true,
+        "detail": "actual=30"
+      },
+      {
+        "check": "tableA_stored_21_blind_pairs",
+        "ok": true,
+        "detail": "actual=21 (stored definition: coarse+fine probes only)"
+      },
+      {
+        "check": "tableA_rederived_blind_pairs_documented",
+        "ok": true,
+        "detail": "actual=23 under the union definition (A_acc_probe_pass + fine_pass); 2 additional linear_trend pairs below the stored band floor: power_n3000_p0.5_m2000 [0.05,0.1] and power_n10000_p0.5_m1000 [0.05,0...."
+      }
+    ],
+    "tables": {
+      "table1_corrected": [
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "power_n300_p0.05_m2000",
+          "family": "linear_trend",
+          "n": 300,
+          "p": 0.05,
+          "k": 15,
+          "m": 2000,
+          "delta_floor": 0.33775086897463935,
+          "in_blind_band": true,
+          "mult_lo": 0.1,
+          "mult_hi": 0.3,
+          "band_width_floor_units": 0.06755017379492786,
+          "n_band_points": 6,
+          "achieved_delta_lo_floor": 0.1954103040515217,
+          "achieved_delta_hi_floor": 0.3623972911500951,
+          "mult_mid": 0.2,
+          "achieved_delta_mid_floor": 0.2587706147591365,
+          "midpoint_power_alpha_0.05": {
+            "maxdev": 0.10666666666666667,
+            "chi2": 0.63,
+            "trend_slope": 1.0,
+            "energy": 0.37,
+            "max_acc": 1.0
+          },
+          "chi2_below_0.95": true,
+          "stored_blind_band": true,
+          "stored_mult_lo": 0.2,
+          "stored_mult_hi": 0.3,
+          "stored_midpoint_power_alpha_0.05": {
+            "maxdev": 0.23733333333333334,
+            "chi2": 0.9886666666666667,
+            "trend_slope": 1.0,
+            "energy": 0.914
+          },
+          "band_reconciled": false,
+          "note": "re-derived band [0.1,0.3] differs from stored band [0.2,0.3] in TARGET mult units (re-derivation over A_acc_probe_pass + fine_pass preferred; see per-table notes)"
+        },
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "power_n300_p0.05_m2000",
+          "family": "exp_recency",
+          "n": 300,
+          "p": 0.05,
+          "k": 15,
+          "m": 2000,
+          "delta_floor": 0.33775086897463935,
+          "in_blind_band": true,
+          "mult_lo": 0.2,
+          "mult_hi": 0.5,
+          "band_width_floor_units": 0.1013252606923918,
+          "n_band_points": 7,
+          "achieved_delta_lo_floor": 0.2454471849374416,
+          "achieved_delta_hi_floor": 0.5216862965739113,
+          "mult_mid": 0.27108060108295345,
+          "achieved_delta_mid_floor": 0.3194662395024121,
+          "midpoint_power_alpha_0.05": {
+            "maxdev": 0.12333333333333334,
+            "chi2": 0.5066666666666667,
+            "trend_slope": 1.0,
+            "energy": 0.41333333333333333,
+            "max_acc": 1.0
+          },
+          "chi2_below_0.95": true,
+          "stored_blind_band": true,
+          "stored_mult_lo": 0.2,
+          "stored_mult_hi": 0.5,
+          "stored_midpoint_power_alpha_0.05": {
+            "maxdev": 0.4633333333333333,
+            "chi2": 1.0,
+            "trend_slope": 1.0,
+            "energy": 1.0
+          },
+          "band_reconciled": true,
+          "note": "re-derived band matches stored blind band (same TARGET mult endpoints)"
+        },
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "power_n300_p0.05_m2000",
+          "family": "half_ramp",
+          "n": 300,
+          "p": 0.05,
+          "k": 15,
+          "m": 2000,
+          "delta_floor": 0.33775086897463935,
+          "in_blind_band": true,
+          "mult_lo": 0.2,
+          "mult_hi": 0.3,
+          "band_width_floor_units": 0.033775086897463925,
+          "n_band_points": 2,
+          "achieved_delta_lo_floor": 0.24041388922702353,
+          "achieved_delta_hi_floor": 0.3544032332570781,
+          "mult_mid": 0.3,
+          "achieved_delta_mid_floor": 0.3544032332570781,
+          "midpoint_power_alpha_0.05": {
+            "maxdev": 0.184,
+            "chi2": 0.826,
+            "trend_slope": 1.0,
+            "energy": 0.7566666666666667,
+            "max_acc": 1.0
+          },
+          "chi2_below_0.95": true,
+          "stored_blind_band": true,
+          "stored_mult_lo": 0.2,
+          "stored_mult_hi": 0.3,
+          "stored_midpoint_power_alpha_0.05": {
+            "maxdev": 0.184,
+            "chi2": 0.826,
+            "trend_slope": 1.0,
+            "energy": 0.7566666666666667
+          },
+          "band_reconciled": true,
+          "note": "re-derived band matches stored blind band (same TARGET mult endpoints)"
+        }
+      ],
+      "c2_inflation_pinned": {
+        "max_inflation_pp_relative": {
+          "source_artifact": "art_uCeKcHDqIJMh",
+          "profile": "zipf_2.0",
+          "n": 5000,
+          "k": 4500,
+          "m": 5000,
+          "V_realized": 101,
+          "maxfreq_share": 0.589,
+          "entropy_deficit": 0.8047026802560078,
+          "thresh_PV_naive_maxdev": 218336.32722772277,
+          "thresh_PP_maxdev": 92.05,
+          "ib_pp_q95": 88.0,
+          "pp_relative_factor": 2371.9318547281127,
+          "ib_relative_factor": 2481.0946275877586,
+          "degenerate_k_gt_V": true,
+          "R": 100
+        },
+        "max_inflation_ib_relative": {
+          "source_artifact": "art_uCeKcHDqIJMh",
+          "profile": "zipf_2.0",
+          "n": 5000,
+          "k": 4500,
+          "m": 5000,
+          "V_realized": 101,
+          "maxfreq_share": 0.589,
+          "entropy_deficit": 0.8047026802560078,
+          "thresh_PV_naive_maxdev": 218336.32722772277,
+          "thresh_PP_maxdev": 92.05,
+          "ib_pp_q95": 88.0,
+          "pp_relative_factor": 2371.9318547281127,
+          "ib_relative_factor": 2481.0946275877586,
+          "degenerate_k_gt_V": true,
+          "R": 100
+        },
+        "same_cell_under_both_definitions": true,
+        "quoted_inflation_approx": 2372.0,
+        "pp_relative_ratio_to_quoted": 0.9999712709646343,
+        "ib_relative_ratio_to_quoted": 1.045992676048802,
+        "vs_ib_ratio_max_across_grid": 35.92389933638774,
+        "vs_ib_ratio_mean_across_grid": 5.542610628249649,
+        "flagship_n": 5000,
+        "flagship_k": 4500,
+        "flagship_m": 5000,
+        "flagship_rows": [
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "uniform",
+            "n": 5000,
+            "k": 4500,
+            "m": 5000,
+            "V_realized": 5000,
+            "maxfreq_share": 0.0002,
+            "entropy_deficit": 0.0,
+            "thresh_PV_naive_maxdev": 95.0,
+            "thresh_PP_maxdev": 95.0,
+            "ib_pp_q95": 88.0,
+            "pp_relative_factor": 1.0,
+            "ib_relative_factor": 1.0795454545454546,
+            "degenerate_k_gt_V": false,
+            "R": 100,
+            "c2_vs_ib_ratio": 1.0106382978723405,
+            "c2_vs_ib_ratio_source": "method_out.json null_law rows (space=PV_naive, stat=maxdev, R=100)"
+          },
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "zipf_0.0",
+            "n": 5000,
+            "k": 4500,
+            "m": 5000,
+            "V_realized": 3169,
+            "maxfreq_share": 0.0012,
+            "entropy_deficit": 0.06695265295985986,
+            "thresh_PV_naive_maxdev": 2690.031555695803,
+            "thresh_PP_maxdev": 91.05,
+            "ib_pp_q95": 88.0,
+            "pp_relative_factor": 29.544553055417936,
+            "ib_relative_factor": 30.568540405634124,
+            "degenerate_k_gt_V": true,
+            "R": 100,
+            "c2_vs_ib_ratio": 1.2809481592787377,
+            "c2_vs_ib_ratio_source": "method_out.json null_law rows (space=PV_naive, stat=maxdev, R=100)"
+          },
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "zipf_0.5",
+            "n": 5000,
+            "k": 4500,
+            "m": 5000,
+            "V_realized": 2802,
+            "maxfreq_share": 0.0056,
+            "entropy_deficit": 0.09530641735013223,
+            "thresh_PV_naive_maxdev": 3617.0785867237687,
+            "thresh_PP_maxdev": 92.1,
+            "ib_pp_q95": 88.0,
+            "pp_relative_factor": 39.273383134894345,
+            "ib_relative_factor": 41.10316575822464,
+            "degenerate_k_gt_V": true,
+            "R": 100,
+            "c2_vs_ib_ratio": 1.1937637455830388,
+            "c2_vs_ib_ratio_source": "method_out.json null_law rows (space=PV_naive, stat=maxdev, R=100)"
+          }
+        ],
+        "all_checkpoints": [
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "geometric",
+            "n": 300,
+            "k": 30,
+            "m": 500,
+            "V_realized": 93,
+            "maxfreq_share": 0.03666666666666667,
+            "entropy_deficit": 0.25618947490995625,
+            "thresh_PV_naive_maxdev": 201.70967741935485,
+            "thresh_PP_maxdev": 26.0,
+            "ib_pp_q95": 25.0,
+            "pp_relative_factor": 7.758064516129033,
+            "ib_relative_factor": 8.068387096774194,
+            "degenerate_k_gt_V": false,
+            "R": 100
+          },
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "geometric",
+            "n": 300,
+            "k": 30,
+            "m": 2000,
+            "V_realized": 89,
+            "maxfreq_share": 0.05333333333333334,
+            "entropy_deficit": 0.2697749219862128,
+            "thresh_PV_naive_maxdev": 997.9426966292135,
+            "thresh_PP_maxdev": 51.05,
+            "ib_pp_q95": 50.0,
+            "pp_relative_factor": 19.548338817418482,
+            "ib_relative_factor": 19.95885393258427,
+            "degenerate_k_gt_V": false,
+            "R": 100
+          },
+          {
+            "source_artifact": "art_uCeKcHDqIJMh",
+            "profile": "geometric",
+            "n": 300,
+            "k": 30,
+            "m": 5000,
+            "V_realized": 100,
+            "maxfreq_share": 0.05333333333333334,
+            "entropy_deficit": 0.2460438128346214,
+            "thresh_PV_naive_maxdev": 2661.1,
+            "thresh_PP_maxdev": 82.1,
+            "ib_pp_q95": 78.0,
+            "pp_relative_factor": 32.41291108404385,
+            "ib_relative_factor": 34.11666666666667,
+            "degenerate_k_gt_V": false,
+            "R": 100
+          }
+        ]
+      },
+      "null_law_validation": [
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "null_n300_k15_m500",
+          "n": 300,
+          "k": 15,
+          "p": 0.05,
+          "m": 500,
+          "n_reps": 4000,
+          "role": "main",
+          "benchmark_q95": 19.0,
+          "benchmark_q99": 21.0,
+          "benchmark_q999": 25.0,
+          "rel_err_q95": 0.0,
+          "rel_err_q99": 0.0,
+          "rel_err_q999": -0.04,
+          "maxdev_maxabs_diff": 0.0,
+          "duality_ok": true,
+          "var_ratio_true_vs_product_binomial": 0.9897570007497554,
+          "var_ratio_true_vs_chi2df": 0.9147268334247443,
+          "textbook_FA_alpha_0.05": 0.0125,
+          "textbook_FA_alpha_0.01": 0.0015,
+          "benchmark_recomputed": false,
+          "note": ""
+        },
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "null_n300_k15_m2000",
+          "n": 300,
+          "k": 15,
+          "p": 0.05,
+          "m": 2000,
+          "n_reps": 4000,
+          "role": "main",
+          "benchmark_q95": 37.0,
+          "benchmark_q99": 41.0,
+          "benchmark_q999": 47.0,
+          "rel_err_q95": 0.0,
+          "rel_err_q99": 0.0,
+          "rel_err_q999": 0.021297872340429867,
+          "maxdev_maxabs_diff": 0.0,
+          "duality_ok": true,
+          "var_ratio_true_vs_product_binomial": 1.0011603203788741,
+          "var_ratio_true_vs_chi2df": 0.9152601119573791,
+          "textbook_FA_alpha_0.05": 0.01075,
+          "textbook_FA_alpha_0.01": 0.00225,
+          "benchmark_recomputed": false,
+          "note": ""
+        },
+        {
+          "source_artifact": "art_UF60msYdlAIi",
+          "cell": "null_n300_k15_m5000",
+          "n": 300,
+          "k": 15,
+          "p": 0.05,
+          "m": 5000,
+          "n_reps": 4000,
+          "role": "main",
+          "benchmark_q95": 57.0,
+          "benchmark_q99": 64.0,
+          "benchmark_q999": 72.0,
+          "rel_err_q95": 0.017543859649122806,
+          "rel_err_q99": 0.0,
+          "rel_err_q999": -0.05554166666666384,
+          "maxdev_maxabs_diff": 0.0,
+          "duality_ok": true,
+          "var_ratio_true_vs_product_binomial": 0.9943048920648858,
+          "var_ratio_true_vs_chi2df": 0.8997553561519409,
+          "textbook_FA_alpha_0.05": 0.012,
+          "textbook_FA_alpha_0.01": 0.0015,
+          "benchmark_recomputed": false,
+          "note": ""
+        }
+      ]
+    },
+    "schema_note": "eval_out.json itself conforms to the exp_eval_sol_out schema: metrics_agg holds the headline aggregate metrics, datasets holds one example per table row (output = full structured row JSON; eval_* nume..."
+  },
+  "metrics_agg": {
+    "n_table1_rows": 30.0,
+    "n_blind_pairs_rederived": 23.0,
+    "n_blind_pairs_stored": 21.0,
+    "n_c2_checkpoints": 189.0,
+    "n_null_cells": 35.0,
+    "max_pp_relative_factor": 2371.9318547281127,
+    "max_ib_relative_factor": 2481.0946275877586,
+    "flagship_achieved_over_floor": 0.3706025395404353,
+    "flagship_delta_floor": 0.400159157527358,
+    "flagship_maxdev_power": 0.467,
+    "p_le_0_5_max_abs_rel_err_pct": 5.0,
+    "p_0_9_max_abs_rel_err_pct": 20.0,
+    "duality_failures": 0.0,
+    "textbook_fa_alpha_0_05_max": 0.0445,
+    "textbook_fa_alpha_0_05_main_grid_max": 0.0125,
+    "textbook_fa_alpha_0_01_max": 0.00925
+  },
+  "datasets": [
+    {
+      "dataset": "table1_corrected",
+      "examples": [
+        {
+          "input": "reconciliation row: table1_corrected key=power_n300_p0.05_m2000/linear_trend",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"power_n300_p0.05_m2000\", \"family\": \"linear_trend\", \"n\": 300, \"p\": 0.05, \"k\": 15, \"m\": 2000, \"delta_floor\": 0.33775086897463935, \"in_blind_band\": true, ...",
+          "metadata_table": "table1_corrected",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 2000.0,
+          "eval_p": 0.05,
+          "eval_delta_floor": 0.33775086897463935,
+          "eval_mult_lo": 0.1,
+          "eval_mult_hi": 0.3,
+          "eval_achieved_delta_lo_floor": 0.1954103040515217,
+          "eval_achieved_delta_hi_floor": 0.3623972911500951,
+          "eval_maxdev_power_mid": 0.10666666666666667,
+          "eval_chi2_power_mid": 0.63,
+          "eval_trend_power_mid": 1.0,
+          "eval_energy_power_mid": 0.37,
+          "eval_max_acc_power_mid": 1.0,
+          "predict_family": "linear_trend",
+          "predict_in_blind_band": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: table1_corrected key=power_n300_p0.05_m2000/exp_recency",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"power_n300_p0.05_m2000\", \"family\": \"exp_recency\", \"n\": 300, \"p\": 0.05, \"k\": 15, \"m\": 2000, \"delta_floor\": 0.33775086897463935, \"in_blind_band\": true, \"...",
+          "metadata_table": "table1_corrected",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 2000.0,
+          "eval_p": 0.05,
+          "eval_delta_floor": 0.33775086897463935,
+          "eval_mult_lo": 0.2,
+          "eval_mult_hi": 0.5,
+          "eval_achieved_delta_lo_floor": 0.2454471849374416,
+          "eval_achieved_delta_hi_floor": 0.5216862965739113,
+          "eval_maxdev_power_mid": 0.12333333333333334,
+          "eval_chi2_power_mid": 0.5066666666666667,
+          "eval_trend_power_mid": 1.0,
+          "eval_energy_power_mid": 0.41333333333333333,
+          "eval_max_acc_power_mid": 1.0,
+          "predict_family": "exp_recency",
+          "predict_in_blind_band": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: table1_corrected key=power_n300_p0.05_m2000/half_ramp",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"power_n300_p0.05_m2000\", \"family\": \"half_ramp\", \"n\": 300, \"p\": 0.05, \"k\": 15, \"m\": 2000, \"delta_floor\": 0.33775086897463935, \"in_blind_band\": true, \"mu...",
+          "metadata_table": "table1_corrected",
+          "metadata_cell": "power_n300_p0.05_m2000",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 2000.0,
+          "eval_p": 0.05,
+          "eval_delta_floor": 0.33775086897463935,
+          "eval_mult_lo": 0.2,
+          "eval_mult_hi": 0.3,
+          "eval_achieved_delta_lo_floor": 0.24041388922702353,
+          "eval_achieved_delta_hi_floor": 0.3544032332570781,
+          "eval_maxdev_power_mid": 0.184,
+          "eval_chi2_power_mid": 0.826,
+          "eval_trend_power_mid": 1.0,
+          "eval_energy_power_mid": 0.7566666666666667,
+          "eval_max_acc_power_mid": 1.0,
+          "predict_family": "half_ramp",
+          "predict_in_blind_band": "true",
+          "predict_flagship": "false"
+        }
+      ]
+    },
+    {
+      "dataset": "null_law_validation",
+      "examples": [
+        {
+          "input": "reconciliation row: null_law_validation key=null_n300_k15_m500",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"null_n300_k15_m500\", \"n\": 300, \"k\": 15, \"p\": 0.05, \"m\": 500, \"n_reps\": 4000, \"role\": \"main\", \"benchmark_q95\": 19.0, \"benchmark_q99\": 21.0, \"benchmark_q...",
+          "metadata_table": "null_law_validation",
+          "metadata_cell": "null_n300_k15_m500",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 500.0,
+          "eval_p": 0.05,
+          "eval_benchmark_q95": 19.0,
+          "eval_benchmark_q99": 21.0,
+          "eval_benchmark_q999": 25.0,
+          "eval_rel_err_q95": 0.0,
+          "eval_rel_err_q99": 0.0,
+          "eval_rel_err_q999": -0.04,
+          "eval_maxdev_maxabs_diff": 0.0,
+          "eval_var_ratio_product_binomial": 0.9897570007497554,
+          "eval_var_ratio_chi2df": 0.9147268334247443,
+          "eval_textbook_FA_alpha_0_05": 0.0125,
+          "eval_textbook_FA_alpha_0_01": 0.0015,
+          "predict_role": "main",
+          "predict_duality_ok": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: null_law_validation key=null_n300_k15_m2000",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"null_n300_k15_m2000\", \"n\": 300, \"k\": 15, \"p\": 0.05, \"m\": 2000, \"n_reps\": 4000, \"role\": \"main\", \"benchmark_q95\": 37.0, \"benchmark_q99\": 41.0, \"benchmark...",
+          "metadata_table": "null_law_validation",
+          "metadata_cell": "null_n300_k15_m2000",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 2000.0,
+          "eval_p": 0.05,
+          "eval_benchmark_q95": 37.0,
+          "eval_benchmark_q99": 41.0,
+          "eval_benchmark_q999": 47.0,
+          "eval_rel_err_q95": 0.0,
+          "eval_rel_err_q99": 0.0,
+          "eval_rel_err_q999": 0.021297872340429867,
+          "eval_maxdev_maxabs_diff": 0.0,
+          "eval_var_ratio_product_binomial": 1.0011603203788741,
+          "eval_var_ratio_chi2df": 0.9152601119573791,
+          "eval_textbook_FA_alpha_0_05": 0.01075,
+          "eval_textbook_FA_alpha_0_01": 0.00225,
+          "predict_role": "main",
+          "predict_duality_ok": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: null_law_validation key=null_n300_k15_m5000",
+          "output": "{\"source_artifact\": \"art_UF60msYdlAIi\", \"cell\": \"null_n300_k15_m5000\", \"n\": 300, \"k\": 15, \"p\": 0.05, \"m\": 5000, \"n_reps\": 4000, \"role\": \"main\", \"benchmark_q95\": 57.0, \"benchmark_q99\": 64.0, \"benchmark...",
+          "metadata_table": "null_law_validation",
+          "metadata_cell": "null_n300_k15_m5000",
+          "eval_n": 300.0,
+          "eval_k": 15.0,
+          "eval_m": 5000.0,
+          "eval_p": 0.05,
+          "eval_benchmark_q95": 57.0,
+          "eval_benchmark_q99": 64.0,
+          "eval_benchmark_q999": 72.0,
+          "eval_rel_err_q95": 0.017543859649122806,
+          "eval_rel_err_q99": 0.0,
+          "eval_rel_err_q999": -0.05554166666666384,
+          "eval_maxdev_maxabs_diff": 0.0,
+          "eval_var_ratio_product_binomial": 0.9943048920648858,
+          "eval_var_ratio_chi2df": 0.8997553561519409,
+          "eval_textbook_FA_alpha_0_05": 0.012,
+          "eval_textbook_FA_alpha_0_01": 0.0015,
+          "predict_role": "main",
+          "predict_duality_ok": "true",
+          "predict_flagship": "false"
+        }
+      ]
+    },
+    {
+      "dataset": "c2_inflation_pinned",
+      "examples": [
+        {
+          "input": "reconciliation row: c2_inflation_pinned key=max_inflation_pp_relative",
+          "output": "{\"source_artifact\": \"art_uCeKcHDqIJMh\", \"profile\": \"zipf_2.0\", \"n\": 5000, \"k\": 4500, \"m\": 5000, \"V_realized\": 101, \"maxfreq_share\": 0.589, \"entropy_deficit\": 0.8047026802560078, \"thresh_PV_naive_maxde...",
+          "metadata_table": "c2_inflation_pinned",
+          "metadata_cell": "zipf_2.0",
+          "eval_n": 5000.0,
+          "eval_k": 4500.0,
+          "eval_m": 5000.0,
+          "eval_thresh_PV_naive_maxdev": 218336.32722772277,
+          "eval_thresh_PP_maxdev": 92.05,
+          "eval_ib_pp_q95": 88.0,
+          "eval_pp_relative_factor": 2371.9318547281127,
+          "eval_ib_relative_factor": 2481.0946275877586,
+          "eval_V_realized": 101.0,
+          "eval_maxfreq_share": 0.589,
+          "eval_entropy_deficit": 0.8047026802560078,
+          "predict_profile": "zipf_2.0",
+          "predict_degenerate_k_gt_V": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: c2_inflation_pinned key=max_inflation_ib_relative",
+          "output": "{\"source_artifact\": \"art_uCeKcHDqIJMh\", \"profile\": \"zipf_2.0\", \"n\": 5000, \"k\": 4500, \"m\": 5000, \"V_realized\": 101, \"maxfreq_share\": 0.589, \"entropy_deficit\": 0.8047026802560078, \"thresh_PV_naive_maxde...",
+          "metadata_table": "c2_inflation_pinned",
+          "metadata_cell": "zipf_2.0",
+          "eval_n": 5000.0,
+          "eval_k": 4500.0,
+          "eval_m": 5000.0,
+          "eval_thresh_PV_naive_maxdev": 218336.32722772277,
+          "eval_thresh_PP_maxdev": 92.05,
+          "eval_ib_pp_q95": 88.0,
+          "eval_pp_relative_factor": 2371.9318547281127,
+          "eval_ib_relative_factor": 2481.0946275877586,
+          "eval_V_realized": 101.0,
+          "eval_maxfreq_share": 0.589,
+          "eval_entropy_deficit": 0.8047026802560078,
+          "predict_profile": "zipf_2.0",
+          "predict_degenerate_k_gt_V": "true",
+          "predict_flagship": "false"
+        },
+        {
+          "input": "reconciliation row: c2_inflation_pinned key=flagship/uniform",
+          "output": "{\"source_artifact\": \"art_uCeKcHDqIJMh\", \"profile\": \"uniform\", \"n\": 5000, \"k\": 4500, \"m\": 5000, \"V_realized\": 5000, \"maxfreq_share\": 0.0002, \"entropy_deficit\": 0.0, \"thresh_PV_naive_maxdev\": 95.0, \"thr...",
+          "metadata_table": "c2_inflation_pinned",
+          "metadata_cell": "uniform",
+          "eval_n": 5000.0,
+          "eval_k": 4500.0,
+          "eval_m": 5000.0,
+          "eval_thresh_PV_naive_maxdev": 95.0,
+          "eval_thresh_PP_maxdev": 95.0,
+          "eval_ib_pp_q95": 88.0,
+          "eval_pp_relative_factor": 1.0,
+          "eval_ib_relative_factor": 1.0795454545454546,
+          "eval_c2_vs_ib_ratio": 1.0106382978723405,
+          "eval_V_realized": 5000.0,
+          "eval_maxfreq_share": 0.0002,
+          "eval_entropy_deficit": 0.0,
+          "predict_profile": "uniform",
+          "predict_degenerate_k_gt_V": "false",
+          "predict_flagship": "false"
+        }
+      ]
+    }
+  ]
+}

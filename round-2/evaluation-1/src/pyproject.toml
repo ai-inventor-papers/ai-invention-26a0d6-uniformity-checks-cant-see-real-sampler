@@ -1,0 +1,10 @@
+[project]
+name = "reservoir-eval-reconciliation"
+version = "0.1.0"
+description = "Evaluation artifact: rebuild the three reviewer-required reconciliation tables (corrected Table 1, pinned C2 maxdev inflation, null-law validation) from the stored iteration-1 evidence, with no new simulation."
+requires-python = ">=3.12"
+dependencies = [
+    "loguru==0.7.3",
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+]
