@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "method_name": "iter1_C2_per_value_verification_screen",
+    "description": "Screens alternate hypothesis C2: does per-VALUE verification of a reservoir sampler on replayed, skewed streams mislead the four-statistic uniformity protocol calibrated per-position? Fully synthetic ...",
+    "verdict": {
+      "c2_dominant": true,
+      "c2_contributing": false,
+      "trigger": "DOMINANT via naive per-value reference (mechanism 1): protocol FA > 0.2 at 7 of 7 profiles (measured FA_max per profile: {'uniform': 0.22, 'zipf_0.0': 1.0, 'zipf_0.5': 1.0, 'zipf_1.0': 1.0, 'zipf_1.5'...",
+      "fa_max_by_profile": {
+        "uniform": 0.22,
+        "zipf_0.0": 1.0,
+        "zipf_0.5": 1.0,
+        "zipf_1.0": 1.0,
+        "zipf_1.5": 1.0,
+        "zipf_2.0": 1.0,
+        "geometric": 1.0
+      },
+      "hiding_max_by_profile": {
+        "uniform": 0.0,
+        "zipf_0.0": 0.0,
+        "zipf_0.5": 0.0,
+        "zipf_1.0": 0.029999999999999916,
+        "zipf_1.5": 0.07999999999999996,
+        "zipf_2.0": 0.09999999999999998,
+        "geometric": 0.14
+      },
+      "pv_aware_pp_maxdev_ratio_outside_band": true
+    },
+    "qc": {
+      "duality_ok": true,
+      "p_v_check": {
+        "ok": true,
+        "cells": [
+          {
+            "profile": "uniform",
+            "sim": 0.10078,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.007800000000043806
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.1004,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.004000000000043726
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.099732,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.002679999999956584
+          }
+        ]
+      },
+      "ib_link": {
+        "cells": [
+          {
+            "profile": "uniform",
+            "n": 1000,
+            "k": 100,
+            "m": 2000,
+            "thresh_sampler": 54.04999999999998,
+            "thresh_ib": 55.0,
+            "ratio": 0.9827272727272724,
+            "ok": true
+          },
+          {
+            "profile": "uniform",
+            "n": 1000,
+            "k": 500,
+            "m": 2000,
+            "thresh_sampler": 91.0,
+            "thresh_ib": 90.0,
+            "ratio": 1.011111111111111,
+            "ok": true
+          }
+        ],
+        "ok": true
+      },
+      "modulo_slot_bias_ratios": [
+        1.3256955810147297,
+        1.2631001530155612,
+        1.2514384349827385
+      ]
+    },
+    "alpha_holdout": {
+      "PP": {
+        "mean_per_stat_maxdev": 0.05,
+        "se": 0.020701966780270628,
+        "protocol_OR_rate": 0.21000000000000002,
+        "expected_protocol_OR_rate": 0.18549375000000012,
+        "ok": true,
+        "n_cells": 8
+      },
+      "PV_aware": {
+        "mean_per_stat_maxdev": 0.0575,
+        "se": 0.01030776406404415,
+        "protocol_OR_rate": 0.20750000000000002,
+        "expected_protocol_OR_rate": 0.18549375000000012,
+        "ok": true,
+        "n_cells": 8
+      }
+    },
+    "grid": {
+      "profiles": [
+        "uniform",
+        "zipf_0.0",
+        "zipf_0.5"
+      ],
+      "ns": [
+        300,
+        1000,
+        5000
+      ],
+      "ps": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "ms": [
+        500,
+        2000,
+        5000
+      ],
+      "alpha": 0.05,
+      "cells_run": {
+        "null": 189,
+        "ib": 189,
+        "fa": 193,
+        "bug": 245,
+        "holdout": 8,
+        "link": 2,
+        "duality": 9
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "iter1_C2_per_value_verification_screen",
+      "examples": [
+        {
+          "input": "experiment",
+          "output": "\"iter1_C2_per_value_verification_screen\""
+        },
+        {
+          "input": "grid",
+          "output": "{\"profiles\": [\"uniform\", \"zipf_0.0\", \"zipf_0.5\", \"zipf_1.0\", \"zipf_1.5\", \"zipf_2.0\", \"geometric\"], \"ns\": [300, 1000, 5000], \"ps\": [0.1, 0.5, 0.9], \"ms\": [500, 2000, 5000], \"alpha\": 0.05, \"r_null_by_n\"..."
+        },
+        {
+          "input": "streams",
+          "output": "[{\"profile\": \"geometric\", \"n\": 300, \"V_realized\": 93, \"maxfreq_share\": 0.03666666666666667, \"entropy\": 4.242533437473418, \"entropy_deficit\": 0.25618947490995625, \"HHI\": 0.01768888888888889}, {\"profile..."
+        }
+      ]
+    },
+    {
+      "dataset": "iter1_C2_value_profile_streams",
+      "examples": [
+        {
+          "input": "value-profile stream: profile=uniform n=300",
+          "output": "{\"profile\": \"uniform\", \"n\": 300, \"seed\": 10075717858885063342, \"V_realized\": 300, \"maxfreq_share\": 0.0033333333333333335, \"entropy\": 5.703782474656201, \"entropy_deficit\": 0.0, \"HHI\": 0.003333333333333..."
+        },
+        {
+          "input": "value-profile stream: profile=uniform n=1000",
+          "output": "{\"profile\": \"uniform\", \"n\": 1000, \"seed\": 488044902851555993, \"V_realized\": 1000, \"maxfreq_share\": 0.001, \"entropy\": 6.907755278982134, \"entropy_deficit\": 3.3306690738754696e-16, \"HHI\": 0.001000000000..."
+        },
+        {
+          "input": "value-profile stream: profile=uniform n=5000",
+          "output": "{\"profile\": \"uniform\", \"n\": 5000, \"seed\": 1306160661942887542, \"V_realized\": 5000, \"maxfreq_share\": 0.0002, \"entropy\": 8.517193191416238, \"entropy_deficit\": 0.0, \"HHI\": 0.00019999999999999998}"
+        }
+      ]
+    }
+  ]
+}

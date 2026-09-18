@@ -1,0 +1,51 @@
+{
+ "experiment": "iter1_C2_value_profile_streams",
+ "seed_scheme": "hash(profile, n)",
+ "streams": [
+  {
+   "profile": "uniform",
+   "n": 300,
+   "seed": 10075717858885063342,
+   "V_realized": 300,
+   "f_v": [
+    1,
+    1,
+    1
+   ],
+   "maxfreq_share": 0.0033333333333333335,
+   "entropy": 5.703782474656201,
+   "entropy_deficit": 0.0,
+   "HHI": 0.003333333333333334
+  },
+  {
+   "profile": "uniform",
+   "n": 1000,
+   "seed": 488044902851555993,
+   "V_realized": 1000,
+   "f_v": [
+    1,
+    1,
+    1
+   ],
+   "maxfreq_share": 0.001,
+   "entropy": 6.907755278982134,
+   "entropy_deficit": 3.3306690738754696e-16,
+   "HHI": 0.0010000000000000002
+  },
+  {
+   "profile": "uniform",
+   "n": 5000,
+   "seed": 1306160661942887542,
+   "V_realized": 5000,
+   "f_v": [
+    1,
+    1,
+    1
+   ],
+   "maxfreq_share": 0.0002,
+   "entropy": 8.517193191416238,
+   "entropy_deficit": 0.0,
+   "HHI": 0.00019999999999999998
+  }
+ ]
+}

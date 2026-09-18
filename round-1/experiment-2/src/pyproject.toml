@@ -1,0 +1,22 @@
+[project]
+name = "iter1-c2-per-value-verification-screen"
+version = "0.1.0"
+description = "C2 screen: do duplicate stream values fool per-value uniformity checks of reservoir samplers?"
+requires-python = ">=3.12"
+# All versions pinned to the exact builds installed in .venv (uv pip freeze).
+dependencies = [
+    "attrs==26.1.0",
+    "jsonschema==4.26.0",
+    "jsonschema-specifications==2025.9.1",
+    "loguru==0.7.3",
+    "numpy==2.5.3",
+    "psutil==7.2.2",
+    "referencing==0.37.0",
+    "rpds-py==2026.6.3",
+    "scipy==1.18.1",
+    "typing-extensions==4.16.0",
+]
+
+# Scripts-only project: the two top-level Python files are the whole package.
+[tool.setuptools]
+py-modules = ["method", "post_process"]

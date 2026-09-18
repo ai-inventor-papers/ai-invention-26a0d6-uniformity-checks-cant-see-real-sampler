@@ -1,0 +1,1310 @@
+{
+  "metadata": {
+    "method_name": "iter1_C2_per_value_verification_screen",
+    "description": "Screens alternate hypothesis C2: does per-VALUE verification of a reservoir sampler on replayed, skewed streams mislead the four-statistic uniformity protocol calibrated per-position? Fully synthetic (7 value profiles x 3 n x 3 p x 3 m grid, alpha=0.05 simulation calibration, 3 count spaces, 4 stats, 4+1 bug samplers, F2 knee profiles).",
+    "verdict": {
+      "c2_dominant": true,
+      "c2_contributing": false,
+      "trigger": "DOMINANT via naive per-value reference (mechanism 1): protocol FA > 0.2 at 7 of 7 profiles (measured FA_max per profile: {'uniform': 0.22, 'zipf_0.0': 1.0, 'zipf_0.5': 1.0, 'zipf_1.0': 1.0, 'zipf_1.5': 1.0, 'zipf_2.0': 1.0, 'geometric': 1.0}); bug-hiding factor (mechanism 2) stayed below 0.3 at every cell (max 0.14) -- both spaces reject the strong bugs at 100% at the tested budgets",
+      "fa_max_by_profile": {
+        "uniform": 0.22,
+        "zipf_0.0": 1.0,
+        "zipf_0.5": 1.0,
+        "zipf_1.0": 1.0,
+        "zipf_1.5": 1.0,
+        "zipf_2.0": 1.0,
+        "geometric": 1.0
+      },
+      "hiding_max_by_profile": {
+        "uniform": 0.0,
+        "zipf_0.0": 0.0,
+        "zipf_0.5": 0.0,
+        "zipf_1.0": 0.029999999999999916,
+        "zipf_1.5": 0.07999999999999996,
+        "zipf_2.0": 0.09999999999999998,
+        "geometric": 0.14
+      },
+      "pv_aware_pp_maxdev_ratio_outside_band": true
+    },
+    "qc": {
+      "duality_ok": true,
+      "p_v_check": {
+        "ok": true,
+        "cells": [
+          {
+            "profile": "uniform",
+            "sim": 0.10078,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.007800000000043806
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.1004,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.004000000000043726
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.099732,
+            "closed": 0.09999999999999565,
+            "rel_err": 0.002679999999956584
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.50004,
+            "closed": 0.4999999999998588,
+            "rel_err": 8.000000028254334e-05
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.49926,
+            "closed": 0.4999999999998588,
+            "rel_err": 0.0014799999997180142
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.500492,
+            "closed": 0.4999999999998588,
+            "rel_err": 0.0009840000002828146
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.89932,
+            "closed": 0.8999999999999806,
+            "rel_err": 0.0007555555555339996
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.89859,
+            "closed": 0.8999999999999806,
+            "rel_err": 0.0015666666666451375
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.899756,
+            "closed": 0.8999999999999806,
+            "rel_err": 0.0002711111110895537
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.09814,
+            "closed": 0.10000000000060949,
+            "rel_err": 0.018600000005981488
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.101265,
+            "closed": 0.10000000000060949,
+            "rel_err": 0.012649999993827937
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.100722,
+            "closed": 0.10000000000060949,
+            "rel_err": 0.007219999993861152
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.50208,
+            "closed": 0.5000000000005409,
+            "rel_err": 0.00415999999891364
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.50026,
+            "closed": 0.5000000000005409,
+            "rel_err": 0.0005199999989177122
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.49965,
+            "closed": 0.5000000000005409,
+            "rel_err": 0.000700000001081078
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.89876,
+            "closed": 0.9000000000001014,
+            "rel_err": 0.0013777777778902695
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.89977,
+            "closed": 0.9000000000001014,
+            "rel_err": 0.00025555555566822327
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.900438,
+            "closed": 0.9000000000001014,
+            "rel_err": 0.0004866666665539175
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.101,
+            "closed": 0.10000000000470233,
+            "rel_err": 0.009999999952506557
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.099075,
+            "closed": 0.10000000000470233,
+            "rel_err": 0.009250000046588346
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.099826,
+            "closed": 0.10000000000470233,
+            "rel_err": 0.001740000046941473
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.50202,
+            "closed": 0.5000000000009956,
+            "rel_err": 0.004039999998000703
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.4996,
+            "closed": 0.5000000000009956,
+            "rel_err": 0.0008000000019897259
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.500174,
+            "closed": 0.5000000000009956,
+            "rel_err": 0.000347999998008026
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.89952,
+            "closed": 0.8999999999999422,
+            "rel_err": 0.000533333333269138
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.898765,
+            "closed": 0.8999999999999422,
+            "rel_err": 0.0013722222221580255
+          },
+          {
+            "profile": "uniform",
+            "sim": 0.900458,
+            "closed": 0.8999999999999422,
+            "rel_err": 0.000508888888953145
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.34462,
+            "closed": 0.3453684337255384,
+            "rel_err": 0.0021670588636747688
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.412955,
+            "closed": 0.4117162276046826,
+            "rel_err": 0.0030088014808753675
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.4121,
+            "closed": 0.4117162276046826,
+            "rel_err": 0.0009321284165798802
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.98346,
+            "closed": 0.9851509540160905,
+            "rel_err": 0.001716441535378061
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.93756,
+            "closed": 0.9387520691868273,
+            "rel_err": 0.0012698445371842984
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.969684,
+            "closed": 0.9697898719637768,
+            "rel_err": 0.00010917000356208578
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 1.0,
+            "closed": 0.999992722913645,
+            "rel_err": 7.277139311322131e-06
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.999925,
+            "closed": 0.9999171531707277,
+            "rel_err": 7.847479411026991e-06
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.99999,
+            "closed": 0.999992722913645,
+            "rel_err": 2.7229334600254716e-06
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.46906,
+            "closed": 0.46944743456076066,
+            "rel_err": 0.0008252991330609438
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.410965,
+            "closed": 0.4101678183107246,
+            "rel_err": 0.001943550063382938
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.410714,
+            "closed": 0.4101678183107246,
+            "rel_err": 0.0013316054183014584
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.96866,
+            "closed": 0.96906234218172,
+            "rel_err": 0.00041518709809139977
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.96867,
+            "closed": 0.96906234218172,
+            "rel_err": 0.00040486784455653245
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.984832,
+            "closed": 0.9846089038994474,
+            "rel_err": 0.00022658346849094058
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.99998,
+            "closed": 0.9999908745621559,
+            "rel_err": 1.0874661391918066e-05
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 1.0,
+            "closed": 0.9999999176059776,
+            "rel_err": 8.239402917141242e-08
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.999988,
+            "closed": 0.9999908745621559,
+            "rel_err": 2.874588387741118e-06
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.4658,
+            "closed": 0.46873625468233004,
+            "rel_err": 0.006264193676079097
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.409705,
+            "closed": 0.4096412885716214,
+            "rel_err": 0.00015552980169731455
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.522202,
+            "closed": 0.5219264574558389,
+            "rel_err": 0.0005279336585164246
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.98468,
+            "closed": 0.9844218562313103,
+            "rel_err": 0.00026222880674142126
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.984245,
+            "closed": 0.9844218562313103,
+            "rel_err": 0.00017965492150622843
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 0.98433,
+            "closed": 0.9844218562313103,
+            "rel_err": 9.330982518196597e-05
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 1.0,
+            "closed": 0.9999999904941653,
+            "rel_err": 9.505834765321916e-09
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 1.0,
+            "closed": 0.9999999037269118,
+            "rel_err": 9.627309743668343e-08
+          },
+          {
+            "profile": "zipf_0.0",
+            "sim": 1.0,
+            "closed": 0.9999990267453389,
+            "rel_err": 9.732556083107783e-07
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.57378,
+            "closed": 0.5740531103938393,
+            "rel_err": 0.00047575805947989487
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.574315,
+            "closed": 0.5740531103938393,
+            "rel_err": 0.00045621145747475934
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.802296,
+            "closed": 0.8022342603700174,
+            "rel_err": 7.69596027400959e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.99922,
+            "closed": 0.9991636005326825,
+            "rel_err": 5.6446679289992773e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.996315,
+            "closed": 0.9964503778075655,
+            "rel_err": 0.00013586005944764287
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.985042,
+            "closed": 0.9851509540160905,
+            "rel_err": 0.00011059626511693781
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999999999026,
+            "rel_err": 9.736655925963571e-14
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999999999026,
+            "rel_err": 9.736655925963571e-14
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999999999026,
+            "rel_err": 9.736655925963571e-14
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.77448,
+            "closed": 0.7735555060348875,
+            "rel_err": 0.0011951229845821951
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.944165,
+            "closed": 0.9441159805502809,
+            "rel_err": 5.192100412341624e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.8356,
+            "closed": 0.8357585468230923,
+            "rel_err": 0.00018970410017931025
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.99992,
+            "closed": 0.9999443433333447,
+            "rel_err": 2.434468828886835e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.99976,
+            "closed": 0.9997716281834713,
+            "rel_err": 1.1630839627308427e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.999982,
+            "closed": 0.9999864922798393,
+            "rel_err": 4.492340520508569e-06
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999999999997,
+            "rel_err": 3.3306690738754706e-16
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999999342837,
+            "rel_err": 6.57163212779309e-11
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.99046,
+            "closed": 0.9905052333166859,
+            "rel_err": 4.56669133735622e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.9773,
+            "closed": 0.977786363183188,
+            "rel_err": 0.000497412524352158
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 0.982116,
+            "closed": 0.9820363455725271,
+            "rel_err": 8.111148618078079e-05
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999995759349,
+            "rel_err": 4.2406511653545207e-10
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.9999999997892902,
+            "rel_err": 2.1070978299951938e-10
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 0.999999999999953,
+            "rel_err": 4.6962433941646324e-14
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_0.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 0.995,
+            "closed": 0.9954931765169827,
+            "rel_err": 0.0004954092389745774
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 0.986105,
+            "closed": 0.9862883667656913,
+            "rel_err": 0.00018591597738561587
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 0.998446,
+            "closed": 0.9983828900339817,
+            "rel_err": 6.321218707590977e-05
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 0.9999992587604875,
+            "rel_err": 7.412400619836538e-07
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 0.9999998818160232,
+            "rel_err": 1.1818399079462266e-07
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 0.9999999562268685,
+            "rel_err": 4.3773133368960435e-08
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 0.999999994643734,
+            "rel_err": 5.356266014990043e-09
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 0.9999999695865983,
+            "rel_err": 3.041340261094421e-08
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 0.9999999234602505,
+            "rel_err": 7.653975539669611e-08
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_1.5",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 0.9999999999999974,
+            "rel_err": 2.5535129566378667e-15
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 0.9999999999998271,
+            "rel_err": 1.7286172493416676e-13
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 0.9999999999999265,
+            "rel_err": 7.349676423019077e-14
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "zipf_2.0",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.69024,
+            "closed": 0.6926758001697981,
+            "rel_err": 0.0035165082556674666
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.821215,
+            "closed": 0.8230517066468235,
+            "rel_err": 0.0022315811169462667
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.822714,
+            "closed": 0.8230517066468235,
+            "rel_err": 0.0004103103657963063
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.9993,
+            "closed": 0.9991636005326825,
+            "rel_err": 0.00013651364725932104
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.999965,
+            "closed": 0.9999555792372155,
+            "rel_err": 9.421181280598776e-06
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999989614574797,
+            "rel_err": 1.0385435988868976e-06
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999999026,
+            "rel_err": 9.736655925963571e-14
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999999939,
+            "rel_err": 6.106226635438398e-15
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999999997,
+            "rel_err": 3.3306690738754706e-16
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.97372,
+            "closed": 0.9739073197259202,
+            "rel_err": 0.00019233834896408518
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.97709,
+            "closed": 0.9766084253443733,
+            "rel_err": 0.000493109257640175
+          },
+          {
+            "profile": "geometric",
+            "sim": 0.984688,
+            "closed": 0.9849095683237601,
+            "rel_err": 0.00022496311426557848
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999325542,
+            "rel_err": 6.744582670592227e-11
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999963557,
+            "rel_err": 3.644307078345357e-12
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999999999074,
+            "rel_err": 9.259260025374663e-14
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999998815747226,
+            "rel_err": 1.1842529138682535e-07
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999233673427,
+            "rel_err": 7.663266320349745e-08
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 0.9999999937729814,
+            "rel_err": 6.227018606226431e-09
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          },
+          {
+            "profile": "geometric",
+            "sim": 1.0,
+            "closed": 1.0,
+            "rel_err": 0.0
+          }
+        ]
+      },
+      "ib_link": {
+        "cells": [
+          {
+            "profile": "uniform",
+            "n": 1000,
+            "k": 100,
+            "m": 2000,
+            "thresh_sampler": 54.04999999999998,
+            "thresh_ib": 55.0,
+            "ratio": 0.9827272727272724,
+            "ok": true
+          },
+          {
+            "profile": "uniform",
+            "n": 1000,
+            "k": 500,
+            "m": 2000,
+            "thresh_sampler": 91.0,
+            "thresh_ib": 90.0,
+            "ratio": 1.011111111111111,
+            "ok": true
+          }
+        ],
+        "ok": true
+      },
+      "modulo_slot_bias_ratios": [
+        1.3256955810147297,
+        1.2631001530155612,
+        1.2514384349827385,
+        1.3130942258638014,
+        1.2752690868407852,
+        1.2499855426145892,
+        1.3312239543139373,
+        1.2536489493916008,
+        1.2583198087191787,
+        1.2903969122645313,
+        1.2603764478764479,
+        1.256030274142762,
+        1.386530297182555,
+        1.2781109626119975,
+        1.2518862718006707,
+        1.3174875281699636,
+        1.289466702042982,
+        1.2371658495976319,
+        1.3390533114817313,
+        1.26749558691605,
+        1.2401254087531919
+      ]
+    },
+    "alpha_holdout": {
+      "PP": {
+        "mean_per_stat_maxdev": 0.05,
+        "se": 0.020701966780270628,
+        "protocol_OR_rate": 0.21000000000000002,
+        "expected_protocol_OR_rate": 0.18549375000000012,
+        "ok": true,
+        "n_cells": 8
+      },
+      "PV_aware": {
+        "mean_per_stat_maxdev": 0.0575,
+        "se": 0.01030776406404415,
+        "protocol_OR_rate": 0.20750000000000002,
+        "expected_protocol_OR_rate": 0.18549375000000012,
+        "ok": true,
+        "n_cells": 8
+      }
+    },
+    "grid": {
+      "profiles": [
+        "uniform",
+        "zipf_0.0",
+        "zipf_0.5",
+        "zipf_1.0",
+        "zipf_1.5",
+        "zipf_2.0",
+        "geometric"
+      ],
+      "ns": [
+        300,
+        1000,
+        5000
+      ],
+      "ps": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "ms": [
+        500,
+        2000,
+        5000
+      ],
+      "alpha": 0.05,
+      "cells_run": {
+        "null": 189,
+        "ib": 189,
+        "fa": 193,
+        "bug": 245,
+        "holdout": 8,
+        "link": 2,
+        "duality": 9
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "iter1_C2_per_value_verification_screen",
+      "examples": [
+        {
+          "input": "experiment",
+          "output": "\"iter1_C2_per_value_verification_screen\""
+        },
+        {
+          "input": "grid",
+          "output": "{\"profiles\": [\"uniform\", \"zipf_0.0\", \"zipf_0.5\", \"zipf_1.0\", \"zipf_1.5\", \"zipf_2.0\", \"geometric\"], \"ns\": [300, 1000, 5000], \"ps\": [0.1, 0.5, 0.9], \"ms\": [500, 2000, 5000], \"alpha\": 0.05, \"r_null_by_n\": {\"300\": 100, \"1000\": 100, \"5000\": 100}, \"r_bug_by_n\": {\"300\": 100, \"1000\": 100, \"5000\": 50}, \"num_workers\": 3, \"chunk_elems\": 4000000, \"cells_run\": {\"null\": 189, \"ib\": 189, \"fa\": 193, \"bug\": 245, \"holdout\": 8, \"link\": 2, \"duality\": 9}}"
+        },
+        {
+          "input": "streams",
+          "output": "[{\"profile\": \"geometric\", \"n\": 300, \"V_realized\": 93, \"maxfreq_share\": 0.03666666666666667, \"entropy\": 4.242533437473418, \"entropy_deficit\": 0.25618947490995625, \"HHI\": 0.01768888888888889}, {\"profile\": \"geometric\", \"n\": 1000, \"V_realized\": 130, \"maxfreq_share\": 0.034, \"entropy\": 4.395456059024486, \"entropy_deficit\": 0.3636925627058172, \"HHI\": 0.01616}, {\"profile\": \"geometric\", \"n\": 5000, \"V_realized\": 185, \"maxfreq_share\": 0.0298, \"entropy\": 4.4456566014040675, \"entropy_deficit\": 0.4780373649520513, \"HHI\": 0.015664320000000002}, {\"profile\": \"uniform\", \"n\": 300, \"V_realized\": 300, \"maxfreq_share\": 0.0033333333333333335, \"entropy\": 5.703782474656201, \"entropy_deficit\": 0.0, \"HHI\": 0.003333333333333334}, {\"profile\": \"uniform\", \"n\": 1000, \"V_realized\": 1000, \"maxfreq_share\": 0.001, \"entropy\": 6.907755278982134, \"entropy_deficit\": 3.3306690738754696e-16, \"HHI\": 0.0010000000000000002}, {\"profile\": \"uniform\", \"n\": 5000, \"V_realized\": 5000, \"maxfreq_share\": 0.0002, \"entropy\": 8.517193191416238, \"entropy_deficit\": 0.0, \"HHI\": 0.00019999999999999998}, {\"profile\": \"zipf_0.0\", \"n\": 300, \"V_realized\": 196, \"maxfreq_share\": 0.013333333333333334, \"entropy\": 5.173933116261079, \"entropy_deficit\": 0.09289438381449833, \"HHI\": 0.006311111111111114}, {\"profile\": \"zipf_0.0\", \"n\": 1000, \"V_realized\": 642, \"maxfreq_share\": 0.006, \"entropy\": 6.347721902823244, \"entropy_deficit\": 0.08107313498248514, \"HHI\": 0.001986}, {\"profile\": \"zipf_0.0\", \"n\": 5000, \"V_realized\": 3147, \"maxfreq_share\": 0.0012, \"entropy\": 7.935493361171673, \"entropy_deficit\": 0.06829712760664053, \"HHI\": 0.00040503999999999996}, {\"profile\": \"zipf_0.5\", \"n\": 300, \"V_realized\": 177, \"maxfreq_share\": 0.02666666666666667, \"entropy\": 5.0178620753569385, \"entropy_deficit\": 0.12025711049589194, \"HHI\": 0.007955555555555558}, {\"profile\": \"zipf_0.5\", \"n\": 1000, \"V_realized\": 554, \"maxfreq_share\": 0.014, \"entropy\": 6.102256006979823, \"entropy_deficit\": 0.11660796300256382, \"HHI\": 0.0029340000000000004}, {\"profile\": \"zipf_0.5\", \"n\": 5000, \"V_realized\": 2842, \"maxfreq_share\": 0.0088, \"entropy\": 7.7136020146395, \"entropy_deficit\": 0.09434929544472581, \"HHI\": 0.00068752}, {\"profile\": \"zipf_1.0\", \"n\": 300, \"V_realized\": 113, \"maxfreq_share\": 0.15666666666666668, \"entropy\": 4.015030643995227, \"entropy_deficit\": 0.29607577746252745, \"HHI\": 0.042577777777777784}, {\"profile\": \"zipf_1.0\", \"n\": 1000, \"V_realized\": 329, \"maxfreq_share\": 0.125, \"entropy\": 4.810920568530381, \"entropy_deficit\": 0.3035479147374668, \"HHI\": 0.027327999999999995}, {\"profile\": \"zipf_1.0\", \"n\": 5000, \"V_realized\": 1503, \"maxfreq_share\": 0.1092, \"entropy\": 5.81905025473154, \"entropy_deficit\": 0.31678780509568927, \"HHI\": 0.02029296}, {\"profile\": \"zipf_1.5\", \"n\": 300, \"V_realized\": 56, \"maxfreq_share\": 0.44666666666666666, \"entropy\": 2.4407500143264778, \"entropy_deficit\": 0.5720822059446445, \"HHI\": 0.22577777777777774}, {\"profile\": \"zipf_1.5\", \"n\": 1000, \"V_realized\": 117, \"maxfreq_share\": 0.394, \"entropy\": 2.7243044971510177, \"entropy_deficit\": 0.6056165299543665, \"HHI\": 0.18551800000000007}, {\"profile\": \"zipf_1.5\", \"n\": 5000, \"V_realized\": 385, \"maxfreq_share\": 0.3788, \"entropy\": 2.9682205235576125, \"entropy_deficit\": 0.6515025012525215, \"HHI\": 0.1766004}, {\"profile\": \"zipf_2.0\", \"n\": 300, \"V_realized\": 18, \"maxfreq_share\": 0.64, \"entropy\": 1.3694316045944095, \"entropy_deficit\": 0.7599081643314329, \"HHI\": 0.43800000000000006}, {\"profile\": \"zipf_2.0\", \"n\": 1000, \"V_realized\": 46, \"maxfreq_share\": 0.6, \"entropy\": 1.6339049555234397, \"entropy_deficit\": 0.763468031287264, \"HHI\": 0.38837399999999983}, {\"profile\": \"zipf_2.0\", \"n\": 5000, \"V_realized\": 94, \"maxfreq_share\": 0.6072, \"entropy\": 1.5883579437679767, \"entropy_deficit\": 0.8135115749906027, \"HHI\": 0.4011247999999998}]"
+        }
+      ]
+    },
+    {
+      "dataset": "iter1_C2_value_profile_streams",
+      "examples": [
+        {
+          "input": "value-profile stream: profile=uniform n=300",
+          "output": "{\"profile\": \"uniform\", \"n\": 300, \"seed\": 10075717858885063342, \"V_realized\": 300, \"maxfreq_share\": 0.0033333333333333335, \"entropy\": 5.703782474656201, \"entropy_deficit\": 0.0, \"HHI\": 0.003333333333333334}"
+        },
+        {
+          "input": "value-profile stream: profile=uniform n=1000",
+          "output": "{\"profile\": \"uniform\", \"n\": 1000, \"seed\": 488044902851555993, \"V_realized\": 1000, \"maxfreq_share\": 0.001, \"entropy\": 6.907755278982134, \"entropy_deficit\": 3.3306690738754696e-16, \"HHI\": 0.0010000000000000002}"
+        },
+        {
+          "input": "value-profile stream: profile=uniform n=5000",
+          "output": "{\"profile\": \"uniform\", \"n\": 5000, \"seed\": 1306160661942887542, \"V_realized\": 5000, \"maxfreq_share\": 0.0002, \"entropy\": 8.517193191416238, \"entropy_deficit\": 0.0, \"HHI\": 0.00019999999999999998}"
+        }
+      ]
+    }
+  ]
+}
