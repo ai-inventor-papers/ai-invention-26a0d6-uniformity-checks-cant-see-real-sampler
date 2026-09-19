@@ -1,0 +1,50 @@
+{
+ "ok": true,
+ "per_m": [
+  {
+   "m": 2000,
+   "n_check_reps": 500,
+   "se3": 0.029240383034426894,
+   "empirical_alpha_rates": {
+    "maxdev": 0.038,
+    "chi2": 0.064,
+    "trend_slope": 0.054,
+    "energy": 0.046
+   },
+   "ok": true,
+   "cell": "2000",
+   "wall_s": 20.59,
+   "skipped": false
+  },
+  {
+   "m": 5000,
+   "n_check_reps": 500,
+   "se3": 0.029240383034426894,
+   "empirical_alpha_rates": {
+    "maxdev": 0.04,
+    "chi2": 0.04,
+    "trend_slope": 0.048,
+    "energy": 0.04
+   },
+   "ok": true,
+   "cell": "5000",
+   "wall_s": 52.67,
+   "skipped": false
+  },
+  {
+   "m": 10000,
+   "n_check_reps": 500,
+   "se3": 0.029240383034426894,
+   "empirical_alpha_rates": {
+    "maxdev": 0.036,
+    "chi2": 0.036,
+    "trend_slope": 0.048,
+    "energy": 0.048
+   },
+   "ok": true,
+   "cell": "10000",
+   "wall_s": 102.26,
+   "skipped": false
+  }
+ ]
+}

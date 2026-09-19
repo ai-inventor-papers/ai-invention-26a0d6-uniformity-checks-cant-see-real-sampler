@@ -1,0 +1,78 @@
+{
+ "ok": true,
+ "rows": [
+  {
+   "family": "linear_trend",
+   "stat": "maxdev",
+   "anchor_kind": "fine_interp",
+   "anchor_delta": 0.12525691972306055,
+   "iter2_delta": 0.13048257623701506,
+   "iter2_mult": 0.32607669669060185,
+   "ok": true
+  },
+  {
+   "family": "linear_trend",
+   "stat": "chi2",
+   "anchor_kind": "a_acc",
+   "anchor_delta": 0.03311117278428566,
+   "iter2_delta": 0.032368648250310814,
+   "iter2_mult": 0.08088943521952972,
+   "ok": true
+  },
+  {
+   "family": "linear_trend",
+   "stat": "trend_slope",
+   "anchor_kind": "upper_bound",
+   "anchor_delta": 0.0200079578763679,
+   "iter2_delta": 0.005261670393141038,
+   "iter2_mult": 0.013148944099277072,
+   "ok": true
+  },
+  {
+   "family": "linear_trend",
+   "stat": "energy",
+   "anchor_kind": "probe_interp",
+   "anchor_delta": 0.037791414624400825,
+   "iter2_delta": 0.038658618440966276,
+   "iter2_mult": 0.09660810633409851,
+   "ok": true
+  },
+  {
+   "family": "exp_recency",
+   "stat": "maxdev",
+   "anchor_kind": "fine_interp",
+   "anchor_delta": 0.14900663365821354,
+   "iter2_delta": 0.14558183462362667,
+   "iter2_mult": 0.3638098288770852,
+   "ok": true
+  },
+  {
+   "family": "exp_recency",
+   "stat": "chi2",
+   "anchor_kind": "a_acc",
+   "anchor_delta": 0.05016429523417776,
+   "iter2_delta": 0.04929636601742361,
+   "iter2_mult": 0.12319189774896838,
+   "ok": true
+  },
+  {
+   "family": "exp_recency",
+   "stat": "trend_slope",
+   "anchor_kind": "upper_bound",
+   "anchor_delta": 0.0200079578763679,
+   "iter2_delta": 0.008701447864851925,
+   "iter2_mult": 0.021744967473990715,
+   "ok": true
+  },
+  {
+   "family": "exp_recency",
+   "stat": "energy",
+   "anchor_kind": "probe_interp",
+   "anchor_delta": 0.04855685593100391,
+   "iter2_delta": 0.04862875817819165,
+   "iter2_mult": 0.1215235419793361,
+   "ok": true
+  }
+ ],
+ "note": "G4: m=2000 half-power vs iteration-1 anchors. Band 10% for bracketed anchors; trend = upper-bound check with 20% slack; unbracketed anchors count as check-only."
+}

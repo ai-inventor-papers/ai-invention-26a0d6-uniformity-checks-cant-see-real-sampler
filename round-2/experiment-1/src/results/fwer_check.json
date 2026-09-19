@@ -1,0 +1,97 @@
+{
+ "scale": "confirm",
+ "generated_at": "2026-09-19T02:54:09",
+ "protocol": "3-test {maxdev, chi2, trend|z|}, energy measured but not used",
+ "cells": [
+  {
+   "m": 2000,
+   "N": 3000,
+   "chunked": true,
+   "n_chunks": 6,
+   "seed_scheme": "fwer_2000_part{i}",
+   "fwer_sidak": 0.05,
+   "fwer_bonf": 0.04833333333333333,
+   "sidak_to_0.05_ratio": 1.0,
+   "bonf_to_0.05_ratio": 0.9666666666666666,
+   "binomial_se": 0.003979112128771107,
+   "sidak_within_2se": true,
+   "bonf_within_2se": true,
+   "marginal_sidak": {
+    "maxdev": 0.01633333333333333,
+    "chi2": 0.018,
+    "trend_slope": 0.017333333333333333,
+    "energy": 0.018
+   },
+   "marginal_bonf": {
+    "maxdev": 0.01633333333333333,
+    "chi2": 0.01633333333333333,
+    "trend_slope": 0.017333333333333333,
+    "energy": 0.018
+   },
+   "marginal_sidak_note": "sanity: each marginal ~= alpha' = 0.01695 within binomial noise sqrt(alpha'*(1-alpha')/3000)",
+   "cell": "2000",
+   "wall_s": 763.86,
+   "skipped": false
+  },
+  {
+   "m": 5000,
+   "N": 3000,
+   "chunked": true,
+   "n_chunks": 6,
+   "seed_scheme": "fwer_5000_part{i}",
+   "fwer_sidak": 0.05,
+   "fwer_bonf": 0.05,
+   "sidak_to_0.05_ratio": 1.0,
+   "bonf_to_0.05_ratio": 1.0,
+   "binomial_se": 0.003979112128771107,
+   "sidak_within_2se": true,
+   "bonf_within_2se": true,
+   "marginal_sidak": {
+    "maxdev": 0.018,
+    "chi2": 0.015666666666666666,
+    "trend_slope": 0.018333333333333333,
+    "energy": 0.018
+   },
+   "marginal_bonf": {
+    "maxdev": 0.018,
+    "chi2": 0.015666666666666666,
+    "trend_slope": 0.018333333333333333,
+    "energy": 0.018
+   },
+   "marginal_sidak_note": "sanity: each marginal ~= alpha' = 0.01695 within binomial noise sqrt(alpha'*(1-alpha')/3000)",
+   "cell": "5000",
+   "wall_s": 902.61,
+   "skipped": false
+  },
+  {
+   "m": 10000,
+   "N": 3000,
+   "chunked": true,
+   "n_chunks": 6,
+   "seed_scheme": "fwer_10000_part{i}",
+   "fwer_sidak": 0.04566666666666667,
+   "fwer_bonf": 0.04566666666666667,
+   "sidak_to_0.05_ratio": 0.9133333333333333,
+   "bonf_to_0.05_ratio": 0.9133333333333333,
+   "binomial_se": 0.003979112128771107,
+   "sidak_within_2se": true,
+   "bonf_within_2se": true,
+   "marginal_sidak": {
+    "maxdev": 0.014,
+    "chi2": 0.017666666666666667,
+    "trend_slope": 0.015,
+    "energy": 0.023666666666666666
+   },
+   "marginal_bonf": {
+    "maxdev": 0.014,
+    "chi2": 0.017666666666666667,
+    "trend_slope": 0.014666666666666666,
+    "energy": 0.023333333333333334
+   },
+   "marginal_sidak_note": "sanity: each marginal ~= alpha' = 0.01695 within binomial noise sqrt(alpha'*(1-alpha')/3000)",
+   "cell": "10000",
+   "wall_s": 987.66,
+   "skipped": false
+  }
+ ]
+}

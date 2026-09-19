@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "method_name": "reservoir_uniformity_law_confirm",
+    "version": "0.2.0",
+    "seed": 0,
+    "generated_at": "2026-09-19T14:56:47",
+    "description": "Confirm-by-measurement of the trials-to-detection design law for reservoir-sampling uniformity checks: half-power amplitudes of the four statistics at m in {2000,5000,10000}, the corrected 3-test prot...",
+    "scale": "full",
+    "grid_summary": {
+      "law_confirm_cells": 6,
+      "fwer_cells": 3,
+      "bug_variants": 4,
+      "practitioner_cells": 2,
+      "secondary_arms": 2
+    },
+    "pre_registration_pointer": "results/pre_registration.json",
+    "verdict": "CONFIRMED",
+    "statistics": [
+      "maxdev = max_i |c_i - mu| (mandated report)",
+      "chi2 = sum_i (c_i - mu)^2 / mu",
+      "trend_slope: OLS slope of c_i on position, |z|-standardized"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "reservoir_uniformity_law_confirm",
+      "examples": [
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=2000, family=exp_recency: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and report...",
+          "output": "{\"m\":2000,\"family\":\"exp_recency\",\"delta_floor\":0.400159157527358,\"half_power_delta_per_stat\":{\"maxdev\":0.14558183462362667,\"chi2\":0.04929636601742361,\"trend|z|\":0.008701447864851925,\"subwin_energy\":0....",
+          "metadata_cell": "power_cell_m2000_exp_recency",
+          "metadata_family": "exp_recency",
+          "metadata_m": "2000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_exprecency": "65.8925",
+          "predict_maxdev_mult": "0.36381",
+          "predict_chi2_mult": "0.123192",
+          "predict_trend_mult": "0.021745",
+          "predict_energy_mult": "0.121524",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_exprecency": "63.6321"
+        },
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=2000, family=linear_trend: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and repor...",
+          "output": "{\"m\":2000,\"family\":\"linear_trend\",\"delta_floor\":0.400159157527358,\"half_power_delta_per_stat\":{\"maxdev\":0.13048257623701506,\"chi2\":0.032368648250310814,\"trend|z|\":0.005261670393141038,\"subwin_energy\":...",
+          "metadata_cell": "power_cell_m2000_linear_trend",
+          "metadata_family": "linear_trend",
+          "metadata_m": "2000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_lineartrend": "152.833",
+          "predict_maxdev_mult": "0.326077",
+          "predict_chi2_mult": "0.0808894",
+          "predict_trend_mult": "0.0131489",
+          "predict_energy_mult": "0.0966081",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_lineartrend": "146.055"
+        },
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=5000, family=exp_recency: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and report...",
+          "output": "{\"m\":5000,\"family\":\"exp_recency\",\"delta_floor\":0.25308287287211273,\"half_power_delta_per_stat\":{\"maxdev\":0.08872476757496704,\"chi2\":0.03165409204502885,\"trend|z|\":0.005452609486817909,\"subwin_energy\":...",
+          "metadata_cell": "power_cell_m5000_exp_recency",
+          "metadata_family": "exp_recency",
+          "metadata_m": "5000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_exprecency": "63.9243",
+          "predict_maxdev_mult": "0.350576",
+          "predict_chi2_mult": "0.125074",
+          "predict_trend_mult": "0.0215448",
+          "predict_energy_mult": "0.127582",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_exprecency": "63.6321"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_fwer",
+      "examples": [
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.05,\"fwer_bonf\":0.04833333333333333,\"marginal_sidak\":{\"maxdev\":0.01633333333333333,\"chi2\":0.018,\"trend_slope\":0.017333333333333333,\"energy\":0.018},\"N\":3000,\"binomial_se\":0.0039791121287...",
+          "metadata_cell": "fwer_m2000",
+          "metadata_m": "2000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.05",
+          "predict_fwer_bonf": "0.0483333",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        },
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.05,\"fwer_bonf\":0.05,\"marginal_sidak\":{\"maxdev\":0.018,\"chi2\":0.015666666666666666,\"trend_slope\":0.018333333333333333,\"energy\":0.018},\"N\":3000,\"binomial_se\":0.003979112128771107}",
+          "metadata_cell": "fwer_m5000",
+          "metadata_m": "5000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.05",
+          "predict_fwer_bonf": "0.05",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        },
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.04566666666666667,\"fwer_bonf\":0.04566666666666667,\"marginal_sidak\":{\"maxdev\":0.014,\"chi2\":0.017666666666666667,\"trend_slope\":0.015,\"energy\":0.023666666666666666},\"N\":3000,\"binomial_se\"...",
+          "metadata_cell": "fwer_m10000",
+          "metadata_m": "10000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.0456667",
+          "predict_fwer_bonf": "0.0456667",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_bug_trials",
+      "examples": [
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=recency_slot, m=5000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"recency_slot\",\"m\":5000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"m...",
+          "metadata_variant": "recency_slot",
+          "metadata_m": "5000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m5000": "1",
+          "predict_power_3test_m5000": "1",
+          "predict_baseline_tie_flag": "True"
+        },
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=recency_slot, m=10000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"recency_slot\",\"m\":10000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"...",
+          "metadata_variant": "recency_slot",
+          "metadata_m": "10000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m10000": "1",
+          "predict_power_3test_m10000": "1",
+          "predict_baseline_tie_flag": "True"
+        },
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=modulo_slot, m=5000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"modulo_slot\",\"m\":5000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"m9...",
+          "metadata_variant": "modulo_slot",
+          "metadata_m": "5000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m5000": "1",
+          "predict_power_3test_m5000": "1",
+          "predict_baseline_tie_flag": "True"
+        }
+      ]
+    }
+  ]
+}

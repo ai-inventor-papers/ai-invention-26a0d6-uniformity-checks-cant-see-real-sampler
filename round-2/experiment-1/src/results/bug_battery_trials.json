@@ -1,0 +1,114 @@
+{
+ "generated_at": "2026-09-19T05:16:20",
+ "cell": "n=3000 k=150 p=0.05",
+ "m_list": [
+  5000,
+  10000
+ ],
+ "n_reps": 800,
+ "protocols": {
+  "maxdev_only": "maxdev > alpha=0.05 threshold",
+  "3test": "any of {maxdev, chi2, trend|z|} > per-test Sidak threshold"
+ },
+ "negative_control_note": "float_threshold is the inert off-by-epsilon bug; powers must sit at the protocol alpha",
+ "variants": [
+  {
+   "variant": "recency_slot",
+   "m90_maxdev_only": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_maxdev_only_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "m90_3test": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_3test_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "trials_ratio": "tie"
+  },
+  {
+   "variant": "modulo_slot",
+   "m90_maxdev_only": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_maxdev_only_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "m90_3test": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_3test_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "trials_ratio": "tie"
+  },
+  {
+   "variant": "float_threshold",
+   "m90_maxdev_only": {
+    "m90": 0.002862434991835286,
+    "method": "EXTRAPOLATED",
+    "slope_probit_per_log10m": -0.47277048039847264,
+    "power_at_m5000": 0.0475,
+    "power_at_m10000": 0.035
+   },
+   "power_maxdev_only_per_m": {
+    "5000": 0.0475,
+    "10000": 0.035
+   },
+   "m90_3test": {
+    "m90": 1.8216735797012797e+18,
+    "method": "EXTRAPOLATED",
+    "slope_probit_per_log10m": 0.20354404184998895,
+    "power_at_m5000": 0.04625,
+    "power_at_m10000": 0.0525
+   },
+   "power_3test_per_m": {
+    "5000": 0.04625,
+    "10000": 0.0525
+   },
+   "trials_ratio": 1.5713215714006631e-21
+  },
+  {
+   "variant": "drop_oldest",
+   "m90_maxdev_only": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_maxdev_only_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "m90_3test": {
+    "m90": "<=5000",
+    "method": "saturated_at_m5000",
+    "power_at_m5000": 1.0,
+    "power_at_m10000": 1.0
+   },
+   "power_3test_per_m": {
+    "5000": 1.0,
+    "10000": 1.0
+   },
+   "trials_ratio": "tie"
+  }
+ ]
+}

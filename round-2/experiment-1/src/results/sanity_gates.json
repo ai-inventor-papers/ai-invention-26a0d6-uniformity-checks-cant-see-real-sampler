@@ -1,0 +1,173 @@
+{
+ "G1_duality": {
+  "ok": true,
+  "complement_algebra_maxabs": {
+   "maxdev_maxabs_diff": 0.0,
+   "energy_maxabs_diff": 0.0,
+   "trend_slope_sum_maxabs": 0.0,
+   "chi2_scaled_maxabs_diff": 0.0
+  }
+ },
+ "G2_algorithmR_vs_priority": {
+  "ok": true,
+  "maxdev_q95_rel_err": 0.0,
+  "q95_algoR": 43.0,
+  "q95_priority": 43.0
+ },
+ "G3_null_self_consistency": {
+  "ok": true,
+  "per_m": [
+   {
+    "m": 2000,
+    "n_check_reps": 500,
+    "se3": 0.029240383034426894,
+    "empirical_alpha_rates": {
+     "maxdev": 0.038,
+     "chi2": 0.064,
+     "trend_slope": 0.054,
+     "energy": 0.046
+    },
+    "ok": true,
+    "cell": "2000",
+    "wall_s": 20.59,
+    "skipped": false
+   },
+   {
+    "m": 5000,
+    "n_check_reps": 500,
+    "se3": 0.029240383034426894,
+    "empirical_alpha_rates": {
+     "maxdev": 0.04,
+     "chi2": 0.04,
+     "trend_slope": 0.048,
+     "energy": 0.04
+    },
+    "ok": true,
+    "cell": "5000",
+    "wall_s": 52.67,
+    "skipped": false
+   },
+   {
+    "m": 10000,
+    "n_check_reps": 500,
+    "se3": 0.029240383034426894,
+    "empirical_alpha_rates": {
+     "maxdev": 0.036,
+     "chi2": 0.036,
+     "trend_slope": 0.048,
+     "energy": 0.048
+    },
+    "ok": true,
+    "cell": "10000",
+    "wall_s": 102.26,
+    "skipped": false
+   }
+  ]
+ },
+ "G4_repro_anchor_m2000": {
+  "ok": true,
+  "rows": [
+   {
+    "family": "linear_trend",
+    "stat": "maxdev",
+    "anchor_kind": "fine_interp",
+    "anchor_delta": 0.12525691972306055,
+    "iter2_delta": 0.13048257623701506,
+    "iter2_mult": 0.32607669669060185,
+    "ok": true
+   },
+   {
+    "family": "linear_trend",
+    "stat": "chi2",
+    "anchor_kind": "a_acc",
+    "anchor_delta": 0.03311117278428566,
+    "iter2_delta": 0.032368648250310814,
+    "iter2_mult": 0.08088943521952972,
+    "ok": true
+   },
+   {
+    "family": "linear_trend",
+    "stat": "trend_slope",
+    "anchor_kind": "upper_bound",
+    "anchor_delta": 0.0200079578763679,
+    "iter2_delta": 0.005261670393141038,
+    "iter2_mult": 0.013148944099277072,
+    "ok": true
+   },
+   {
+    "family": "linear_trend",
+    "stat": "energy",
+    "anchor_kind": "probe_interp",
+    "anchor_delta": 0.037791414624400825,
+    "iter2_delta": 0.038658618440966276,
+    "iter2_mult": 0.09660810633409851,
+    "ok": true
+   },
+   {
+    "family": "exp_recency",
+    "stat": "maxdev",
+    "anchor_kind": "fine_interp",
+    "anchor_delta": 0.14900663365821354,
+    "iter2_delta": 0.14558183462362667,
+    "iter2_mult": 0.3638098288770852,
+    "ok": true
+   },
+   {
+    "family": "exp_recency",
+    "stat": "chi2",
+    "anchor_kind": "a_acc",
+    "anchor_delta": 0.05016429523417776,
+    "iter2_delta": 0.04929636601742361,
+    "iter2_mult": 0.12319189774896838,
+    "ok": true
+   },
+   {
+    "family": "exp_recency",
+    "stat": "trend_slope",
+    "anchor_kind": "upper_bound",
+    "anchor_delta": 0.0200079578763679,
+    "iter2_delta": 0.008701447864851925,
+    "iter2_mult": 0.021744967473990715,
+    "ok": true
+   },
+   {
+    "family": "exp_recency",
+    "stat": "energy",
+    "anchor_kind": "probe_interp",
+    "anchor_delta": 0.04855685593100391,
+    "iter2_delta": 0.04862875817819165,
+    "iter2_mult": 0.1215235419793361,
+    "ok": true
+   }
+  ],
+  "note": "G4: m=2000 half-power vs iteration-1 anchors. Band 10% for bracketed anchors; trend = upper-bound check with 20% slack; unbracketed anchors count as check-only."
+ },
+ "G5_negative_control": {
+  "ok": true,
+  "check": [
+   {
+    "variant": "float_threshold",
+    "ok": true,
+    "rows": [
+     {
+      "m": 5000,
+      "power_maxdev_only": 0.0475,
+      "power_3test": 0.04625,
+      "ref_fwer_sidak": 0.05,
+      "ok_maxdev_only": true,
+      "ok_3test": true
+     },
+     {
+      "m": 10000,
+      "power_maxdev_only": 0.035,
+      "power_3test": 0.0525,
+      "ref_fwer_sidak": 0.04566666666666667,
+      "ok_maxdev_only": true,
+      "ok_3test": true
+     }
+    ]
+   }
+  ]
+ },
+ "wall_s": 0.0
+}

@@ -1,0 +1,109 @@
+{
+ "generated_at": "2026-09-19T05:43:17",
+ "m": 1000000,
+ "cells": [
+  {
+   "cell": "A",
+   "n": 1000,
+   "k": 50,
+   "m": 1000000,
+   "null_threshold": {
+    "threshold_alpha_0.05": 897.2,
+    "n_null_reps": 300,
+    "empirical_maxdev_mean": 753.7033333333334,
+    "empirical_q95": 897.2,
+    "floor": {
+     "A_floor": 831.1290681345549,
+     "delta_floor": 0.0166225813626911
+    },
+    "expected_magnitude_note": "~ sqrt(2 p m log n) = 831",
+    "ib_benchmark_q95": 849.0,
+    "rel_error_sim_vs_ib": 0.05677267373380453
+   },
+   "tours": [
+    {
+     "sampler": "priority",
+     "n_tour_reps": 5,
+     "per_rep_maxdev": [
+      748.0,
+      780.0,
+      737.0,
+      669.0,
+      707.0
+     ],
+     "mean_maxdev": 728.2,
+     "max_maxdev": 780.0,
+     "ratio_maxdev_over_threshold": 0.811636201515827,
+     "verdict": "PASS"
+    },
+    {
+     "sampler": "algorithm_R",
+     "n_tour_reps": 5,
+     "per_rep_maxdev": [
+      631.0,
+      748.0,
+      748.0,
+      846.0,
+      928.0
+     ],
+     "mean_maxdev": 780.2,
+     "max_maxdev": 928.0,
+     "ratio_maxdev_over_threshold": 0.869594293357111,
+     "verdict": "PASS"
+    }
+   ]
+  },
+  {
+   "cell": "B",
+   "n": 3000,
+   "k": 150,
+   "m": 1000000,
+   "null_threshold": {
+    "threshold_alpha_0.05": 932.05,
+    "n_null_reps": 200,
+    "empirical_maxdev_mean": 808.415,
+    "empirical_q95": 932.05,
+    "floor": {
+     "A_floor": 894.7830780502192,
+     "delta_floor": 0.017895661561004382
+    },
+    "expected_magnitude_note": "~ sqrt(2 p m log n) = 895",
+    "ib_benchmark_q95": 905.0,
+    "rel_error_sim_vs_ib": 0.029889502762430888
+   },
+   "tours": [
+    {
+     "sampler": "priority",
+     "n_tour_reps": 5,
+     "per_rep_maxdev": [
+      833.0,
+      829.0,
+      870.0,
+      790.0,
+      691.0
+     ],
+     "mean_maxdev": 802.6,
+     "max_maxdev": 870.0,
+     "ratio_maxdev_over_threshold": 0.8611126012552975,
+     "verdict": "PASS"
+    },
+    {
+     "sampler": "algorithm_R",
+     "n_tour_reps": 5,
+     "per_rep_maxdev": [
+      778.0,
+      751.0,
+      779.0,
+      1040.0,
+      769.0
+     ],
+     "mean_maxdev": 823.4,
+     "max_maxdev": 1040.0,
+     "ratio_maxdev_over_threshold": 0.8834290005900971,
+     "verdict": "PASS"
+    }
+   ]
+  }
+ ],
+ "note": "10^6-trial budget is the practitioner-scale claim; pass verdict vs the simulated alpha=5% threshold and the independent-Binomial benchmark for reference"
+}

@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+# Staged, idempotent confirm-pipeline driver.
+#
+# Every step is a single foreground command capped at 680 s (fits the
+# per-operation budget) and guarded by markers/<step>.done; re-invoking the
+# script resumes exactly where it stopped.  Steps roughly follow the plan's
+# ladder: third-scale T2 rehearsal first, then full-N null/FWER/power, the
+# hard G4 gate, bugs, practitioner, secondary, gates, law, report, T5 verify.
+#
+#   bash run_staged.sh [all|A|B|C|D|E|F|G|H|I]
+set +e
+cd "$(dirname "$0")"
+export VENV=.venv/bin/python
+mkdir -p logs markers
+
+step() {
+  local name=$1 tmo=$2; shift 2
+  if [ -f "markers/$name.done" ]; then
+    echo "[stage] $(date) $name already done"
+    return 0
+  fi
+  echo "[stage] $(date) START $name"
+  timeout "$tmo" "$@" > "logs/stage_$name.log" 2>&1
+  local rc=$?
+  echo "[stage] $(date) $name exit=$rc"
+  [ "$rc" = "0" ] && touch "markers/$name.done"
+  return 0
+}
+
+GRP="${1:-all}"
+case "$GRP" in
+A|all)
+  step third_m5000_lin 680 env RESERVOIR_CONFIRM_SCALE=third "$VENV" method.py confirm power --m 5000 --family linear_trend
+  step third_m5000_exp 680 env RESERVOIR_CONFIRM_SCALE=third "$VENV" method.py confirm power --m 5000 --family exp_recency
+  ;;
+esac
+case "$GRP" in
+B|all)
+  step null_m2000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm null --m 2000 --force
+  step null_m5000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm null --m 5000 --force
+  step null_m10000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm null --m 10000 --force
+  ;;
+esac
+case "$GRP" in
+C|all)
+  step fwer_m2000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm fwer --m 2000 --force
+  step fwer_m5000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm fwer --m 5000 --force
+  step fwer_m10000 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm fwer --m 10000 --force
+  ;;
+esac
+case "$GRP" in
+D|all)
+  step power_m2000_lin 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 2000 --family linear_trend --force
+  step power_m2000_exp 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 2000 --family exp_recency --force
+  step power_m5000_lin 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 5000 --family linear_trend --force
+  step power_m5000_exp 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 5000 --family exp_recency --force
+  step power_m10000_lin 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 10000 --family linear_trend --force
+  step power_m10000_exp 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 10000 --family exp_recency --force
+  step power_gate 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm power --m 2000,5000,10000
+  ;;
+esac
+case "$GRP" in
+E|all)
+  step bugs_full 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm bugs --force
+  ;;
+esac
+case "$GRP" in
+F|all)
+  step pract_full 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm pract --force
+  ;;
+esac
+case "$GRP" in
+G|all)
+  step secondary_arm1 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm secondary --arms 1 --force
+  ;;
+esac
+case "$GRP" in
+H|all)
+  step gate_g12 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" -c "
+import sys; sys.path.insert(0, '.')
+from reservoir.sanity2 import gate_duality, gate_algorithmR_vs_priority
+import json
+for name, fn in [('G1_duality', gate_duality), ('G2_algorithmR_vs_priority', gate_algorithmR_vs_priority)]:
+    r = fn()
+    open(f'results/sanity_gate_{name}.json', 'w').write(json.dumps(r, indent=1))
+    print(name, 'ok=', r['ok'])
+"
+  step gate_g3 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" -c "
+import sys; sys.path.insert(0, '.')
+from reservoir.sanity2 import gate_null_self_consistency
+import json
+r = gate_null_self_consistency()
+open('results/sanity_gate_G3_null_self_consistency.json', 'w').write(json.dumps(r, indent=1))
+print('G3 ok=', r['ok'])
+"
+  step gates_final 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm gates
+  ;;
+esac
+case "$GRP" in
+I|all)
+  step law 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm law
+  step report 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" method.py confirm report
+  step verify 680 env RESERVOIR_CONFIRM_SCALE=full "$VENV" python tools/verify_law.py
+  ;;
+esac
+echo "[stage] $(date) group $GRP finished; markers:"
+ls markers/ 2>/dev/null | tr '\n' ' '; echo

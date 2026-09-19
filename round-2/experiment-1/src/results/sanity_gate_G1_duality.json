@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "complement_algebra_maxabs": {
+  "maxdev_maxabs_diff": 0.0,
+  "energy_maxabs_diff": 0.0,
+  "trend_slope_sum_maxabs": 0.0,
+  "chi2_scaled_maxabs_diff": 0.0
+ }
+}

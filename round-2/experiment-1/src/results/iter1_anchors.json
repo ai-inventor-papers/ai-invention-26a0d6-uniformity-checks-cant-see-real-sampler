@@ -1,0 +1,627 @@
+{
+ "iter1_dir": "/ai-inventor/aii_data/runs/run_yRBWOr6EQPIx/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/results",
+ "generated_at": "2026-09-18T18:52:07",
+ "read_only_note": "extract from iteration-1 results; the source files are NOT modified by this iteration",
+ "cells": {
+  "power_n3000_p0.05_m2000": {
+   "linear_trend": {
+    "family": "linear_trend",
+    "cell": "power_n3000_p0.05_m2000",
+    "delta_floor": 0.400159157527358,
+    "A_floor": 40.0159157527358,
+    "A_acc_over_delta_floor": 0.08274500823343503,
+    "kappa_derived": 146.05498786519732,
+    "A_acc_delta": 0.03311117278428566,
+    "mdev_mult_anchor": 0.3130177514792899,
+    "anchors": {
+     "maxdev": {
+      "value_delta": 0.12525691972306055,
+      "mult": 0.3130177514792899,
+      "kind": "fine_interp"
+     },
+     "chi2": {
+      "value_delta": 0.03311117278428566,
+      "mult": 0.08274500823343503,
+      "kind": "a_acc"
+     },
+     "trend_slope": {
+      "value_delta": 0.0200079578763679,
+      "mult": 0.05,
+      "kind": "upper_bound"
+     },
+     "energy": {
+      "value_delta": 0.037791414624400825,
+      "mult": 0.09444095908717798,
+      "kind": "probe_interp"
+     }
+    },
+    "n_fine_iter1": null,
+    "probe_pass_rows": [
+     {
+      "a": 0.04595304978495155,
+      "delta": 0.04960000000000006,
+      "power_alpha_0.05": {
+       "maxdev": 0.04666666666666667,
+       "chi2": 0.19,
+       "trend_slope": 1.0,
+       "energy": 0.12666666666666668
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.08,
+       "trend_slope": 1.0,
+       "energy": 0.04
+      },
+      "delta_target": 0.0200079578763679,
+      "mult": 0.05
+     },
+     {
+      "a": 0.0919060995699031,
+      "delta": 0.0691,
+      "power_alpha_0.05": {
+       "maxdev": 0.05333333333333334,
+       "chi2": 0.8233333333333334,
+       "trend_slope": 1.0,
+       "energy": 0.5966666666666667
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.64,
+       "trend_slope": 1.0,
+       "energy": 0.3233333333333333
+      },
+      "delta_target": 0.0400159157527358,
+      "mult": 0.1
+     },
+     {
+      "a": 0.06498742623828452,
+      "delta": 0.06059999999999996,
+      "power_alpha_0.05": {
+       "maxdev": 0.043333333333333335,
+       "chi2": 0.37,
+       "trend_slope": 1.0,
+       "energy": 0.22666666666666666
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.18666666666666668,
+       "trend_slope": 1.0,
+       "energy": 0.08666666666666667
+      },
+      "delta_target": 0.028295525384149076,
+      "mult": 0.07071067811865477
+     },
+     {
+      "a": 0.07728350966828247,
+      "delta": 0.068,
+      "power_alpha_0.05": {
+       "maxdev": 0.07,
+       "chi2": 0.5133333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.32
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.023333333333333334,
+       "chi2": 0.31666666666666665,
+       "trend_slope": 1.0,
+       "energy": 0.13333333333333333
+      },
+      "delta_target": 0.03364924010957018,
+      "mult": 0.08408964152537146
+     }
+    ]
+   },
+   "exp_recency": {
+    "family": "exp_recency",
+    "cell": "power_n3000_p0.05_m2000",
+    "delta_floor": 0.400159157527358,
+    "A_floor": 40.0159157527358,
+    "A_acc_over_delta_floor": 0.125360857775067,
+    "kappa_derived": 63.63207562425397,
+    "A_acc_delta": 0.05016429523417776,
+    "mdev_mult_anchor": 0.3723684210526315,
+    "anchors": {
+     "maxdev": {
+      "value_delta": 0.14900663365821354,
+      "mult": 0.3723684210526315,
+      "kind": "fine_interp"
+     },
+     "chi2": {
+      "value_delta": 0.05016429523417776,
+      "mult": 0.125360857775067,
+      "kind": "a_acc"
+     },
+     "trend_slope": {
+      "value_delta": 0.0200079578763679,
+      "mult": 0.05,
+      "kind": "upper_bound"
+     },
+     "energy": {
+      "value_delta": 0.04855685593100391,
+      "mult": 0.12134385785656845,
+      "kind": "probe_interp"
+     }
+    },
+    "n_fine_iter1": null,
+    "probe_pass_rows": [
+     {
+      "a": 0.031920800696183624,
+      "delta": 0.0535999999999999,
+      "power_alpha_0.05": {
+       "maxdev": 0.03,
+       "chi2": 0.07666666666666666,
+       "trend_slope": 0.9966666666666667,
+       "energy": 0.07333333333333333
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.04,
+       "trend_slope": 0.9666666666666667,
+       "energy": 0.006666666666666667
+      },
+      "delta_target": 0.0200079578763679,
+      "mult": 0.05
+     },
+     {
+      "a": 0.06384160139236725,
+      "delta": 0.06149999999999989,
+      "power_alpha_0.05": {
+       "maxdev": 0.05333333333333334,
+       "chi2": 0.2633333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.22333333333333333
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.10666666666666667,
+       "trend_slope": 1.0,
+       "energy": 0.09666666666666666
+      },
+      "delta_target": 0.0400159157527358,
+      "mult": 0.1
+     },
+     {
+      "a": 0.1276832027847345,
+      "delta": 0.10919999999999999,
+      "power_alpha_0.05": {
+       "maxdev": 0.12666666666666668,
+       "chi2": 0.97,
+       "trend_slope": 1.0,
+       "energy": 1.0
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.9333333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.9933333333333333
+      },
+      "delta_target": 0.0800318315054716,
+      "mult": 0.2
+     },
+     {
+      "a": 0.09028565853270284,
+      "delta": 0.08379999999999999,
+      "power_alpha_0.05": {
+       "maxdev": 0.06333333333333334,
+       "chi2": 0.66,
+       "trend_slope": 1.0,
+       "energy": 0.6933333333333334
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.02,
+       "chi2": 0.43333333333333335,
+       "trend_slope": 1.0,
+       "energy": 0.49666666666666665
+      },
+      "delta_target": 0.05659105076829815,
+      "mult": 0.14142135623730953
+     },
+     {
+      "a": 0.07592088660897076,
+      "delta": 0.08099999999999996,
+      "power_alpha_0.05": {
+       "maxdev": 0.043333333333333335,
+       "chi2": 0.43,
+       "trend_slope": 1.0,
+       "energy": 0.4766666666666667
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.23,
+       "trend_slope": 1.0,
+       "energy": 0.2633333333333333
+      },
+      "delta_target": 0.04758721172650288,
+      "mult": 0.11892071150027213
+     }
+    ]
+   }
+  },
+  "power_n10000_p0.05_m1000": {
+   "linear_trend": {
+    "family": "linear_trend",
+    "cell": "power_n10000_p0.05_m1000",
+    "delta_floor": 0.6069708517540585,
+    "A_floor": 30.348542587702926,
+    "A_acc_over_delta_floor": 0.055737353895295015,
+    "kappa_derived": 321.88986750685496,
+    "A_acc_delta": 0.03383094916834461,
+    "mdev_mult_anchor": 0.30588235294117644,
+    "anchors": {
+     "maxdev": {
+      "value_delta": 0.18566167230124142,
+      "mult": 0.30588235294117644,
+      "kind": "fine_interp"
+     },
+     "chi2": {
+      "value_delta": 0.03383094916834461,
+      "mult": 0.055737353895295015,
+      "kind": "a_acc"
+     },
+     "trend_slope": {
+      "value_delta": 0.030348542587702927,
+      "mult": 0.05,
+      "kind": "upper_bound"
+     },
+     "energy": {
+      "value_delta": 0.03955449438784585,
+      "mult": 0.06516704100952961,
+      "kind": "probe_interp"
+     }
+    },
+    "n_fine_iter1": null,
+    "probe_pass_rows": [
+     {
+      "a": 0.06484731322158747,
+      "delta": 0.07819999999999994,
+      "power_alpha_0.05": {
+       "maxdev": 0.06666666666666667,
+       "chi2": 0.36,
+       "trend_slope": 1.0,
+       "energy": 0.22666666666666666
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.16,
+       "trend_slope": 1.0,
+       "energy": 0.1
+      },
+      "delta_target": 0.030348542587702927,
+      "mult": 0.05
+     },
+     {
+      "a": 0.12969462644317495,
+      "delta": 0.10020000000000001,
+      "power_alpha_0.05": {
+       "maxdev": 0.07666666666666666,
+       "chi2": 0.9966666666666667,
+       "trend_slope": 1.0,
+       "energy": 0.98
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.9833333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.94
+      },
+      "delta_target": 0.060697085175405854,
+      "mult": 0.1
+     },
+     {
+      "a": 0.09170794984142515,
+      "delta": 0.087,
+      "power_alpha_0.05": {
+       "maxdev": 0.03666666666666667,
+       "chi2": 0.7666666666666667,
+       "trend_slope": 1.0,
+       "energy": 0.6133333333333333
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.006666666666666667,
+       "chi2": 0.5066666666666667,
+       "trend_slope": 1.0,
+       "energy": 0.37666666666666665
+      },
+      "delta_target": 0.04291932052578695,
+      "mult": 0.07071067811865477
+     },
+     {
+      "a": 0.07711688627192186,
+      "delta": 0.08399999999999991,
+      "power_alpha_0.05": {
+       "maxdev": 0.05333333333333334,
+       "chi2": 0.5833333333333334,
+       "trend_slope": 1.0,
+       "energy": 0.38333333333333336
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.0033333333333333335,
+       "chi2": 0.3,
+       "trend_slope": 1.0,
+       "energy": 0.21
+      },
+      "delta_target": 0.036090702775259415,
+      "mult": 0.059460355750136064
+     }
+    ]
+   }
+  },
+  "power_n300_p0.05_m2000": {
+   "linear_trend": {
+    "family": "linear_trend",
+    "cell": "power_n300_p0.05_m2000",
+    "delta_floor": 0.33775086897463935,
+    "A_floor": 33.775086897463936,
+    "A_acc_over_delta_floor": 0.1772631747640718,
+    "kappa_derived": 31.824599987669274,
+    "A_acc_delta": 0.059870791313768615,
+    "mdev_mult_anchor": 0.4264847512038524,
+    "anchors": {
+     "maxdev": {
+      "value_delta": 0.144045595323534,
+      "mult": 0.4264847512038524,
+      "kind": "fine_interp"
+     },
+     "chi2": {
+      "value_delta": 0.059870791313768615,
+      "mult": 0.1772631747640718,
+      "kind": "a_acc"
+     },
+     "trend_slope": {
+      "value_delta": 0.017241827577027045,
+      "mult": 0.051048951048951054,
+      "kind": "probe_interp"
+     },
+     "energy": {
+      "value_delta": 0.07211310336185546,
+      "mult": 0.2135097493036212,
+      "kind": "fine_interp"
+     }
+    },
+    "n_fine_iter1": null,
+    "probe_pass_rows": [
+     {
+      "a": 0.03853843781088994,
+      "delta": 0.0381999999999999,
+      "power_alpha_0.05": {
+       "maxdev": 0.043333333333333335,
+       "chi2": 0.08,
+       "trend_slope": 0.49,
+       "energy": 0.08333333333333333
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.013333333333333334,
+       "trend_slope": 0.2733333333333333,
+       "energy": 0.02
+      },
+      "delta_target": 0.01688754344873197,
+      "mult": 0.05
+     },
+     {
+      "a": 0.07707687562177988,
+      "delta": 0.06599999999999995,
+      "power_alpha_0.05": {
+       "maxdev": 0.04666666666666667,
+       "chi2": 0.12666666666666668,
+       "trend_slope": 0.9666666666666667,
+       "energy": 0.09333333333333334
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.013333333333333334,
+       "chi2": 0.04,
+       "trend_slope": 0.8766666666666667,
+       "energy": 0.016666666666666666
+      },
+      "delta_target": 0.03377508689746394,
+      "mult": 0.1
+     },
+     {
+      "a": 0.15415375124355976,
+      "delta": 0.08739999999999998,
+      "power_alpha_0.05": {
+       "maxdev": 0.10666666666666667,
+       "chi2": 0.63,
+       "trend_slope": 1.0,
+       "energy": 0.37
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.016666666666666666,
+       "chi2": 0.35333333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.17
+      },
+      "delta_target": 0.06755017379492788,
+      "mult": 0.2
+     },
+     {
+      "a": 0.1090031628496653,
+      "delta": 0.06820000000000007,
+      "power_alpha_0.05": {
+       "maxdev": 0.09666666666666666,
+       "chi2": 0.28,
+       "trend_slope": 1.0,
+       "energy": 0.15333333333333332
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.016666666666666666,
+       "chi2": 0.12666666666666668,
+       "trend_slope": 1.0,
+       "energy": 0.07666666666666666
+      },
+      "delta_target": 0.04776518596072333,
+      "mult": 0.14142135623730953
+     },
+     {
+      "a": 0.12962733681862224,
+      "delta": 0.0716,
+      "power_alpha_0.05": {
+       "maxdev": 0.09333333333333334,
+       "chi2": 0.44333333333333336,
+       "trend_slope": 1.0,
+       "energy": 0.2866666666666667
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.02666666666666667,
+       "chi2": 0.2,
+       "trend_slope": 1.0,
+       "energy": 0.14666666666666667
+      },
+      "delta_target": 0.05680269899392026,
+      "mult": 0.16817928305074292
+     }
+    ]
+   }
+  },
+  "power_n3000_p0.5_m2000": {
+   "linear_trend": {
+    "family": "linear_trend",
+    "cell": "power_n3000_p0.5_m2000",
+    "delta_floor": 0.12654143643605636,
+    "A_floor": 126.54143643605636,
+    "A_acc_over_delta_floor": 0.05385465128844869,
+    "kappa_derived": 344.7891284987909,
+    "A_acc_delta": 0.006814844932803211,
+    "mdev_mult_anchor": 0.05,
+    "anchors": {
+     "maxdev": {
+      "value_delta": 0.006327071821802819,
+      "mult": 0.05,
+      "kind": "upper_bound"
+     },
+     "chi2": {
+      "value_delta": 0.006814844932803211,
+      "mult": 0.05385465128844869,
+      "kind": "a_acc"
+     },
+     "trend_slope": {
+      "value_delta": 0.006327071821802819,
+      "mult": 0.05,
+      "kind": "upper_bound"
+     },
+     "energy": {
+      "value_delta": 0.008229235604286044,
+      "mult": 0.0650319439707358,
+      "kind": "probe_interp"
+     }
+    },
+    "n_fine_iter1": null,
+    "probe_pass_rows": [
+     {
+      "a": 0.015582385532959361,
+      "delta": 0.015059999999999962,
+      "power_alpha_0.05": {
+       "maxdev": 0.08333333333333333,
+       "chi2": 0.4,
+       "trend_slope": 1.0,
+       "energy": 0.22
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.02,
+       "chi2": 0.14,
+       "trend_slope": 1.0,
+       "energy": 0.11333333333333333
+      },
+      "delta_target": 0.006327071821802819,
+      "mult": 0.05
+     },
+     {
+      "a": 0.031164771065918723,
+      "delta": 0.020469999999999988,
+      "power_alpha_0.05": {
+       "maxdev": 0.15333333333333332,
+       "chi2": 1.0,
+       "trend_slope": 1.0,
+       "energy": 1.0
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.03333333333333333,
+       "chi2": 1.0,
+       "trend_slope": 1.0,
+       "energy": 0.9966666666666667
+      },
+      "delta_target": 0.012654143643605637,
+      "mult": 0.1
+     },
+     {
+      "a": 0.022036820954837444,
+      "delta": 0.01658000000000004,
+      "power_alpha_0.05": {
+       "maxdev": 0.056666666666666664,
+       "chi2": 0.9,
+       "trend_slope": 1.0,
+       "energy": 0.6766666666666666
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.01,
+       "chi2": 0.7366666666666667,
+       "trend_slope": 1.0,
+       "energy": 0.4033333333333333
+      },
+      "delta_target": 0.008947830780502194,
+      "mult": 0.07071067811865477
+     },
+     {
+      "a": 0.018530683744510744,
+      "delta": 0.016109999999999958,
+      "power_alpha_0.05": {
+       "maxdev": 0.07,
+       "chi2": 0.6333333333333333,
+       "trend_slope": 1.0,
+       "energy": 0.32666666666666666
+      },
+      "power_alpha_0.01": {
+       "maxdev": 0.006666666666666667,
+       "chi2": 0.37,
+       "trend_slope": 1.0,
+       "energy": 0.14666666666666667
+      },
+      "delta_target": 0.007524198827621141,
+      "mult": 0.059460355750136064
+     }
+    ]
+   }
+  }
+ },
+ "null_reference": {
+  "cell": "null_n3000_k150_m2000",
+  "n_reps": 2500,
+  "mu": 100.0,
+  "thresholds_alpha_0.05": {
+   "maxdev": 43.0,
+   "chi2": 2971.473,
+   "trend_slope": 1.947862780898312,
+   "energy": 36696.15
+  },
+  "trend_z_reference": {
+   "mu": 3.676915252990584e-06,
+   "sd": 0.00020696285437188443
+  },
+  "stat_quantiles": {
+   "maxdev": {
+    "0.5": 36.0,
+    "0.95": 43.0,
+    "0.99": 47.0,
+    "0.999": 51.0
+   },
+   "chi2": {
+    "0.5": 2850.88,
+    "0.95": 2971.473,
+    "0.99": 3018.6205999999997,
+    "0.999": 3081.6381000000056
+   },
+   "trend_slope": {
+    "0.5": 0.6517905538497779,
+    "0.95": 1.947862780898312,
+    "0.99": 2.6070217757965763,
+    "0.999": 3.2611584280245247
+   },
+   "energy": {
+    "0.5": 33854.5,
+    "0.95": 36696.15,
+    "0.99": 37959.14,
+    "0.999": 39335.026000000005
+   }
+  }
+ }
+}

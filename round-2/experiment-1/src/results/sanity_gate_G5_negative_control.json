@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "check": [
+  {
+   "variant": "float_threshold",
+   "ok": true,
+   "rows": [
+    {
+     "m": 5000,
+     "power_maxdev_only": 0.0475,
+     "power_3test": 0.04625,
+     "ref_fwer_sidak": 0.05,
+     "ok_maxdev_only": true,
+     "ok_3test": true
+    },
+    {
+     "m": 10000,
+     "power_maxdev_only": 0.035,
+     "power_3test": 0.0525,
+     "ref_fwer_sidak": 0.04566666666666667,
+     "ok_maxdev_only": true,
+     "ok_3test": true
+    }
+   ]
+  }
+ ]
+}

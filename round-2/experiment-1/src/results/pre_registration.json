@@ -1,0 +1,100 @@
+{
+ "title": "Trial-budget law for reservoir uniformity checks: confirm-by-measurement",
+ "cell": "n=3000, p=0.05 (k=150), m in {2000, 5000, 10000}",
+ "families": [
+  "linear_trend",
+  "exp_recency"
+ ],
+ "hypotheses": {
+  "P1": "maxdev half-power is m-invariant in floor-relative units: max pairwise relative spread of A_half_over_delta_floor(maxdev) over m in {2000,5000,10000} <= 15%",
+  "P2": "accumulated detectors' half-power scales as m^(-1/2): LS slope of log(A_half_delta_chi2) vs log(m) in (-0.55, -0.45) (trend and energy reported likewise)",
+  "P3": "kappa_hat(m) = (delta_floor(m)/A_half_delta_chi2(m))^2 is m-invariant and reproduces the derived table: |kappa_hat(m)-kappa_derived|/kappa_derived <= 25% for every m in {5000,10000} AND spread of kappa_hat over {2000,5000,10000} <= 25%"
+ },
+ "tolerances": {
+  "P1_max_spread_tol": 0.15,
+  "P2_slope_range": [
+   -0.55,
+   -0.45
+  ],
+  "P3_kappa_rel_tol": 0.25,
+  "P3_kappa_spread_tol": 0.25,
+  "G4_anchor_tol": 0.1,
+  "G4_trend_slack": 1.2
+ },
+ "kappa_derived": {
+  "linear_trend": 146.05498786519732,
+  "exp_recency": 63.63207562425397
+ },
+ "kappa_derived_headlines": {
+  "n=3000 p=0.05 (confirm cell)": {
+   "linear_trend": 146.05498786519732,
+   "exp_recency": 63.63207562425397
+  },
+  "n=10000 p=0.05 m=1000 (322x headline)": 321.88986750685496,
+  "n=300 p=0.05 m=2000 (32x value)": 31.824599987669274,
+  "n=3000 p=0.5 m=2000 (arm-2 value)": 344.7891284987909
+ },
+ "anchors_m2000": {
+  "linear_trend": {
+   "maxdev": {
+    "value_delta": 0.12525691972306055,
+    "mult": 0.3130177514792899,
+    "kind": "fine_interp"
+   },
+   "chi2": {
+    "value_delta": 0.03311117278428566,
+    "mult": 0.08274500823343503,
+    "kind": "a_acc"
+   },
+   "trend_slope": {
+    "value_delta": 0.0200079578763679,
+    "mult": 0.05,
+    "kind": "upper_bound"
+   },
+   "energy": {
+    "value_delta": 0.037791414624400825,
+    "mult": 0.09444095908717798,
+    "kind": "probe_interp"
+   }
+  },
+  "exp_recency": {
+   "maxdev": {
+    "value_delta": 0.14900663365821354,
+    "mult": 0.3723684210526315,
+    "kind": "fine_interp"
+   },
+   "chi2": {
+    "value_delta": 0.05016429523417776,
+    "mult": 0.125360857775067,
+    "kind": "a_acc"
+   },
+   "trend_slope": {
+    "value_delta": 0.0200079578763679,
+    "mult": 0.05,
+    "kind": "upper_bound"
+   },
+   "energy": {
+    "value_delta": 0.04855685593100391,
+    "mult": 0.12134385785656845,
+    "kind": "probe_interp"
+   }
+  }
+ },
+ "anchor_kinds": {
+  "linear_trend": {
+   "maxdev": "fine_interp",
+   "chi2": "a_acc",
+   "trend_slope": "upper_bound",
+   "energy": "probe_interp"
+  },
+  "exp_recency": {
+   "maxdev": "fine_interp",
+   "chi2": "a_acc",
+   "trend_slope": "upper_bound",
+   "energy": "probe_interp"
+  }
+ },
+ "anchor_kind_note": "maxdev/chi2: bracketed in iteration-1 (fine_interp / a_acc); energy: coarse probe interpolation; trend: UPPER BOUND (iteration-1 power saturated at the smallest probed mult 0.05 x delta_floor) -- G4 applies the 120% slack to trend.",
+ "verdict_rule": "Per family at alpha=0.05: P1 PASS iff max pairwise relative spread of maxdev A_half_over_delta_floor over m in {2000,5000,10000} <= 15%. P2 PASS iff LS slope of log(A_half_delta_chi2) vs log(m) in (-0.55, -0.45). P3: kappa_hat(m) = (delta_floor(m)/A_half_delta_chi2(m))^2; CONFIRMED iff |kappa_hat(m)-kappa_derived|/kappa_derived <= 25% for every m in {5000,10000} AND max pairwise relative spread of kappa_hat over {2000,5000,10000} <= 25%. PARTIALLY_CONFIRMED iff P1 and P2 PASS but the multiplier shifts by a roughly constant factor (factor = median over m of kappa_hat/kappa_derived, reported). Otherwise MEASURED_LAW: the fitted exponent and intercept over the three budgets become the finding. Overall verdict = worst across the two families in the order ('CONFIRMED', 'PARTIALLY_CONFIRMED', 'MEASURED_LAW'). The direction of the blind band is NOT re-litigated: it is established by iteration-1.",
+ "blind_band_direction_note": "Established by iteration-1: maxdev under-resolves diffuse biases (chi2/trend/energy saturate at ~0.2-0.35 x delta_floor while maxdev crosses at ~0.31-0.37 x delta_floor at n=3000). Not re-tested here."
+}

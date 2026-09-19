@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "method_name": "reservoir_uniformity_law_confirm",
+    "version": "0.2.0",
+    "seed": 0,
+    "generated_at": "2026-09-19T14:56:47",
+    "description": "Confirm-by-measurement of the trials-to-detection design law for reservoir-sampling uniformity checks: half-power amplitudes of the four statistics at m in {2000,5000,10000}, the corrected 3-test protocol FWER, blind bug-battery trials-to-90%, practitioner maxdev null at 10^6 trials, and n/p-invariance secondary arms. Ports the iteration-1 harness unchanged (identical statistic definitions, threshold conventions and seeds).",
+    "scale": "full",
+    "grid_summary": {
+      "law_confirm_cells": 6,
+      "fwer_cells": 3,
+      "bug_variants": 4,
+      "practitioner_cells": 2,
+      "secondary_arms": 2
+    },
+    "pre_registration_pointer": "results/pre_registration.json",
+    "verdict": "CONFIRMED",
+    "statistics": [
+      "maxdev = max_i |c_i - mu| (mandated report)",
+      "chi2 = sum_i (c_i - mu)^2 / mu",
+      "trend_slope: OLS slope of c_i on position, |z|-standardized",
+      "subwin_energy: max sliding-window sum of squared devs"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "reservoir_uniformity_law_confirm",
+      "examples": [
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=2000, family=exp_recency: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and report kappa_hat(m).",
+          "output": "{\"m\":2000,\"family\":\"exp_recency\",\"delta_floor\":0.400159157527358,\"half_power_delta_per_stat\":{\"maxdev\":0.14558183462362667,\"chi2\":0.04929636601742361,\"trend|z|\":0.008701447864851925,\"subwin_energy\":0.04862875817819165},\"mult_per_stat_alpha05\":{\"maxdev\":0.3638098288770852,\"chi2\":0.12319189774896838,\"trend|z|\":0.021744967473990715,\"subwin_energy\":0.1215235419793361},\"mult_per_stat_sidak\":{\"maxdev\":0.4251045490112136,\"chi2\":0.13993515282379476,\"trend|z|\":0.027118821850105668,\"subwin_energy\":0.13318297474200727},\"kappa_hat\":65.89245808640975,\"method\":\"grid+extend_down+bisect_r1+bisect_r2\"}",
+          "metadata_cell": "power_cell_m2000_exp_recency",
+          "metadata_family": "exp_recency",
+          "metadata_m": "2000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_exprecency": "65.8925",
+          "predict_maxdev_mult": "0.36381",
+          "predict_chi2_mult": "0.123192",
+          "predict_trend_mult": "0.021745",
+          "predict_energy_mult": "0.121524",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_exprecency": "63.6321"
+        },
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=2000, family=linear_trend: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and report kappa_hat(m).",
+          "output": "{\"m\":2000,\"family\":\"linear_trend\",\"delta_floor\":0.400159157527358,\"half_power_delta_per_stat\":{\"maxdev\":0.13048257623701506,\"chi2\":0.032368648250310814,\"trend|z|\":0.005261670393141038,\"subwin_energy\":0.038658618440966276},\"mult_per_stat_alpha05\":{\"maxdev\":0.32607669669060185,\"chi2\":0.08088943521952972,\"trend|z|\":0.013148944099277072,\"subwin_energy\":0.09660810633409851},\"mult_per_stat_sidak\":{\"maxdev\":0.38624439836365565,\"chi2\":0.09424981662529114,\"trend|z|\":0.016301503776298666,\"subwin_energy\":0.10395840773366247},\"kappa_hat\":152.83273806170558,\"method\":\"grid+extend_down+bisect_r1+bisect_r2\"}",
+          "metadata_cell": "power_cell_m2000_linear_trend",
+          "metadata_family": "linear_trend",
+          "metadata_m": "2000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_lineartrend": "152.833",
+          "predict_maxdev_mult": "0.326077",
+          "predict_chi2_mult": "0.0808894",
+          "predict_trend_mult": "0.0131489",
+          "predict_energy_mult": "0.0966081",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_lineartrend": "146.055"
+        },
+        {
+          "input": "Confirm trial-budget law, cell n=3000, p=0.05, m=5000, family=exp_recency: measure the half-power amplitude of maxdev, chi2, trend|z| and subwindow energy at alpha=0.05 and the Sidak level, and report kappa_hat(m).",
+          "output": "{\"m\":5000,\"family\":\"exp_recency\",\"delta_floor\":0.25308287287211273,\"half_power_delta_per_stat\":{\"maxdev\":0.08872476757496704,\"chi2\":0.03165409204502885,\"trend|z|\":0.005452609486817909,\"subwin_energy\":0.032288810623046636},\"mult_per_stat_alpha05\":{\"maxdev\":0.35057594600564396,\"chi2\":0.1250740189796416,\"trend|z|\":0.021544758935833675,\"subwin_energy\":0.12758196655750287},\"mult_per_stat_sidak\":{\"maxdev\":0.4195887646950089,\"chi2\":0.14149349275700107,\"trend|z|\":0.028598063610808248,\"subwin_energy\":0.13817911013918244},\"kappa_hat\":63.92427183534118,\"method\":\"grid+extend_down+bisect_r1+bisect_r2\"}",
+          "metadata_cell": "power_cell_m5000_exp_recency",
+          "metadata_family": "exp_recency",
+          "metadata_m": "5000",
+          "metadata_alpha": "0.05_and_sidak",
+          "predict_kappa_hat_exprecency": "63.9243",
+          "predict_maxdev_mult": "0.350576",
+          "predict_chi2_mult": "0.125074",
+          "predict_trend_mult": "0.0215448",
+          "predict_energy_mult": "0.127582",
+          "predict_law_verdict": "CONFIRMED",
+          "predict_baseline_kappa_derived_exprecency": "63.6321"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_fwer",
+      "examples": [
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.05,\"fwer_bonf\":0.04833333333333333,\"marginal_sidak\":{\"maxdev\":0.01633333333333333,\"chi2\":0.018,\"trend_slope\":0.017333333333333333,\"energy\":0.018},\"N\":3000,\"binomial_se\":0.003979112128771107}",
+          "metadata_cell": "fwer_m2000",
+          "metadata_m": "2000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.05",
+          "predict_fwer_bonf": "0.0483333",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        },
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.05,\"fwer_bonf\":0.05,\"marginal_sidak\":{\"maxdev\":0.018,\"chi2\":0.015666666666666666,\"trend_slope\":0.018333333333333333,\"energy\":0.018},\"N\":3000,\"binomial_se\":0.003979112128771107}",
+          "metadata_cell": "fwer_m5000",
+          "metadata_m": "5000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.05",
+          "predict_fwer_bonf": "0.05",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        },
+        {
+          "input": "Empirical FWER of the corrected 3-test protocol {maxdev, chi2, trend|z|} at n=3000, p=0.05, m={r['m']}, N={r['N']} null replicates of a correct priority sampler.",
+          "output": "{\"fwer_sidak\":0.04566666666666667,\"fwer_bonf\":0.04566666666666667,\"marginal_sidak\":{\"maxdev\":0.014,\"chi2\":0.017666666666666667,\"trend_slope\":0.015,\"energy\":0.023666666666666666},\"N\":3000,\"binomial_se\":0.003979112128771107}",
+          "metadata_cell": "fwer_m10000",
+          "metadata_m": "10000",
+          "metadata_N": "3000",
+          "predict_fwer_sidak": "0.0456667",
+          "predict_fwer_bonf": "0.0456667",
+          "predict_baseline_alpha_divided_by_3": "0.0166667",
+          "predict_sidak_alpha": "0.0169524"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_bug_trials",
+      "examples": [
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=recency_slot, m=5000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"recency_slot\",\"m\":5000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"trials_ratio\":\"tie\"}",
+          "metadata_variant": "recency_slot",
+          "metadata_m": "5000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m5000": "1",
+          "predict_power_3test_m5000": "1",
+          "predict_baseline_tie_flag": "True"
+        },
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=recency_slot, m=10000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"recency_slot\",\"m\":10000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"trials_ratio\":\"tie\"}",
+          "metadata_variant": "recency_slot",
+          "metadata_m": "10000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m10000": "1",
+          "predict_power_3test_m10000": "1",
+          "predict_baseline_tie_flag": "True"
+        },
+        {
+          "input": "Blind bug battery, n=3000, p=0.05, variant=modulo_slot, m=5000: detection power of the maxdev-only protocol (alpha=0.05) and the 3-test protocol (per-test Sidak), trials-to-90% units.",
+          "output": "{\"variant\":\"modulo_slot\",\"m\":5000,\"power_maxdev_only\":1.0,\"power_3test\":1.0,\"m90_maxdev_only\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"m90_3test\":{\"m90\":\"<=5000\",\"method\":\"saturated_at_m5000\",\"power_at_m5000\":1.0,\"power_at_m10000\":1.0},\"trials_ratio\":\"tie\"}",
+          "metadata_variant": "modulo_slot",
+          "metadata_m": "5000",
+          "predict_trials_to_90_maxdev_only": "<=5000",
+          "predict_trials_to_90_3test": "<=5000",
+          "predict_trials_ratio": "tie",
+          "predict_power_maxdev_only_m5000": "1",
+          "predict_power_3test_m5000": "1",
+          "predict_baseline_tie_flag": "True"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_practitioner_null",
+      "examples": [
+        {
+          "input": "Practitioner-scale uniformity check: n=1000, k=50, m=1000000 trials with the priority sampler; report maxdev vs the simulated alpha=5% null threshold.",
+          "output": "{\"maxdev_mean\":728.2,\"maxdev_max\":780.0,\"per_rep\":[748.0,780.0,737.0,669.0,707.0],\"verdict\":\"PASS\"}",
+          "metadata_sampler": "priority",
+          "metadata_cell": "A",
+          "metadata_n": "1000",
+          "metadata_m": "1000000",
+          "predict_maxdev_observed": "728.2",
+          "predict_maxdev_threshold_alpha05": "897.2",
+          "predict_ib_benchmark_q95": "849",
+          "predict_verdict": "PASS",
+          "predict_expected_magnitude": "831"
+        },
+        {
+          "input": "Practitioner-scale uniformity check: n=1000, k=50, m=1000000 trials with the algorithm_R sampler; report maxdev vs the simulated alpha=5% null threshold.",
+          "output": "{\"maxdev_mean\":780.2,\"maxdev_max\":928.0,\"per_rep\":[631.0,748.0,748.0,846.0,928.0],\"verdict\":\"PASS\"}",
+          "metadata_sampler": "algorithm_R",
+          "metadata_cell": "A",
+          "metadata_n": "1000",
+          "metadata_m": "1000000",
+          "predict_maxdev_observed": "780.2",
+          "predict_maxdev_threshold_alpha05": "897.2",
+          "predict_ib_benchmark_q95": "849",
+          "predict_verdict": "PASS",
+          "predict_expected_magnitude": "831"
+        },
+        {
+          "input": "Practitioner-scale uniformity check: n=3000, k=150, m=1000000 trials with the priority sampler; report maxdev vs the simulated alpha=5% null threshold.",
+          "output": "{\"maxdev_mean\":802.6,\"maxdev_max\":870.0,\"per_rep\":[833.0,829.0,870.0,790.0,691.0],\"verdict\":\"PASS\"}",
+          "metadata_sampler": "priority",
+          "metadata_cell": "B",
+          "metadata_n": "3000",
+          "metadata_m": "1000000",
+          "predict_maxdev_observed": "802.6",
+          "predict_maxdev_threshold_alpha05": "932.05",
+          "predict_ib_benchmark_q95": "905",
+          "predict_verdict": "PASS",
+          "predict_expected_magnitude": "895"
+        }
+      ]
+    },
+    {
+      "dataset": "reservoir_uniformity_secondary_arms",
+      "examples": [
+        {
+          "input": "Secondary arm 1: n=10000, p=0.05, family=linear_trend, m=2000: reproduce kappa_derived at a new trial budget.",
+          "output": "{\"m\":2000,\"kappa_hat\":292.73874420538885,\"kappa_derived\":321.88986750685496,\"chi2_half_mult\":0.05844668682282411}",
+          "metadata_arm": "1",
+          "metadata_m": "2000",
+          "metadata_n": "10000",
+          "metadata_p": "0.05",
+          "predict_kappa_hat": "292.739",
+          "predict_kappa_derived": "321.89"
+        },
+        {
+          "input": "Secondary arm 1: n=10000, p=0.05, family=linear_trend, m=5000: reproduce kappa_derived at a new trial budget.",
+          "output": "{\"m\":5000,\"kappa_hat\":396.99857027921144,\"kappa_derived\":321.88986750685496,\"chi2_half_mult\":0.05018865169542296}",
+          "metadata_arm": "1",
+          "metadata_m": "5000",
+          "metadata_n": "10000",
+          "metadata_p": "0.05",
+          "predict_kappa_hat": "396.999",
+          "predict_kappa_derived": "321.89"
+        },
+        {
+          "input": "Secondary arm 2: n=3000, p=0.5, family=linear_trend, m=2000: reproduce kappa_derived at a new trial budget.",
+          "output": "{\"m\":2000,\"kappa_hat\":380.6780611498132,\"kappa_derived\":344.7891284987909,\"chi2_half_mult\":0.05125321060195818}",
+          "metadata_arm": "2",
+          "metadata_m": "2000",
+          "metadata_n": "3000",
+          "metadata_p": "0.5",
+          "predict_kappa_hat": "380.678",
+          "predict_kappa_derived": "344.789"
+        }
+      ]
+    }
+  ]
+}
